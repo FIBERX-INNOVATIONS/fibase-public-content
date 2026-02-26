@@ -1,5 +1,5 @@
 {
-    "MEMBER_LOGIN": {
+    "member_login_email": {
         "subject_text": "New Device Login Detected",
         "body": {
             "header_text": "New Device Login Detected",
