@@ -1,0 +1,17 @@
+{
+    "MEMBER_LOGIN": {
+        "subject_text": "New Device Login Detected",
+        "body": {
+            "header_text": "New Device Login Detected",
+            "hello_text": "Hello",
+            "login_sub_text": "A new device login to your account was detected with the following details:",
+            "login_time_text": "Login Time:",
+            "device_name_text": "Device:",
+            "ip_address_text": "IP Address:",
+            "location_text": "Location:",
+            "note_location_text": "Note: The location shown above is estimated based on the IP address and may not be entirely accurate.",
+            "contact_us_text": "If this was you, no further action is required. If you did not initiate this login, please reset your password immediately and contact our support team."
+
+        }
+    }
+}
