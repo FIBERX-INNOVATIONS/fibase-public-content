@@ -1,4 +1,13 @@
 {
+    "footer_one_section": "This is an automatically generated email, please do not reply.<br>If you have any questions, please <a href='mailto:support@fiberxinnovations.com'>contact us here</a>.",
+    "footer_two_section": "<a href='mailto:support@fiberxinnovations.com' style='color: #0867ec; text-decoration: underline;'>Contact Us</a>",
+    "footer_scoial_links": {
+		"fb_social_link": "https://www.facebook.com/profile.php?id=61552583040655",
+		"instagram_social_link": "https://www.instagram.com/fiberx_innovations",
+		"twitter_social_link": "https://twitter.com/FiberxInnovate",
+		"email_social_link": "mailto:info@fiberxinnovations.com",
+		"telegram_social_link": "https://t.me/fiberxinnovations"
+    },
     "member_login_email": {
         "subject_text": "New Device Login Detected",
         "body": {
