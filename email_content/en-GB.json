@@ -6,7 +6,10 @@
 		"instagram_social_link": "https://www.instagram.com/fiberx_innovations",
 		"twitter_social_link": "https://twitter.com/FiberxInnovate",
 		"email_social_link": "mailto:info@fiberxinnovations.com",
-		"telegram_social_link": "https://t.me/fiberxinnovations"
+		"telegram_social_link": "https://t.me/fiberxinnovations",
+        "linkedin_social_link": null,
+        "youtube_social_link": null,
+        "whatsapp_social_link": "https://wa.me/+2347064874632"
     },
     "member_login_email": {
         "subject_text": "New Device Login Detected",
