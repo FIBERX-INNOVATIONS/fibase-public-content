@@ -1,0 +1,7 @@
+{
+    "screen_loader_ui": {
+        "img_src_link": "/assets/img/loader.svg",
+        "img_alt_text": "full screen loader svg image",
+        "loader_text": "LOADING..."
+    }
+}
