@@ -3,5 +3,12 @@
         "img_src_link": "/assets/img/loader.svg",
         "img_alt_text": "full screen loader svg image",
         "loader_text": "LOADING..."
+    },
+    "auth_layout_view_ui": {
+        "auth_bg_img_link": "/assets/img/auth_bg.svg",
+        "footer": {
+            "powered_by_text": "Powered by",
+            "author_text": "FiberX Innovations Ltd."
+        }
     }
 }
