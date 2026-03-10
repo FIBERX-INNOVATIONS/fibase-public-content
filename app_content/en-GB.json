@@ -27,6 +27,7 @@
     },
     "api_responses": {
         "general_responses": {
+            "invalid_input_config": "⚠️ Invalid input configuration. Please check your request and try again.",
             "unauthorized_access_1": "🔐 Unauthorized access. Please log in to continue.",
             "unauthorized_access_2": "🔐 You do not have permission to access this resource.",
             "unauthorized_access"  : "🔐 Unauthorized access. Please log in to continue." ,
