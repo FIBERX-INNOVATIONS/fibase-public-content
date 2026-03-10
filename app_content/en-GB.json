@@ -24,5 +24,39 @@
             },
             "btn_text": "Submit"
         }
+    },
+    "api_responses": {
+        "general_responses": {
+            "unauthorized_access_1": "🔐 Unauthorized access. Please log in to continue.",
+            "unauthorized_access_2": "🔐 You do not have permission to access this resource.",
+            "unauthorized_access"  : "🔐 Unauthorized access. Please log in to continue." ,
+            "unauthorized_app_request": "❌ Unauthorized app request. App identity could not be verified.",
+            "unauthorized_access_permission": "🚫 You do not have the required permissions to perform this action.",
+            "failed_to_fetch_api_info": "❌ Could not retrieve API information. Please try again later.",
+            "fetched_apps_api_info_successfully": "✅ API information retrieved successfully!",
+            "invalid_request_resource_not_found": "🔍 Oops! We couldn't find what you're looking for.",
+            "server_error": "⚠️ Something went wrong on our end. Please try again.",
+            "rate_limit_exceeded": "⏳ You're going too fast! Please wait a moment and try again.",
+            "invalid_input_query_page": "⚠️ The 'page' query parameter must be a valid number.",
+            "invalid_input_query_size": "⚠️ The 'size' query parameter must be provided and a valid number.",
+            "invalid_input_query_order_by": "⚠️ The 'order_by' field is not valid. Please use an allowed field.",
+            "invalid_input_query_order": "⚠️ The 'order' parameter must be either 'ASC' ⬆️ or 'DESC' ⬇️.",
+            "invalid_input_query_preview_only": "⚠️ The 'preview_only' parameter must be either 'true' ✅ or 'false' ❌.",
+            "valid_input_query": "✅ Query parameters are valid.",
+            "failed_to_fetch_rows": "❌ Failed to fetch records. Please try again later.",
+            "failed_to_create_record": "❌ Failed to create New record. Please try again.",
+            "failed_to_update_record": "❌ Failed to update record. Please try again.",
+            "fetched_list_successfully": "📋 Records fetched successfully!",
+            "invalid_record_not_found": "⚠️ Record not found. Please check and try again.",
+            "failed_to_change_record_state": "❌ Could not update Record state. Try again later.",
+            "error_occurred": "🚨 An unexpected error occurred. Please contact support.",
+            "input_has_not_changed": "ℹ️ No changes detected. Update skipped.",
+            "invalid_csrf_token": "🛑 Invalid or expired CSRF token. Please refresh and retry.",
+            "input_cannot_be_updated": "🔒 Some fields cannot be updated once created.",
+            "Invalid_auth_member_request": "🔐 Authentication required. Please log in again.",
+            "invalid_auth_app_request": "❌ Unauthorized app request. App identity could not be verified.",
+            "invalid_request_no_input_provided": "⚠️ No input provided. Please fill out the form and try again.",
+            "form_open_failed_refresh_page": "⚠️ Oops! Something went wrong while opening this form. The record might be missing or outdated — please try refreshing the page 🔄"
+        }
     }
 }
