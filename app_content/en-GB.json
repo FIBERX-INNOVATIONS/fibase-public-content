@@ -10,5 +10,15 @@
             "powered_by_text": "Powered by",
             "author_text": "FiberX Innovations Ltd."
         }
+    },
+    "login_view_ui": {
+        "sign_in_text": "Sign In",
+        "fieldset": {
+            "email_label_text": "Email/Username",
+            "email_placeholder_text": "xxxx@email.com/@xxxx",
+            "password_label_text": "Password",
+            "password_placeholder_text": "••••••••",
+            "btn_text": "Submit"
+        }
     }
 }
