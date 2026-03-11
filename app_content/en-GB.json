@@ -27,6 +27,7 @@
     },
     "api_responses": {
         "general_responses": {
+            "session_expired": "",
             "invalid_input_config": "⚠️ Invalid input configuration. Please check your request and try again.",
             "unauthorized_access_1": "🔐 Unauthorized access. Please log in to continue.",
             "unauthorized_access_2": "🔐 You do not have permission to access this resource.",
@@ -67,6 +68,7 @@
             "invalid_device_id": "📱 Device ID is not valid.",
             "valid_input": "✅ All good!",
             "invalid_input": "⚠️ Invalid login details. Please try again.",
+            "invalid_credentials": "⚠️ Invalid login details. Please try again.",
             "invalid_request_account_locked": "🔒 Your account has been locked due to too many failed attempts.",
             "invalid_request_is_locked": "⏳ Your account is temporarily locked. Please wait.",
             "invalid_request_already_logged_in": "🔌 Too many active sessions. Please log out from other devices.",
