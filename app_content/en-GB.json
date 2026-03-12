@@ -76,6 +76,7 @@
             "failed_to_deactive_member_session": "⚠️ We couldn't log you out properly. Please try again.",
             "member_logged_out_successfully": "👋 You've been logged out successfully. See you next time!",
             "invalid_credentials": "❌ The username, password, or code you entered is incorrect. Please try again.",
+            "invalid_otp_code": "❌ The Otp Code Input contains invalid characters",
             "invalid_request_to_many_devices_logged_in": "📱 Too many devices are currently logged into your account. Please log out from another device and try again.",
             "valid_credentials": "✅ Credentials verified successfully.",
             "unauthorized_request": "🚫 This request isn't authorised. Please log in again.",
