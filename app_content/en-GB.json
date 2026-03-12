@@ -25,6 +25,16 @@
             "btn_text": "Submit"
         }
     },
+    "two_factor_login_view_ui": {
+        "sign_in_text": "Two Factor Sign In",
+        "fieldset": {
+            "otp_field": {
+                "label_text": "Two Factor OTP",
+                "placeholder_text": "XXXXXX"
+            },
+            "btn_text": "Submit"
+        }
+    },
     "api_responses": {
         "general_responses": {
             "session_expired": "🔒 You are not authorised to perform this action.",
