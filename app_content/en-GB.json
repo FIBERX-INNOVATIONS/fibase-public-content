@@ -4,7 +4,7 @@
         "img_alt_text": "full screen loader svg image",
         "loader_text": "LOADING..."
     },
-    "auth_layout_view_ui": {
+    "auth_layout_ui": {
         "auth_bg_img_link": "/assets/img/auth_bg.svg",
         "footer": {
             "powered_by_text": "Powered by",
@@ -34,6 +34,20 @@
             },
             "btn_text": "Submit"
         }
+    },
+    "dashboard_layout_ui": {
+        "member_menu_list":[
+            {
+                "menu_text": "Profile",
+                "menu_icon": "member_icon",
+                "menu_link": "/members?member_profile=%"
+            },
+            {
+                "menu_text": "Logout",
+                "menu_icon": "logout_icon",
+                "menu_link": "/logout"
+            }
+        ]
     },
     "api_responses": {
         "general_responses": {
