@@ -12,7 +12,7 @@
         }
     },
     "login_view_ui": {
-        "sign_in_text": "Sign In",
+        "header_text": "Sign In",
         "fieldset": {
             "username_field": {
                 "label_text": "Email/Username",
@@ -26,7 +26,7 @@
         }
     },
     "two_factor_login_view_ui": {
-        "sign_in_text": "Two Factor Sign In",
+        "header_text": "Two Factor Sign In",
         "fieldset": {
             "otp_field": {
                 "label_text": "Two Factor OTP",
@@ -34,6 +34,9 @@
             },
             "btn_text": "Submit"
         }
+    },
+    "logout_view_ui": {
+        "header_text": "Logging Member Out...."
     },
     "dashboard_layout_ui": {
         "member_menu_list":[
