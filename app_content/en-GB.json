@@ -39,6 +39,18 @@
         "header_text": "Logging Member Out...."
     },
     "dashboard_layout_ui": {
+        "top_bar_ui": {
+            "logo": {
+                "img_link": "/assets/img/fibase-logo-transparent-bg.png",
+                "img_alt_text": "Top Bar Fibase Logo"
+            }
+        },
+        "side_bar_ui": {
+            "logo": {
+                "img_link": "/assets/img/fibase-logo-transparent-bg.png",
+                "img_alt_text": "Side Bar Fibase Logo"
+            }
+        },
         "member_menu_list":[
             {
                 "menu_text": "Profile",
