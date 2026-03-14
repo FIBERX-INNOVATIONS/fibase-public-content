@@ -40,7 +40,7 @@
             {
                 "menu_text": "Profile",
                 "menu_icon": "member_icon",
-                "menu_link": "/members?member_profile=%"
+                "menu_link": "/my-profile"
             },
             {
                 "menu_text": "Logout",
