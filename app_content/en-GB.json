@@ -72,7 +72,7 @@
                 {
                     "menu_id": "RegisteredAppListView",
                     "menu_link": "/registered-apps",
-                    "svg_icon": "square_grid_plus_svg_icon",
+                    "menu_icon": "square_grid_plus_svg_icon",
                     "menu_text": "Registered Apps",
                     "menu_permission_text": "view_all_registered_apps"
                 }
