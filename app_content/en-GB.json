@@ -43,26 +43,41 @@
             "logo": {
                 "img_link": "/assets/img/fibase-logo-transparent-bg.png",
                 "img_alt_text": "Top Bar Fibase Logo"
-            }
+            },
+            "member_menu_list":[
+                {
+                    "menu_text": "Profile",
+                    "menu_icon": "member_icon",
+                    "menu_link": "/my-profile"
+                },
+                {
+                    "menu_text": "Logout",
+                    "menu_icon": "logout_icon",
+                    "menu_link": "/logout"
+                }
+            ]
         },
         "side_bar_ui": {
             "logo": {
                 "img_link": "/assets/img/fibasw-white-logo-transparent-bg.png",
                 "img_alt_text": "Side Bar Fibase Logo"
-            }
-        },
-        "member_menu_list":[
-            {
-                "menu_text": "Profile",
-                "menu_icon": "member_icon",
-                "menu_link": "/my-profile"
             },
-            {
-                "menu_text": "Logout",
-                "menu_icon": "logout_icon",
-                "menu_link": "/logout"
-            }
-        ]
+            "nav_menu_list":[
+                {
+                    "menu_id_text": "Dashboard",
+                    "menu_link": "/dashboard",
+                    "menu_icon": "chart_bar_svg_icon",
+                    "menu_text": "Dashboard"
+                },
+                {
+                    "menu_id": "RegisteredAppListView",
+                    "menu_link": "/registered-apps",
+                    "svg_icon": "square_grid_plus_svg_icon",
+                    "menu_text": "Registered Apps",
+                    "menu_permission_text": "view_all_registered_apps"
+                }
+            ]
+        }
     },
     "api_responses": {
         "general_responses": {
