@@ -83,12 +83,12 @@
         "list_view_ui": {
             "breadcrumb_list": [
                 {
-                    "menu_tex": "Home",
+                    "menu_text": "Home",
                     "menu_icon": "home_svg_icon",
                     "menu_link": "/dashboard"
                 },
                 {
-                    "menu_tex": "Registered Apps",
+                    "menu_text": "Registered Apps",
                     "menu_icon": "greater_than_caret_svg_icon"
                 }
             ]
