@@ -94,7 +94,7 @@
             ],
             "header_section": {
                 "header_text": "Registered Apps",
-                "header_description": "",
+                "header_description": "Manage applications registered within your organization. View app details, manage activation status, and securely access public and private keys used for system integrations.",
                 "create_btn": {
                     "btn_icon": "plus_circle_svg_icon",
                     "btn_text": "Register New App"
