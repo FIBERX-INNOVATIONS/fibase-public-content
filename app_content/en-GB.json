@@ -91,7 +91,15 @@
                     "menu_text": "Registered Apps",
                     "menu_icon": "greater_than_caret_svg_icon"
                 }
-            ]
+            ],
+            "header_section": {
+                "header_text": "Registered Apps",
+                "header_description": "",
+                "create_btn": {
+                    "btn_icon": "plus_circle_svg_icon",
+                    "btn_text": "Register New App"
+                }
+            }
         }
     },
     "api_responses": {
