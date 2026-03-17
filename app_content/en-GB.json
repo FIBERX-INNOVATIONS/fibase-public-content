@@ -109,7 +109,7 @@
                     "label_text": "Keyword Search",
                     "placeholder_text": "Keyword Search"
                 },
-                "status_version_filter": {
+                "status_filter": {
                     "label_text": "App Status",
                     "placeholder_text": "App Status",
                     "option_list": [
