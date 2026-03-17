@@ -102,7 +102,7 @@
             },
             "filters_section": {
                 "toggle_btn": {
-                    "btn_icon": "",
+                    "btn_icon": "horizontal_filters_svg_icon",
                     "btn_text": "Filters"
                 }
             }
