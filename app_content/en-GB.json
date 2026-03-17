@@ -99,6 +99,12 @@
                     "btn_icon": "plus_circle_svg_icon",
                     "btn_text": "Register New App"
                 }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_icon": "",
+                    "btn_text": "Filters"
+                }
             }
         }
     },
