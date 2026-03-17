@@ -117,6 +117,10 @@
                         { "label_text": "Is In-Active", "value": 0 }
                     ]
                 },
+                "created_by_filter": {
+                    "label_text": "Created By",
+                    "placeholder_text": "Member ID..."
+                },
                 "key_version_filter": {
                     "label_text": "App Key version",
                     "placeholder_text": "1,2,3,4..."
