@@ -105,6 +105,10 @@
                     "btn_icon": "horizontal_filters_svg_icon",
                     "btn_text": "Filters"
                 },
+                "search_filter": {
+                    "label_text": "Keyword Search",
+                    "placeholder_text": "Keyword Search"
+                },
                 "status_version_filter": {
                     "label_text": "App Status",
                     "placeholder_text": "App Status",
