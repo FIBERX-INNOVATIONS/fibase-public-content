@@ -105,6 +105,14 @@
                     "btn_icon": "horizontal_filters_svg_icon",
                     "btn_text": "Filters"
                 },
+                "status_version_filter": {
+                    "label_text": "App Status",
+                    "placeholder_text": "App Status",
+                    "option_list": [
+                        { "label_text": "Is Active", "value": 1 },
+                        { "label_text": "Is In-Active", "value": 0 }
+                    ]
+                },
                 "key_version_filter": {
                     "label_text": "App Key version",
                     "placeholder_text": "1,2,3,4..."
