@@ -127,7 +127,7 @@
                 },
                 "date_range_filter": {
                     "label_text": "Crated At Range",
-                    "placeholder_text": "Select date range"
+                    "placeholder_text": "yyyy-mm-dd"
                 }
             }
         }
