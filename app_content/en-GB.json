@@ -126,8 +126,14 @@
                     "placeholder_text": "1,2,3,4..."
                 },
                 "date_range_filter": {
-                    "label_text": "Crated At Range",
+                    "label_text": "Created At Date Range",
                     "placeholder_text": "yyyy-mm-dd"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear Filters"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
                 }
             }
         }
