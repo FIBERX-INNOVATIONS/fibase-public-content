@@ -113,8 +113,8 @@
                     "label_text": "App Status",
                     "placeholder_text": "App Status",
                     "option_list": [
-                        { "label_text": "Is Active", "value": 1 },
-                        { "label_text": "Is In-Active", "value": 0 }
+                        { "label_text": "Is Active", "value": "true" },
+                        { "label_text": "Is In-Active", "value": "false" }
                     ]
                 },
                 "created_by_filter": {
@@ -135,7 +135,99 @@
                 "apply_filters_btn": {
                     "btn_text": "Apply Filters"
                 }
+            },
+            "register_app_modal": {
+                "add_new_registered_app": {
+                    "title_text": "Register New App",
+                    "title_icon": "square_grid_plus_svg_icon",
+                    "title_img": "/assets/img/modal_icon.png"
+                },
+                "update_registered_app": {
+                    "title_text": "Edit Registered App",
+                    "title_icon": "square_grid_plus_svg_icon",
+                    "title_img": "/assets/img/modal_icon.png"
+                },
+                "registered_app_details": {
+                    "title_text": "Registered App Details",
+                    "title_icon": "square_grid_plus_svg_icon",
+                    "title_img": "/assets/img/modal_icon.png"
+                },
+                "delete_registered_app": {
+                    "title_text": "Delete Registered App",
+                    "title_icon": "square_grid_plus_svg_icon",
+                    "title_img": "/assets/img/modal_icon.png",
+                    "content": {
+                        "title_text": "Delete {{name}} Registered App",
+                        "message_text": "Are you sure you want to delete {{name}} Registered App ?",
+                        "cancel_btn_text": "No, cancel",
+                        "confirm_btn_text": "Yes Delete"
+                    }
+                }
+            },
+            "table": {
+                "loading_section": {
+                    "loader_text": "Loading registered applications..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Registered Applications Found"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "name_text": "Name",
+                    "base_url_text": "Base URL",
+                    "creator_text": "Created By",
+                    "created_at_text": "Created At",
+                    "status_text": "Status",
+                    "actions_text": "Actions"
+                },
+                "action_menu_list":[
+                    {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon"
+                    },
+                    {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon"
+                    },
+                    {
+                        "menu_text": "Edit",
+                        "menu_icon": "edit_square_pencil_svg_icon"
+                    },
+                    {
+                        "menu_text": "Delete",
+                        "menu_icon": "delete_trash_svg_icon"
+                    }
+                ]
             }
+        },
+        "form_view_ui": {
+            "fieldset": {
+            "prefix_field": {
+                "label_text": "App Prefix",
+                "placeholder_text": "example: FIB, FIY, FIN, FIDL"
+            },
+            "name_field": {
+                "label_text": "App Name",
+                "placeholder_text": "App Name"
+            },
+            "description_field": {
+                "label_text": "App  Description",
+                "placeholder_text": "App Description"
+            },
+            "base_url_field": {
+                "label_text": "App Base URL",
+                "placeholder_text": "example: https://fiyalo.com, https://fibse.com"
+            },
+            "logo_url_field": {
+                "label_text": "App Logo ",
+                "placeholder_text": ""
+            },
+            "urls_field": {
+                "label_text": "App URLS ",
+                "placeholder_text": "Comma Seperated URLS e.g: https://fiyalo.com, https://fibse.com"
+            },
+            "btn_text": "Submit"
+        }
         }
     },
     "api_responses": {
@@ -162,9 +254,26 @@
             "invalid_app_request_expired": "⏱️ This application request has expired. Please try again.",
             "error_occurred": "⚠️ Something went wrong on our side. Please try again in a moment.",
             "failed_to_fetch_rows": "⚠️ We couldn't retrieve the list of registered applications right now.",
-            "record_not_found": "🔍 The requested application could not be found.",
+            "record_not_found": "🔍 The requested resource could not be found.",
             "valid_input": "✅ Input validated successfully.",
-            "input_has_not_changed": "ℹ️ No changes were detected in the submitted data."
+            "input_has_not_changed": "ℹ️ No changes were detected in the submitted data.",
+            "invalid_record_selection": "⚠️ Invalid record selected. Please try again."
+        },
+        "storage_responses": {
+            "missing_mime_type": "",
+            "missing_original_file_name": "",
+            "file_size_to_large": "",
+            "invalid_file_mime_type": "",
+            "failed_to_store_file": "",
+            "file_upload_error_occured": "",
+            "file_required": "",
+            "invalid_folder": "",
+            "reference_type_required": "",
+            "invalid_file_object": "",
+            "invalid_is_public_flag": "",
+            "invalid_reference_type": "",
+            "valid_input": "",
+            "file_uploaded_successfully": ""
         },
         "auth_module_responses": {
             "invalid_input_username": "❌ Please enter a valid username.",
