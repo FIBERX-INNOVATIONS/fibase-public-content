@@ -75,8 +75,25 @@
                     "menu_icon": "square_grid_plus_svg_icon",
                     "menu_text": "Registered Apps",
                     "menu_permission_text": "view_all_registered_apps"
+                },
+                {
+                    "menu_id": "CurrencyListView",
+                    "menu_link": "/currencies",
+                    "menu_icon": "dollar_currency_svg_icon",
+                    "menu_text": "Currencies",
+                    "menu_permission_text": "view_all_currencies"
                 }
             ]
+        }
+    },
+    "global_modal_ui": {
+        "file_preview_upload_modal": {
+            "title_text": "File Preview",
+            "title_icon": "file_upload_svg_icon",
+            "title_img": "/assets/img/modal_icon.png",
+            "content": {
+                "upload_btn_text": "Upload"
+            }
         }
     },
     "registered_app_view_ui": {
@@ -165,6 +182,12 @@
                 }
             },
             "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} registered app record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} record(s) selected"
+                },
                 "loading_section": {
                     "loader_text": "Loading registered applications..."
                 },
@@ -197,7 +220,13 @@
                         "menu_text": "Delete",
                         "menu_icon": "delete_trash_svg_icon"
                     }
-                ]
+                ],
+                "pagination_section": {
+                    "btn_content": {
+                        "next_btn_text": "Next",
+                        "prev_btn_text": "Prev"
+                    }
+                }
             }
         },
         "form_view_ui": {
@@ -260,20 +289,24 @@
             "invalid_record_selection": "⚠️ Invalid record selected. Please try again."
         },
         "storage_responses": {
-            "missing_mime_type": "",
-            "missing_original_file_name": "",
-            "file_size_to_large": "",
-            "invalid_file_mime_type": "",
-            "failed_to_store_file": "",
-            "file_upload_error_occured": "",
-            "file_required": "",
-            "invalid_folder": "",
-            "reference_type_required": "",
-            "invalid_file_object": "",
-            "invalid_is_public_flag": "",
-            "invalid_reference_type": "",
-            "valid_input": "",
-            "file_uploaded_successfully": ""
+            "missing_mime_type": "⚠️ File type could not be detected. Please upload a valid file.",
+            "missing_original_file_name": "⚠️ The original file name is missing. Please try again.",
+            "file_size_to_large": "📦 The selected file is too large. Please upload a smaller file.",
+            "invalid_file_mime_type": "🚫 This file type is not supported. Please upload a valid format.",
+            "failed_to_store_file": "❌ We couldn’t save your file at the moment. Please try again.",
+            "file_upload_error_occured": "⚠️ An unexpected error occurred during upload. Please try again.",
+            "file_required": "📎 Please select a file before proceeding.",
+            "invalid_folder": "📁 The selected storage location is invalid.",
+            "reference_type_required": "🏷️ A reference type is required to upload this file.",
+            "invalid_file_object": "🚫 The selected file is invalid. Please choose a valid file.",
+            "invalid_is_public_flag": "🔒 Invalid visibility setting provided for this file.",
+            "invalid_reference_type": "🚫 The provided reference type is invalid.",
+            "unsupported_reference_type": "⚠️ This reference type is not supported.",
+            "valid_input": "✅ File details look good and ready for upload.",
+            "file_uploaded_successfully": "🎉 Your file has been uploaded successfully.",
+            "no_file_selected": "⚠️ No file was selected for upload. Please choose a file and try again.",
+            "file_upload_not_supported": "🚫 File uploads are not supported in this environment.",
+            "file_upload_failed": "❌ The file upload failed. Please try again."
         },
         "auth_module_responses": {
             "invalid_input_username": "❌ Please enter a valid username.",
@@ -282,6 +315,7 @@
             "invalid_input": "⚠️ Invalid login details. Please try again.",
             "failed_to_create_login_challenge": "🚫 We couldn't start your login process right now. Please try again.",
             "member_logged_in_successfully": "✅ You're successfully logged in. Welcome back! 🎉",
+            "member_two_factor_logged_in_successfully": "✅ Two-factor authentication successful. You're securely logged in! 🔐",
             "failed_to_create_login_session": "⚠️ We couldn't create your login session. Please try signing in again.",
             "member_access_refreshed_successfully": "🔄 Your session has been refreshed successfully. You're good to go!",
             "failed_to_refresh_member_access": "⚠️ We couldn't refresh your session. Please log in again.",
