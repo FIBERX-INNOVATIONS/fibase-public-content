@@ -286,7 +286,8 @@
             "record_not_found": "🔍 The requested resource could not be found.",
             "valid_input": "✅ Input validated successfully.",
             "input_has_not_changed": "ℹ️ No changes were detected in the submitted data.",
-            "invalid_record_selection": "⚠️ Invalid record selected. Please try again."
+            "invalid_record_selection": "⚠️ Invalid record selected. Please try again.",
+            "greater_than_max_bulk_input_allowed": "⚠️ The number of items provided/selected exceeds the maximum allowed limit."
         },
         "storage_responses": {
             "missing_mime_type": "⚠️ File type could not be detected. Please upload a valid file.",
@@ -352,6 +353,42 @@
             "invalid_input_app_urls_must_be_valid_links": "🌐 All application URLs must be valid links.",
             "invalid_input_app_prefix_public_id_is_not_unique": "⚠️ This application prefix is already in use. Please choose another.",
             "invalid_input_app_name_exist": "⚠️ An application with this name already exists."
+        },
+        "currency_module_responses": {
+                "invalid_currency_code": "❌ Please provide a valid currency code.",
+                "invalid_currency_code_format": "🔤 Currency code must be exactly 3 uppercase letters (e.g. GBP, USD).",
+                "invalid_currency_name": "❌ Please provide a valid currency name.",
+                "invalid_currency_symbol": "💱 Please provide a valid currency symbol.",
+                "invalid_currency_logo_url": "🖼️ Please provide a valid logo URL.",
+                "invalid_currency_numeric_code": "🔢 Currency numeric code must be a valid number.",
+                "invalid_currency_precision": "🎯 Please provide a valid currency precision value.",
+                "invalid_currency_minor_unit": "🔢 Minor unit must be a valid number.",
+                "invalid_currency_country_code": "🌍 Country code must be exactly 2 uppercase letters (e.g. GB, US).",
+                "invalid_currency_type": "⚖️ Currency type must be specified correctly.",
+                "currency_code_exists": "⚠️ This currency code already exists. Please use a different one.",
+
+                "invalid_currency_assign_unassign_action_type": "❌ Invalid action type. Please choose either assign or unassign.",
+                "invalid_input_currency_id": "❌ Invalid currency ID provided.",
+                "invalid_input_app_id": "❌ Invalid application ID provided.",
+                "invalid_input_currency_not_found": "🔍 The selected currency could not be found.",
+                "invalid_input_app_not_found": "🔍 The selected application could not be found.",
+                "currency_already_linked_to_app": "ℹ️ This currency is already linked to the application.",
+                "currency_not_linked_to_app": "ℹ️ This currency is not linked to the application.",
+                "invalid_currency_is_default_flag": "⚠️ Invalid default flag value provided.",
+                "no_currency_provided": "❌ Please provide at least one currency.",
+
+                "fetched_currency_list_successfully": "📦 Currency list retrieved successfully.",
+                "fetched_currency_record_successfully": "📄 Currency details retrieved successfully.",
+                "currency_created_successfully": "🎉 Currency created successfully.",
+                "currency_record_not_found_must_be_deactivated": "⚠️ Currency must be deactivated before it can be deleted.",
+                "currency_record_already_deleted": "ℹ️ This currency has already been deleted.",
+                "currency_updated_successfully": "✏️ Currency updated successfully.",
+                "currency_updated_status_successfully": "🔄 Currency status updated successfully.",
+                "currency_deleted_successfully": "🗑️ Currency deleted successfully.",
+
+                "app_currency_bulk_assign_successfully": "✅ Currencies assigned to the application successfully.",
+                "app_currency_bulk_unassign_successfully": "✅ Currencies unassigned from the application successfully.",
+                "app_currency_default_toggled_successfully": "🔄 Default currency updated successfully."
         }
     }
 }
