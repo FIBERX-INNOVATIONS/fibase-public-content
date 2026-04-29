@@ -287,7 +287,8 @@
             "valid_input": "✅ Input validated successfully.",
             "input_has_not_changed": "ℹ️ No changes were detected in the submitted data.",
             "invalid_record_selection": "⚠️ Invalid record selected. Please try again.",
-            "greater_than_max_bulk_input_allowed": "⚠️ The number of items provided/selected exceeds the maximum allowed limit."
+            "greater_than_max_bulk_input_allowed": "⚠️ The number of items provided/selected exceeds the maximum allowed limit.",
+            "invalid_form_input_provided": "❌ No input was provided. Please complete the form and try again."
         },
         "storage_responses": {
             "missing_mime_type": "⚠️ File type could not be detected. Please upload a valid file.",
