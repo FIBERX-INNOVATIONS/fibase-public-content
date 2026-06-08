@@ -25,5 +25,19 @@
             "contact_us_text": "If this was you, no further action is required. If you did not initiate this login, please reset your password immediately and contact our support team."
 
         }
+    },
+    "admin_member_account_setup_email": {
+        "subject_text": "Complete your Fibase Admin Account Setup",
+        "body": {
+            "header_text": "Complete your Fibase Admin Account Setup",
+            "hello_text": "Hello",
+            "welcome_text": "Welcome to Fibase. Your administrator account has been created successfully, and you're just one step away from accessing the platform.",
+            "setup_instruction_text": "Use the secure link below to set your password and configure two-factor authentication for your Fibase account.",
+            "complete_setup_button_text": "Complete account setup",
+            "link_expires_text": "This link expires at",
+            "reason_text": "Reason:",
+            "unexpected_email_text": "If you were not expecting this email, contact your Fibase administrator."
+        }
+
     }
 }

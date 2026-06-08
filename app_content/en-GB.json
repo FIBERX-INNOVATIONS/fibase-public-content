@@ -1,4 +1,54 @@
 {
+    "page_meta": {
+        "home_page": {
+            "title": "Fibase Admin - Home",
+            "description": "Welcome to Fibase, your all-in-one platform for managing registered applications and currencies. Explore our dashboard to view app details, manage activation status, and securely access public and private keys used for system integrations. Stay organized and in control with Fibase's powerful features designed to streamline your application and currency management needs."
+        },
+        "login_page": {
+            "title": "Fibase Admin - Login",
+            "description": "Sign in to your Fibase Admin account to manage registered applications and currencies. Access powerful features to view app details, manage activation status, and securely access public and private keys for system integrations. Stay organized and in control with Fibase's all-in-one platform designed for efficient application and currency management."
+        },
+        "two_factor_login_page": {
+            "title": "Fibase Admin - Two Factor Login",
+            "description": "Secure your Fibase Admin account with two-factor authentication. Enter the OTP code sent to your registered email or phone number to complete the login process. Enhance your account security and protect your application and currency management with Fibase's robust authentication features."
+        },
+        "logout_page": {
+            "title": "Fibase Admin - Logout",
+            "description": "You have been logged out of your Fibase Admin account. We hope you had a productive session managing your registered applications and currencies. If you need to access your account again, simply sign in with your credentials. Thank you for using Fibase, your all-in-one platform for efficient application and currency management."
+        },
+        "dashboard_page": {
+            "title": "Fibase Admin - Dashboard",
+            "description": "Welcome to the Fibase Admin Dashboard, your central hub for managing registered applications and currencies. Explore detailed insights, view app details, manage activation status, and securely access public and private keys for system integrations. Stay organized and in control with Fibase's powerful features designed to streamline your application and currency management needs. Navigate through the dashboard to efficiently oversee your resources and make informed decisions for your organization."
+        },
+        "registered_app_page": {
+            "title": "Fibase Admin - Registered Applications",
+            "description": "Manage your registered applications with ease using the Fibase Admin platform. View detailed information about each application, including app details, activation status, and securely access public and private keys for system integrations. Stay organized and in control with Fibase's powerful features designed to streamline your application management needs. Navigate through the registered applications page to efficiently oversee your resources and make informed decisions for your organization."
+        },
+        "currency_page": {
+            "title": "Fibase Admin - Currencies",
+            "description": "Efficiently manage your currencies with the Fibase Admin platform. View detailed information about each currency, including currency properties, assigned applications, and default currency behavior. Stay organized and in control with Fibase's powerful features designed to streamline your currency management needs. Navigate through the currencies page to efficiently oversee your resources and make informed decisions for your organization."
+        },
+        "payment_method_page": {
+            "title": "Fibase Admin - Payment Methods",
+            "description": "Efficiently manage your payment methods with the Fibase Admin platform. View detailed information about each payment method, including payment method properties, assigned applications, and default payment method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment method management needs. Navigate through the payment methods page to efficiently oversee your resources and make informed decisions for your organization."
+        },
+        "payment_provider_page": {
+            "title": "Fibase Admin - Payment Providers",
+            "description": "Efficiently manage your payment providers with the Fibase Admin platform. View detailed information about each payment provider, including provider properties, assigned applications, and default provider behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment provider management needs. Navigate through the payment providers page to efficiently oversee your resources and make informed decisions for your organization."
+        },
+        "payment_provider_config_page": {
+            "title": "Fibase Admin - Payment Provider Configurations",
+            "description": "Efficiently manage your payment provider configurations with the Fibase Admin platform. View detailed information about each payment provider configuration, including configuration properties, assigned applications, and default configuration behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment provider configuration management needs. Navigate through the payment provider configurations page to efficiently oversee your resources and make informed decisions for your organization."
+        },
+        "payment_provider_method_page": {
+            "title": "Fibase Admin - Payment Provider Methods",
+            "description": "Efficiently manage your payment provider methods with the Fibase Admin platform. View detailed information about each payment provider method, including method properties, assigned applications, and default method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment provider method management needs. Navigate through the payment provider methods page to efficiently oversee your resources and make informed decisions for your organization."
+        },
+        "currency_payment_provider_method_page": {
+            "title": "Fibase Admin - Currency Payment Provider Methods",
+            "description": "Efficiently manage your currency payment provider methods with the Fibase Admin platform. View detailed information about each currency payment provider method, including method properties, assigned applications, and default method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your currency payment provider method management needs. Navigate through the currency payment provider methods page to efficiently oversee your resources and make informed decisions for your organization."
+        }
+    },
     "screen_loader_ui": {
         "img_src_link": "/assets/img/loader.svg",
         "img_alt_text": "full screen loader svg image",
@@ -44,7 +94,7 @@
                 "img_link": "/assets/img/fibase-logo-transparent-bg.png",
                 "img_alt_text": "Top Bar Fibase Logo"
             },
-            "member_menu_list":[
+            "member_menu_list": [
                 {
                     "menu_text": "Profile",
                     "menu_icon": "member_icon",
@@ -62,7 +112,7 @@
                 "img_link": "/assets/img/fibasw-white-logo-transparent-bg.png",
                 "img_alt_text": "Side Bar Fibase Logo"
             },
-            "nav_menu_list":[
+            "nav_menu_list": [
                 {
                     "menu_id_text": "Dashboard",
                     "menu_link": "/dashboard",
@@ -70,18 +120,60 @@
                     "menu_text": "Dashboard"
                 },
                 {
-                    "menu_id": "RegisteredAppListView",
+                    "menu_id_text": "RegisteredAppListView",
                     "menu_link": "/registered-apps",
                     "menu_icon": "square_grid_plus_svg_icon",
                     "menu_text": "Registered Apps",
-                    "menu_permission_text": "view_all_registered_apps"
+                    "menu_permission_text": "registered_app_module.get_registered_app_list"
                 },
                 {
-                    "menu_id": "CurrencyListView",
+                    "menu_id_text": "CurrencyListView",
                     "menu_link": "/currencies",
                     "menu_icon": "dollar_currency_svg_icon",
                     "menu_text": "Currencies",
-                    "menu_permission_text": "view_all_currencies"
+                    "menu_permission_text": "currency_module.get_currency_list"
+                },
+                {
+                    "menu_id_text": "PaymentConfigSidebarMenu",
+                    "menu_text": "Payment Config",
+                    "menu_icon": "payment_configurations_svg_icon",
+                    "children_list": [
+                        {
+                            "menu_id_text": "PaymentMethodsSidebarMenu",
+                            "menu_text": "Payment Methods",
+                            "menu_icon": "payment_methods_svg_icon",
+                            "menu_link": "/payment-config/methods",
+                            "menu_permission_text": "payment_method_module.get_payment_method_list"
+                        },
+                        {
+                            "menu_id_text": "PaymentProvidersSidebarMenu",
+                            "menu_text": "Providers",
+                            "menu_icon": "payment_providers_svg_icon",
+                            "menu_link": "/payment-config/providers",
+                            "menu_permission_text": "payment_provider_module.get_payment_provider_list"
+                        },
+                        {
+                            "menu_id_text": "PaymentProviderConfigsSidebarMenu",
+                            "menu_text": "Provider Configs",
+                            "menu_icon": "payment_provider_configurations_svg_icon",
+                            "menu_link": "/payment-config/provider-configs",
+                            "menu_permission_text": "payment_provider_config_module.get_payment_provider_config_list"
+                        },
+                        {
+                            "menu_id_text": "PaymentProviderMethodsSidebarMenu",
+                            "menu_text": "Provider Methods",
+                            "menu_icon": "link_payment_provider_method_svg_icon",
+                            "menu_link": "/payment-config/provider-methods",
+                            "menu_permission_text": "payment_provider_method_module.get_payment_provider_method_list"
+                        },
+                        {
+                            "menu_id_text": "CurrencyProviderMethodsSidebarMenu",
+                            "menu_text": "Currency Provider Methods",
+                            "menu_icon": "link_currency_provider_method_svg_icon",
+                            "menu_link": "/payment-config/currency-provider-methods",
+                            "menu_permission_text": "currency_payment_provider_method_module.get_currency_payment_provider_method_list"
+                        }
+                    ]
                 }
             ]
         }
@@ -153,34 +245,6 @@
                     "btn_text": "Apply Filters"
                 }
             },
-            "register_app_modal": {
-                "add_new_registered_app": {
-                    "title_text": "Register New App",
-                    "title_icon": "square_grid_plus_svg_icon",
-                    "title_img": "/assets/img/modal_icon.png"
-                },
-                "update_registered_app": {
-                    "title_text": "Edit Registered App",
-                    "title_icon": "square_grid_plus_svg_icon",
-                    "title_img": "/assets/img/modal_icon.png"
-                },
-                "registered_app_details": {
-                    "title_text": "Registered App Details",
-                    "title_icon": "square_grid_plus_svg_icon",
-                    "title_img": "/assets/img/modal_icon.png"
-                },
-                "delete_registered_app": {
-                    "title_text": "Delete Registered App",
-                    "title_icon": "square_grid_plus_svg_icon",
-                    "title_img": "/assets/img/modal_icon.png",
-                    "content": {
-                        "title_text": "Delete {{name}} Registered App",
-                        "message_text": "Are you sure you want to delete {{name}} Registered App ?",
-                        "cancel_btn_text": "No, cancel",
-                        "confirm_btn_text": "Yes Delete"
-                    }
-                }
-            },
             "table": {
                 "result_section": {
                     "result_text": "Showing {{showing}} of {{total_records}} registered app record(s) (Page {{current_page}} of {{total_pages}})"
@@ -203,24 +267,24 @@
                     "status_text": "Status",
                     "actions_text": "Actions"
                 },
-                "action_menu_list":[
-                    {
+                "action_menu_list": {
+                    "view_menu_option": {
                         "menu_text": "View",
                         "menu_icon": "view_eye_svg_icon"
                     },
-                    {
+                    "select_menu_option": {
                         "menu_text": "Select",
                         "menu_icon": "check_circle_svg_icon"
                     },
-                    {
+                    "edit_menu_option": {
                         "menu_text": "Edit",
                         "menu_icon": "edit_square_pencil_svg_icon"
                     },
-                    {
+                    "delete_menu_option": {
                         "menu_text": "Delete",
                         "menu_icon": "delete_trash_svg_icon"
                     }
-                ],
+                },
                 "pagination_section": {
                     "btn_content": {
                         "next_btn_text": "Next",
@@ -229,38 +293,1835 @@
                 }
             }
         },
+        "modals_ui": {
+            "add_new_modal_ui": {
+                "title_text": "Register New App",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "update_modal_ui": {
+                "title_text": "Edit Registered App",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Registered App Details",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "delete_modal_ui": {
+                "title_text": "Delete Registered App",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Delete {{name}} Registered App",
+                    "message_text": "Are you sure you want to delete {{name}} Registered App ?",
+                    "cancel_btn_text": "No, cancel",
+                    "confirm_btn_text": "Yes Delete"
+                }
+            }
+        },
         "form_view_ui": {
+            "header_text": "",
             "fieldset": {
-            "prefix_field": {
-                "label_text": "App Prefix",
-                "placeholder_text": "example: FIB, FIY, FIN, FIDL"
+                "prefix_field": {
+                    "label_text": "App Prefix",
+                    "placeholder_text": "example: FIB, FIY, FIN, FIDL"
+                },
+                "name_field": {
+                    "label_text": "App Name",
+                    "placeholder_text": "App Name"
+                },
+                "description_field": {
+                    "label_text": "App  Description",
+                    "placeholder_text": "App Description"
+                },
+                "base_url_field": {
+                    "label_text": "App Base URL",
+                    "placeholder_text": "example: https://fiyalo.com, https://fibse.com"
+                },
+                "logo_url_field": {
+                    "label_text": "App Logo ",
+                    "placeholder_text": ""
+                },
+                "urls_field": {
+                    "label_text": "App URLS ",
+                    "placeholder_text": "Comma Seperated URLS e.g: https://fiyalo.com, https://fibse.com"
+                },
+                "btn_text": "Submit"
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading...",
+            "no_description_text": "No description provided.",
+            "empty_value_text": "-",
+            "header": {
+                "app_logo_alt_text": "App logo",
+                "prefix_label_text": "Prefix:"
             },
-            "name_field": {
-                "label_text": "App Name",
-                "placeholder_text": "App Name"
-            },
-            "description_field": {
-                "label_text": "App  Description",
-                "placeholder_text": "App Description"
-            },
-            "base_url_field": {
-                "label_text": "App Base URL",
-                "placeholder_text": "example: https://fiyalo.com, https://fibse.com"
-            },
-            "logo_url_field": {
-                "label_text": "App Logo ",
-                "placeholder_text": ""
-            },
-            "urls_field": {
-                "label_text": "App URLS ",
-                "placeholder_text": "Comma Seperated URLS e.g: https://fiyalo.com, https://fibse.com"
-            },
-            "btn_text": "Submit"
+            "sections": {
+                "app_information": {
+                    "title_text": "App Information",
+                    "app_id_label_text": "App ID:",
+                    "status_label_text": "Status:",
+                    "active_status_text": "Active",
+                    "inactive_status_text": "Inactive",
+                    "created_label_text": "Created:",
+                    "updated_label_text": "Updated:"
+                },
+                "auth_details": {
+                    "title_text": "Auth Details",
+                    "algorithm_label_text": "Algorithm:",
+                    "version_label_text": "Version:",
+                    "last_rotated_label_text": "Last Rotated:"
+                },
+                "social_links": {
+                    "title_text": "Social Links",
+                    "facebook_alt_text": "Facebook",
+                    "twitter_alt_text": "Twitter Link",
+                    "telegram_alt_text": "Telegram Link",
+                    "linkedin_alt_text": "LinkedIn Link",
+                    "instagram_alt_text": "Instagram Link",
+                    "whatsapp_alt_text": "WhatsApp Link",
+                    "youtube_alt_text": "YouTube Link"
+                },
+                "created_by": {
+                    "title_text": "Created By"
+                },
+                "updated_by": {
+                    "title_text": "Updated By"
+                },
+                "roles": {
+                    "title_text": "Roles"
+                },
+                "additional_urls": {
+                    "title_text": "Additional URLs"
+                }
+            }
         }
+    },
+    "currency_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Currencies",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Currencies",
+                "header_description": "Manage system currencies, configure currency properties, assign currencies to applications, and control default currency behavior.",
+                "create_btn": {
+                    "btn_icon": "plus_circle_svg_icon",
+                    "btn_text": "Add New Currency"
+                }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_icon": "horizontal_filters_svg_icon",
+                    "btn_text": "Filters"
+                },
+                "search_filter": {
+                    "label_text": "Keyword Search",
+                    "placeholder_text": "Search by name, code, symbol..."
+                },
+                "precision_filter": {
+                    "label_text": "Currency Precision",
+                    "placeholder_text": "0, 1,2,3,4..."
+                },
+                "minor_unit_filter": {
+                    "label_text": "Currency Minor Unit",
+                    "placeholder_text": "100, 200, 300"
+                },
+                "numeric_code_filter": {
+                    "label_text": "currency Numeric Code",
+                    "placeholder_text": "566, 840, 826"
+                },
+                "status_filter": {
+                    "label_text": "Currency Status",
+                    "placeholder_text": "Select Status",
+                    "option_list": [
+                        { "label_text": "Active", "value": "true" },
+                        { "label_text": "Inactive", "value": "false" }
+                    ]
+                },
+                "type_filter": {
+                    "label_text": "Currency Type",
+                    "placeholder_text": "Select Type",
+                    "option_list": [
+                        { "label_text": "Fiat", "value": "true" },
+                        { "label_text": "Non-Fiat", "value": "false" }
+                    ]
+                },
+                "app_id_filter": {
+                    "label_text": "Filter by App",
+                    "placeholder_text": "App ID or Public ID...",
+                    "selected_text_prefix": "Selected Registered App"
+                },
+                "unassigned_to_app_filter": {
+                    "label_text": "Unassigned to App",
+                    "placeholder_text": "Select Option",
+                    "option_list": [
+                        { "label_text": "Assigned Only", "value": "false" },
+                        { "label_text": "Unassigned Only", "value": "true" }
+                    ]
+                },
+                "created_by_filter": {
+                    "label_text": "Created By",
+                    "placeholder_text": "Member ID..."
+                },
+                "date_range_filter": {
+                    "label_text": "Created Date Range",
+                    "placeholder_text": "yyyy-mm-dd"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear Filters"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} currency record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} selected",
+                    "actions": [
+                        {
+                            "label_text": "Assign to App",
+                            "value": "assign"
+                        },
+                        {
+                            "label_text": "Unassign from App",
+                            "value": "unassign"
+                        }
+                    ]
+                },
+                "loading_section": {
+                    "loader_text": "Loading currencies..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Currencies Found"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "code_text": "Code",
+                    "name_text": "Name",
+                    "country_code_text": "Country Code",
+                    "type_text": "Type",
+                    "precision_text": "Precision",
+                    "sort_order_text": "Sort Order",
+                    "creator_text": "Created By",
+                    "created_at_text": "Created At",
+                    "status_text": "Status",
+                    "actions_text": "Actions"
+                },
+                "body": {
+                    "fiat_currency_type_text": "Fiat Currency",
+                    "crypto_currency_type_text": "Crypto Currency"
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon"
+                    },
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon"
+                    },
+                    "edit_menu_option": {
+                        "menu_text": "Edit",
+                        "menu_icon": "edit_square_pencil_svg_icon"
+                    },
+                    "assign_menu_option": {
+                        "menu_text": "Assign to App",
+                        "menu_icon": "chain_link_svg_icon"
+                    },
+                    "un_assign_menu_option": {
+                        "menu_text": "Unassign from App",
+                        "menu_icon": "chain_unlink_svg_icon"
+                    },
+                    "set_default_menu_option": {
+                        "menu_text": "Set As Default",
+                        "menu_icon": "star_svg_icon"
+                    },
+                    "delete_menu_option": {
+                        "menu_text": "Delete",
+                        "menu_icon": "delete_trash_svg_icon"
+                    }
+                },
+                "bulk_action_menu_list": {
+                    "assign_menu_option": {
+                        "menu_text": "Assign to App",
+                        "menu_icon": "chain_link_svg_icon"
+                    },
+                    "un_assign_menu_option": {
+                        "menu_text": "Unassign from App",
+                        "menu_icon": "chain_unlink_svg_icon"
+                    }
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "next_btn_text": "Next",
+                        "prev_btn_text": "Prev"
+                    }
+                }
+            }
+        },
+        "modals_ui": {
+            "add_new_modal_ui": {
+                "title_text": "Create Currency",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "update_modal_ui": {
+                "title_text": "Edit Currency",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Currency Details",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "delete_modal_ui": {
+                "title_text": "Delete Currency",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Delete {{name}} ({{code}})",
+                    "message_text": "Are you sure you want to delete {{name}} ({{code}})?",
+                    "cancel_btn_text": "No, cancel",
+                    "confirm_btn_text": "Yes Delete"
+                }
+            },
+            "assign_currency_modal_ui": {
+                "title_text": "Assign Currency to App",
+                "title_img": "/assets/img/modal_icon.png",
+                "title_icon": ""
+            },
+            "unassign_currency_modal_ui": {
+                "title_text": "Unassign Currency from App",
+                "title_icon": "",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Unasign Currency {{name}} ({{code}}) From App {{app.name}}",
+                    "message_text": "Are you sure you want to un-assign currency {{name}} ({{code}}) from App {{app.name}}?",
+                    "cancel_btn_text": "No, cancel",
+                    "confirm_btn_text": "Yes Un-Assign"
+                }
+            },
+            "bulk_unassign_currency_modal_ui": {
+                "title_text": "Unassign Currencies from App",
+                "title_icon": "",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Unasign {{currency_count}} Currencies  From App {{app_name}}",
+                    "message_text": "Are you sure you want to un-assign currency {{currencies}} from App {{app_name}}?",
+                    "cancel_btn_text": "No, cancel",
+                    "confirm_btn_text": "Yes Un-Assign"
+                }
+            },
+            "set_default_currency_modal_ui": {
+                "title_text": "Set As App Default Currency",
+                "title_icon": "",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Set Currency {{name}} ({{code}}) For App {{app.name}} As Default",
+                    "message_text": "Are you sure you want to set currency {{name}} ({{code}}) for App {{app.name}} as Default?",
+                    "cancel_btn_text": "No, cancel",
+                    "confirm_btn_text": "Set As Default"
+                }
+            }
+        },
+        "form_view_ui": {
+            "header_text": "",
+            "fieldset": {
+                "code_field": {
+                    "label_text": "Currency Code",
+                    "placeholder_text": "e.g. USD, EUR, GBP"
+                },
+                "name_field": {
+                    "label_text": "Currency Name",
+                    "placeholder_text": "e.g. United States Dollar"
+                },
+                "symbol_field": {
+                    "label_text": "Symbol",
+                    "placeholder_text": "$, €, £"
+                },
+                "numeric_code_field": {
+                    "label_text": "Numeric Code",
+                    "placeholder_text": "e.g. 840"
+                },
+                "precision_field": {
+                    "label_text": "Precision",
+                    "placeholder_text": "e.g. 2"
+                },
+                "minor_unit_field": {
+                    "label_text": "Minor Unit",
+                    "placeholder_text": "e.g. 100"
+                },
+                "format_field": {
+                    "label_text": "Format",
+                    "placeholder_text": "Optional display format"
+                },
+                "country_code_field": {
+                    "label_text": "Country Code",
+                    "placeholder_text": "e.g. US, GB"
+                },
+                "sort_order_field": {
+                    "label_text": "Sort Order",
+                    "placeholder_text": "e.g. 1, 2, 3"
+                },
+                "logo_url_field": {
+                    "label_text": "Logo URL",
+                    "placeholder_text": "https://..."
+                },
+                "is_fiat_field": {
+                    "label_text": "Is Fiat Currency",
+                    "option_list": [
+                        { "label_text": "Yes", "value": "true" },
+                        { "label_text": "No", "value": "false" }
+                    ]
+                },
+                "btn_text": "Submit"
+            }
+        },
+        "assign_currency_form_view_ui": {
+            "header_text": "",
+            "fieldset": {
+                "registered_app_id_field": {
+                    "label_text": "Select Registered App",
+                    "placeholder_text": "Select Registered App to assign too",
+                    "selected_text_prefix": "Selected Registered App"
+                },
+                "currency_list_field": {
+                    "label_text": "Select Currencies to Assign",
+                    "placeholder_text": "Select Currencies to Assign to Assign to registered App"
+                },
+                "btn_text": "Submit"
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading currency...",
+            "no_description_text": "",
+            "empty_value_text": "-",
+            "header": {
+                "currency_logo_alt_text": "Currency logo",
+                "symbol_label_text": "Symbol:",
+                "format_label_text": "Format:",
+                "no_format_text": "No format defined"
+            },
+            "sections": {
+                "currency_information": {
+                    "title_text": "Currency Information",
+                    "code_label_text": "Code:",
+                    "numeric_code_label_text": "Numeric Code:",
+                    "country_code_label_text": "Country:",
+                    "precision_label_text": "Precision:",
+                    "minor_unit_label_text": "Minor Unit:",
+                    "sort_order_label_text": "Sort Order:"
+                },
+                "status": {
+                    "title_text": "Status",
+                    "type_label_text": "Type:",
+                    "fiat_type_text": "Fiat",
+                    "crypto_type_text": "Crypto",
+                    "active_label_text": "Active:",
+                    "active_status_text": "Active",
+                    "inactive_status_text": "Inactive",
+                    "created_label_text": "Created:",
+                    "updated_label_text": "Updated:"
+                },
+                "assigned_apps": {
+                    "title_text": "Apps Using This Currency",
+                    "app_prefix_label_text": "Prefix:",
+                    "default_badge_text": "Default",
+                    "no_assigned_apps_text": "No apps assigned"
+                },
+                "created_by": {
+                    "title_text": "Created By"
+                },
+                "updated_by": {
+                    "title_text": "Updated By"
+                }
+            }
+        }
+    },
+    "payment_method_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Payment Methods",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Payment Methods",
+                "header_description": "Manage payment rails available across payment providers and currencies.",
+                "create_btn": {
+                    "btn_text": "Create Method"
+                }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search code, name, or description"
+                },
+                "status_filter": {
+                    "label_text": "Status",
+                    "placeholder_text": "Select status",
+                    "option_list": [
+                        { "label_text": "Active", "value": "true" },
+                        { "label_text": "Inactive", "value": "false" }
+                    ]
+                },
+                "display_group_filter": {
+                    "label_text": "Display Group",
+                    "placeholder_text": "Enter display group",
+                    "options_list": [
+                        { "label_text": "Bank transfer", "value": "bank_transfer" },
+                        { "label_text": "Card payment", "value": "card" },
+                        { "label_text": "Digital wallet", "value": "digital_wallet" },
+                        { "label_text": "Mobile money", "value": "mobile_money" },
+                        { "label_text": "Cryptocurrency", "value": "crypto" },
+                        { "label_text": "Cash", "value": "cash" }
+                    ]
+                },
+                "supports_deposit_filter": {
+                    "label_text": "Supports Deposit",
+                    "placeholder_text": "Select option",
+                    "option_list": [
+                        { "label_text": "Yes", "value": "true" },
+                        { "label_text": "No", "value": "false" }
+                    ]
+                },
+                "supports_withdrawal_filter": {
+                    "label_text": "Supports Withdrawal",
+                    "placeholder_text": "Select option",
+                    "option_list": [
+                        { "label_text": "Yes", "value": "true" },
+                        { "label_text": "No", "value": "false" }
+                    ]
+                },
+                "supports_refund_filter": {
+                    "label_text": "Supports Refund",
+                    "placeholder_text": "Select option",
+                    "option_list": [
+                        { "label_text": "Yes", "value": "true" },
+                        { "label_text": "No", "value": "false" }
+                    ]
+                },
+                "requires_redirect_filter": {
+                    "label_text": "Requires Redirect",
+                    "placeholder_text": "Select option",
+                    "option_list": [
+                        { "label_text": "Yes", "value": "true" },
+                        { "label_text": "No", "value": "false" }
+                    ]
+                },
+                "created_by_filter": {
+                    "label_text": "Created By",
+                    "placeholder_text": "Search member"
+                },
+                "date_range_filter": {
+                    "label_text": "Date Range",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} payment method record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} record(s) selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading payment Method records..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Payment Method Record Found"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "method_text": "Method",
+                    "display_group_text": "Display Group",
+                    "capabilities_text": "Capabilities",
+                    "sort_order_text": "Sort",
+                    "status_text": "Status",
+                    "creator_text": "Created By",
+                    "created_at_text": "Created At",
+                    "actions_text": "Actions"
+                },
+                "capabilities": {
+                    "supports_deposit_text": "Deposit",
+                    "supports_withdrawal_text": "Withdrawal",
+                    "supports_refund_text": "Refund",
+                    "requires_redirect_text": "Redirect",
+                    "separator_text": ", ",
+                    "empty_text": "-"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "previous_text": "Previous",
+                        "next_text": "Next"
+                    }
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon",
+                        "menu_link": ""
+                    },
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon",
+                        "menu_link": ""
+                    },
+                    "edit_menu_option": {
+                        "menu_text": "Edit",
+                        "menu_icon": "edit_square_pencil_svg_icon",
+                        "menu_link": ""
+                    },
+                    "delete_menu_option": {
+                        "menu_text": "Delete",
+                        "menu_icon": "delete_trash_svg_icon",
+                        "menu_link": ""
+                    }
+                }
+            }
+        },
+        "modals_ui": {
+            "add_new_modal_ui": {
+                "title_text": "Create New Payment Method",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "update_modal_ui": {
+                "title_text": "Edit Payment Method",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Payment Method Details",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "delete_modal_ui": {
+                "title_text": "Delete Payment Method",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Delete {{name}}?",
+                    "message_text": "Are you sure you want to delete {{name}} ({{code}})? This action cannot be undone.",
+                    "cancel_btn_text": "Cancel",
+                    "confirm_btn_text": "Delete"
+                }
+            }
+        },
+        "form_view_ui": {
+            "header_text": "",
+            "fieldset": {
+                "btn_text": "Save Payment Method",
+                "code_field": {
+                    "label_text": "Code",
+                    "placeholder_text": "e.g. card, bank_transfer",
+                    "helper_text": "Unique payment method code."
+                },
+                "name_field": {
+                    "label_text": "Name",
+                    "placeholder_text": "e.g. Card"
+                },
+                "description_field": {
+                    "label_text": "Description",
+                    "placeholder_text": "Describe how this payment method is used"
+                },
+                "icon_url_field": {
+                    "label_text": "Icon URL",
+                    "placeholder_text": "https://example.com/icon.svg"
+                },
+                "sort_order_field": {
+                    "label_text": "Sort Order",
+                    "placeholder_text": "e.g. 10"
+                },
+                "display_name_field": {
+                    "label_text": "Display Name",
+                    "placeholder_text": "e.g. Credit or debit card"
+                },
+                "display_description_field": {
+                    "label_text": "Display Description",
+                    "placeholder_text": "Customer-facing description"
+                },
+                "display_group_field": {
+                    "label_text": "Display group",
+                    "placeholder_text": "Select a display group",
+                    "options_list": [
+                        { "label_text": "Bank transfer", "value": "bank_transfer" },
+                        { "label_text": "Card payment", "value": "card" },
+                        { "label_text": "Digital wallet", "value": "digital_wallet" },
+                        { "label_text": "Mobile money", "value": "mobile_money" },
+                        { "label_text": "Cryptocurrency", "value": "crypto" },
+                        { "label_text": "Cash", "value": "cash" }
+                    ]
+                },
+                "processing_time_text_field": {
+                    "label_text": "Processing Time",
+                    "placeholder_text": "e.g. Instant, 1-3 business days"
+                },
+                "fee_label_field": {
+                    "label_text": "Fee label",
+                    "placeholder_text": "Select a fee label",
+                    "options_list": [
+                        { "label_text": "Free", "value": "Free" },
+                        { "label_text": "Fees apply", "value": "Fees apply" },
+                        { "label_text": "Varies by provider", "value": "Varies by provider" }
+                    ]
+                },
+                "supported_country_codes_field": {
+                    "label_text": "Supported Countries",
+                    "placeholder_text": "Comma-separated country codes, e.g. NG, GB, US"
+                },
+                "supported_currency_codes_field": {
+                    "label_text": "Supported Currencies",
+                    "placeholder_text": "Comma-separated currency codes, e.g. NGN, GBP, USD"
+                },
+                "min_amount_field": {
+                    "label_text": "Minimum Amount",
+                    "placeholder_text": "e.g. 100"
+                },
+                "max_amount_field": {
+                    "label_text": "Maximum Amount",
+                    "placeholder_text": "e.g. 1000000"
+                },
+                "requires_redirect_field": {
+                    "label_text": "Requires Redirect",
+                    "helper_text": "Enable if customers leave the app to complete payment."
+                },
+                "supports_deposit_field": {
+                    "label_text": "Supports Deposit"
+                },
+                "supports_withdrawal_field": {
+                    "label_text": "Supports Withdrawal"
+                },
+                "supports_refund_field": {
+                    "label_text": "Supports Refund"
+                }
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading payment method...",
+            "no_description_text": "No description provided.",
+            "empty_value_text": "-",
+            "header": {
+                "payment_method_icon_alt_text": "Payment method icon",
+                "code_label_text": "Code:"
+            },
+            "sections": {
+                "display_details": {
+                    "title_text": "Display Details",
+                    "display_name_label_text": "Display Name:",
+                    "display_group_label_text": "Display Group:",
+                    "processing_time_label_text": "Processing Time:",
+                    "fee_label_text": "Fee Label:"
+                },
+                "amount_limits": {
+                    "title_text": "Amount Limits",
+                    "min_amount_label_text": "Minimum:",
+                    "max_amount_label_text": "Maximum:"
+                },
+                "capabilities": {
+                    "title_text": "Capabilities",
+                    "requires_redirect_label_text": "Requires Redirect:",
+                    "supports_deposit_label_text": "Deposit:",
+                    "supports_withdrawal_label_text": "Withdrawal:",
+                    "supports_refund_label_text": "Refund:",
+                    "enabled_text": "Enabled",
+                    "disabled_text": "Disabled"
+                },
+                "supported_regions": {
+                    "title_text": "Supported Regions",
+                    "countries_label_text": "Countries:",
+                    "currencies_label_text": "Currencies:",
+                    "no_countries_text": "No countries configured",
+                    "no_currencies_text": "No currencies configured"
+                },
+                "status": {
+                    "title_text": "Status",
+                    "active_label_text": "Active:",
+                    "active_status_text": "Active",
+                    "inactive_status_text": "Inactive",
+                    "sort_order_label_text": "Sort Order:",
+                    "created_label_text": "Created:",
+                    "updated_label_text": "Updated:"
+                },
+                "created_by": {
+                    "title_text": "Created By"
+                },
+                "updated_by": {
+                    "title_text": "Updated By"
+                }
+            }
+        }
+    },
+    "payment_provider_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Payment Providers",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Payment Providers",
+                "header_description": "Manage payment providers that facilitate payment processing across various methods and currencies.",
+                "create_btn": {
+                    "btn_text": "Create Provider"
+                }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search code, name, or description"
+                },
+                "status_filter": {
+                    "label_text": "Status",
+                    "placeholder_text": "Select status",
+                    "option_list": [
+                        { "label_text": "Active", "value": "true" },
+                        { "label_text": "Inactive", "value": "false" }
+                    ]
+                },
+                "provider_type_filter": {
+                    "label_text": "Provider Type",
+                    "placeholder_text": "Select provider type",
+                    "option_list": [
+                        { "label_text": "Payment Gateway", "value": "payment_gateway" },
+                        { "label_text": "Banking Partner", "value": "banking_partner" },
+                        { "label_text": "Crypto Exchange", "value": "crypto_exchange" },
+                        { "label_text": "Wallet Provider", "value": "wallet_provider" }
+                    ]
+                },
+                "created_by_filter": {
+                    "label_text": "Created By",
+                    "placeholder_text": "Search member"
+                },
+                "date_range_filter": {
+                    "label_text": "Date Range",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} payment provider record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} record(s) selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading payment provider records..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Payment Provider Record Found"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "provider_text": "Provider",
+                    "provider_type_text": "Type",
+                    "website_text": "Website",
+                    "supported_methods_text": "Supported Methods",
+                    "sort_order_text": "Sort",
+                    "status_text": "Status",
+                    "creator_text": "Created By",
+                    "created_at_text": "Created At",
+                    "actions_text": "Actions"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "previous_text": "Previous",
+                        "next_text": "Next"
+                    }
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon",
+                        "menu_link": ""
+                    },
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon",
+                        "menu_link": ""
+                    },
+                    "edit_menu_option": {
+                        "menu_text": "Edit",
+                        "menu_icon": "edit_square_pencil_svg_icon",
+                        "menu_link": ""
+                    },
+                    "delete_menu_option": {
+                        "menu_text": "Delete",
+                        "menu_icon": "delete_trash_svg_icon",
+                        "menu_link": ""
+                    }
+                }
+            }
+        },
+        "modals_ui": {
+            "add_new_modal_ui": {
+                "title_text": "Create New Payment Provider",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "update_modal_ui": {
+                "title_text": "Edit Payment Provider",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Payment Provider Details",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "delete_modal_ui": {
+                "title_text": "Delete Payment Provider",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Delete {{name}}?",
+                    "message_text": "Are you sure you want to delete {{name}} Payment Provider? This action cannot be undone.",
+                    "cancel_btn_text": "Cancel",
+                    "confirm_btn_text": "Delete"
+                }
+            }
+        },
+        "form_view_ui": {
+            "header_text": "",
+            "fieldset": {
+                "btn_text": "Save Payment Provider",
+                "code_field": {
+                    "label_text": "Code",
+                    "placeholder_text": "e.g. stripe, paypal"
+                },
+                "name_field": {
+                    "label_text": "Name",
+                    "placeholder_text": "e.g. Stripe"
+                },
+                "description_field": {
+                    "label_text": "Description",
+                    "placeholder_text": "Describe this payment provider"
+                },
+                "provider_type_field": {
+                    "label_text": "Provider Type",
+                    "placeholder_text": "Select a provider type",
+                    "options_list": [
+                        { "label_text": "Payment Gateway", "value": "payment_gateway" },
+                        { "label_text": "Banking Partner", "value": "banking_partner" },
+                        { "label_text": "Crypto Exchange", "value": "crypto_exchange" },
+                        { "label_text": "Wallet Provider", "value": "wallet_provider" }
+                    ]
+                },
+                "logo_url_field": {
+                    "label_text": "Logo URL",
+                    "placeholder_text": "https://example.com/logo.png"
+                },
+                "website_url_field": {
+                    "label_text": "Website URL",
+                    "placeholder_text": "https://example.com"
+                }
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading payment provider...",
+            "no_description_text": "No description provided.",
+            "empty_value_text": "-",
+            "header": {
+                "payment_provider_logo_alt_text": "Payment provider logo",
+                "code_label_text": "Code:"
+            },
+            "sections": {
+                "provider_information": {
+                    "title_text": "Provider Information",
+                    "provider_type_label_text": "Provider Type:",
+                    "website_url_label_text": "Website:",
+                    "no_website_text": "No website configured"
+                },
+                "status": {
+                    "title_text": "Status",
+                    "active_label_text": "Active:",
+                    "active_status_text": "Active",
+                    "inactive_status_text": "Inactive",
+                    "created_label_text": "Created:",
+                    "updated_label_text": "Updated:"
+                },
+                "created_by": {
+                    "title_text": "Created By"
+                },
+                "updated_by": {
+                    "title_text": "Updated By"
+                }
+            }
+        }
+    },
+    "payment_provider_config_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Payment Provider Configurations",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Payment Provider Configurations",
+                "header_description": "Manage specific configurations for payment providers, such as API keys, environment settings, and supported features.",
+                "create_btn": {
+                    "btn_text": "Create Configuration"
+                }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search by provider or environment"
+                },
+                "provider_filter": {
+                    "label_text": "Payment Provider",
+                    "placeholder_text": "Select payment provider"
+                },
+                "environment_filter": {
+                    "label_text": "Environment",
+                    "placeholder_text": "Select environment",
+                    "option_list": [
+                        { "label_text": "Production", "value": "live" },
+                        { "label_text": "Sandbox", "value": "test" }
+                    ]
+                },
+                "account_reference_filter": {
+                    "label_text": "Account Reference",
+                    "placeholder_text": "Enter account reference"
+                },
+                "created_by_filter": {
+                    "label_text": "Created By",
+                    "placeholder_text": "Search member"
+                },
+                "date_range_filter": {
+                    "label_text": "Date Range",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} payment provider configuration record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} record(s) selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading payment provider configuration records..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Payment Provider Configuration Record Found"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "provider_text": "Provider",
+                    "environment_text": "Environment",
+                    "account_reference_text": "Reference",
+                    "settlement_currency_text": "Settlement Currency",
+                    "default_currency_text": "Default Currency",
+                    "config_summary_text": "Config Summary",
+                    "creator_text": "Created By",
+                    "created_at_text": "Created At",
+                    "actions_text": "Actions"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "previous_text": "Previous",
+                        "next_text": "Next"
+                    }
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon",
+                        "menu_link": ""
+                    },
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon",
+                        "menu_link": ""
+                    },
+                    "edit_menu_option": {
+                        "menu_text": "Edit",
+                        "menu_icon": "edit_square_pencil_svg_icon",
+                        "menu_link": ""
+                    },
+                    "delete_menu_option": {
+                        "menu_text": "Delete",
+                        "menu_icon": "delete_trash_svg_icon",
+                        "menu_link": ""
+                    }
+                }
+            }
+        },
+        "modals_ui": {
+            "add_new_modal_ui": {
+                "title_text": "Create New Payment Provider Configuration",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "update_modal_ui": {
+                "title_text": "Edit Payment Provider Configuration",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Payment Provider Configuration Details",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "delete_modal_ui": {
+                "title_text": "Delete Payment Provider Configuration",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Permanently delete {{account_reference}}?",
+                    "message_text": "Are you sure you want to permanently delete this payment provider config? This is not a soft delete and cannot be undone.",
+                    "cancel_btn_text": "Cancel",
+                    "confirm_btn_text": "Delete Permanently"
+                }
+            }
+        },
+        "form_view_ui": {
+            "header_text": "",
+            "fieldset": {
+                "provider_id_field": {
+                    "label_text": "Payment Provider",
+                    "placeholder_text": "Search payment provider"
+                },
+                "environment_field": {
+                    "label_text": "Environment",
+                    "placeholder_text": "Select environment",
+                    "options_list": [
+                        {
+                            "label_text": "Test",
+                            "value": "test"
+                        },
+                        {
+                            "label_text": "Live",
+                            "value": "live"
+                        }
+                    ]
+                },
+                "account_reference_field": {
+                    "label_text": "Account Reference",
+                    "placeholder_text": "Optional merchant or account reference"
+                },
+                "api_key_field": {
+                    "label_text": "API Key",
+                    "placeholder_text": "Enter API key",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "secret_key_field": {
+                    "label_text": "Secret Key",
+                    "placeholder_text": "Enter secret key",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "public_key_field": {
+                    "label_text": "Public Key",
+                    "placeholder_text": "Enter public key",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "private_key_field": {
+                    "label_text": "Private Key",
+                    "placeholder_text": "Enter private key",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "client_id_field": {
+                    "label_text": "Client ID",
+                    "placeholder_text": "Enter client ID"
+                },
+                "client_secret_field": {
+                    "label_text": "Client Secret",
+                    "placeholder_text": "Enter client secret",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "merchant_id_field": {
+                    "label_text": "Merchant ID",
+                    "placeholder_text": "Enter merchant ID"
+                },
+                "account_id_field": {
+                    "label_text": "Account ID",
+                    "placeholder_text": "Enter account ID"
+                },
+                "username_field": {
+                    "label_text": "Username",
+                    "placeholder_text": "Enter username"
+                },
+                "password_field": {
+                    "label_text": "Password",
+                    "placeholder_text": "Enter password",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "webhook_hash_field": {
+                    "label_text": "Webhook Hash",
+                    "placeholder_text": "Enter webhook hash",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "webhook_secret_field": {
+                    "label_text": "Webhook Secret",
+                    "placeholder_text": "Enter webhook secret",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "signing_secret_field": {
+                    "label_text": "Signing Secret",
+                    "placeholder_text": "Enter signing secret",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "webhook_url_field": {
+                    "label_text": "Webhook URL",
+                    "placeholder_text": "https://..."
+                },
+                "callback_url_field": {
+                    "label_text": "Callback URL",
+                    "placeholder_text": "https://..."
+                },
+                "redirect_url_field": {
+                    "label_text": "Redirect URL",
+                    "placeholder_text": "https://..."
+                },
+                "success_url_field": {
+                    "label_text": "Success URL",
+                    "placeholder_text": "https://..."
+                },
+                "failure_url_field": {
+                    "label_text": "Failure URL",
+                    "placeholder_text": "https://..."
+                },
+                "settlement_currency_field": {
+                    "label_text": "Settlement Currency",
+                    "placeholder_text": "Search currency"
+                },
+                "default_currency_field": {
+                    "label_text": "Default Currency",
+                    "placeholder_text": "Search currency"
+                },
+                "payout_schedule_field": {
+                    "label_text": "Payout Schedule",
+                    "placeholder_text": "e.g. daily"
+                },
+                "capture_mode_field": {
+                    "label_text": "Capture Mode",
+                    "placeholder_text": "e.g. automatic"
+                },
+                "timeout_ms_field": {
+                    "label_text": "Timeout (MS)",
+                    "placeholder_text": "e.g. 30000"
+                },
+                "btn_text": "Submit"
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading payment provider config...",
+            "no_description_text": "",
+            "empty_value_text": "-",
+            "header": {
+                "payment_provider_logo_alt_text": "Payment provider logo"
+            },
+            "sections": {
+                "config_information": {
+                    "title_text": "Config Information",
+                    "provider_name_label_text": "Provider:",
+                    "provider_code_label_text": "Provider Code:",
+                    "provider_id_label_text": "Provider ID:",
+                    "environment_label_text": "Environment:",
+                    "account_reference_label_text": "Account Reference:"
+                },
+                "settings": {
+                    "title_text": "Settings",
+                    "webhook_url_label_text": "Webhook URL:",
+                    "callback_url_label_text": "Callback URL:",
+                    "redirect_url_label_text": "Redirect URL:",
+                    "success_url_label_text": "Success URL:",
+                    "failure_url_label_text": "Failure URL:",
+                    "settlement_currency_label_text": "Settlement Currency:",
+                    "default_currency_label_text": "Default Currency:",
+                    "payout_schedule_label_text": "Payout Schedule:",
+                    "capture_mode_label_text": "Capture Mode:",
+                    "timeout_ms_label_text": "Timeout (MS):",
+                    "no_settings_text": "No settings configured."
+                },
+                "credentials": {
+                    "title_text": "Credentials",
+                    "hidden_text": "Credentials are hidden until you reveal them.",
+                    "reveal_btn_text": "Reveal Credentials",
+                    "hide_btn_text": "Hide Credentials",
+                    "loading_text": "Loading credentials...",
+                    "permission_denied_text": "You do not have permission to view decrypted credentials.",
+                    "no_credentials_text": "No credentials returned for this provider config.",
+                    "api_key_label_text": "API Key:",
+                    "secret_key_label_text": "Secret Key:",
+                    "public_key_label_text": "Public Key:",
+                    "private_key_label_text": "Private Key:",
+                    "client_id_label_text": "Client ID:",
+                    "client_secret_label_text": "Client Secret:",
+                    "merchant_id_label_text": "Merchant ID:",
+                    "account_id_label_text": "Account ID:",
+                    "username_label_text": "Username:",
+                    "password_label_text": "Password:",
+                    "webhook_hash_label_text": "Webhook Hash:",
+                    "webhook_secret_label_text": "Webhook Secret:",
+                    "signing_secret_label_text": "Signing Secret:"
+                },
+                "status": {
+                    "title_text": "Status",
+                    "created_label_text": "Created:",
+                    "updated_label_text": "Updated:"
+                },
+                "created_by": {
+                    "title_text": "Created By"
+                },
+                "updated_by": {
+                    "title_text": "Updated By"
+                }
+            }
+        }
+    },
+    "payment_provider_method_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Payment Provider Methods",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Payment Provider Methods",
+                "header_description": "Manage the links between payment providers, payment methods, and transaction directions.",
+                "create_btn": {
+                    "btn_text": "Create Provider Method"
+                }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search provider, method, direction, or provider method code"
+                },
+                "status_filter": {
+                    "label_text": "Status",
+                    "placeholder_text": "Select status",
+                    "option_list": [
+                        {
+                            "label_text": "Active",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "Inactive",
+                            "value": "false"
+                        }
+                    ]
+                },
+                "provider_filter": {
+                    "label_text": "Provider",
+                    "placeholder_text": "Search payment provider"
+                },
+                "payment_method_filter": {
+                    "label_text": "Payment Method",
+                    "placeholder_text": "Search payment method"
+                },
+                "direction_filter": {
+                    "label_text": "Direction",
+                    "placeholder_text": "Select direction",
+                    "option_list": [
+                        {
+                            "label_text": "Deposit",
+                            "value": "deposit"
+                        },
+                        {
+                            "label_text": "Withdrawal",
+                            "value": "withdrawal"
+                        }
+                    ]
+                },
+                "created_by_filter": {
+                    "label_text": "Linked By",
+                    "placeholder_text": "Search member"
+                },
+                "date_range_filter": {
+                    "label_text": "Date Range",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} payment provider method record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} record(s) selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading payment provider method records..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Payment Provider Method Record Found"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "provider_text": "Provider",
+                    "payment_method_text": "Payment Method",
+                    "direction_text": "Direction",
+                    "provider_method_code_text": "Provider Method Code",
+                    "limits_text": "Limits",
+                    "status_text": "Status",
+                    "linked_by_text": "Linked By",
+                    "created_at_text": "Created At",
+                    "actions_text": "Actions"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "prev_btn_text": "Previous",
+                        "next_btn_text": "Next"
+                    }
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon",
+                        "menu_link": ""
+                    },
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon",
+                        "menu_link": ""
+                    },
+                    "edit_menu_option": {
+                        "menu_text": "Edit",
+                        "menu_icon": "edit_square_pencil_svg_icon",
+                        "menu_link": ""
+                    },
+                    "delete_menu_option": {
+                        "menu_text": "Delete",
+                        "menu_icon": "delete_trash_svg_icon",
+                        "menu_link": ""
+                    }
+                }
+            }
+        },
+        "modals_ui": {
+            "add_new_modal_ui": {
+                "title_text": "Create New Payment Provider Method",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "update_modal_ui": {
+                "title_text": "Edit Payment Provider Method",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Payment Provider Method Details",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "delete_modal_ui": {
+                "title_text": "Delete Payment Provider Method",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Delete this provider method?",
+                    "message_text": "Are you sure you want to delete this payment provider method? This action cannot be undone.",
+                    "cancel_btn_text": "Cancel",
+                    "confirm_btn_text": "Delete"
+                }
+            }
+        },
+        "form_view_ui": {
+            "header_text": "",
+            "fieldset": {
+                "provider_id_field": {
+                    "label_text": "Payment Provider",
+                    "placeholder_text": "Search payment provider"
+                },
+                "payment_method_id_field": {
+                    "label_text": "Payment Method",
+                    "placeholder_text": "Search payment method"
+                },
+                "direction_field": {
+                    "label_text": "Direction",
+                    "placeholder_text": "Select direction",
+                    "options_list": [
+                        {
+                            "label_text": "Deposit",
+                            "value": "deposit"
+                        },
+                        {
+                            "label_text": "Withdrawal",
+                            "value": "withdrawal"
+                        }
+                    ]
+                },
+                "provider_method_code_field": {
+                    "label_text": "Provider Method Code",
+                    "placeholder_text": "Enter provider method code (e.g. stripe_card_deposit)"
+                },
+                "min_amount_field": {
+                    "label_text": "Minimum Amount",
+                    "placeholder_text": "Enter minimum amount for this provider method"
+                },
+                "max_amount_field": {
+                    "label_text": "Maximum Amount",
+                    "placeholder_text": "Enter maximum amount for this provider method"
+                },
+                "btn_text": "Submit"
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading payment provider method...",
+            "no_description_text": "",
+            "header": {
+                "payment_provider_logo_alt_text": "Payment provider logo"
+            },
+            "empty_value_text": "-",
+            "sections": {
+                    "method_information": {
+                        "title_text": "Method Information",
+                        "provider_name_label_text": "Provider:",
+                        "provider_code_label_text": "Provider Code:",
+                        "provider_id_label_text": "Provider ID:",
+                        "payment_method_name_label_text": "Payment Method:",
+                        "payment_method_code_label_text": "Payment Method Code:",
+                        "payment_method_id_label_text": "Payment Method ID:",
+                        "direction_label_text": "Direction:",
+                        "provider_method_code_label_text": "Provider Method Code:"
+                    },
+                    "amount_limits": {
+                        "title_text": "Amount Limits",
+                        "min_amount_label_text": "Minimum:",
+                        "max_amount_label_text": "Maximum:"
+                    },
+                    "status": {
+                        "title_text": "Status",
+                        "active_label_text": "Active:",
+                        "active_status_text": "Active",
+                        "inactive_status_text": "Inactive",
+                        "created_label_text": "Created:",
+                        "updated_label_text": "Updated:"
+                    },
+                    "linked_by": {
+                    "title_text": "Linked By"
+                    }
+            }
+        }
+    },
+    "currency_payment_provider_method_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Currency Provider Methods",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Currency Provider Methods",
+                "header_description": "Manage the currency-specific availability and limits for provider payment methods.",
+                "create_btn": {
+                    "btn_text": "Create Currency Provider Method"
+                }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search currency, provider, payment method, or direction"
+                },
+                "status_filter": {
+                    "label_text": "Status",
+                    "placeholder_text": "Select status",
+                    "option_list": [
+                        {
+                            "label_text": "Active",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "Inactive",
+                            "value": "false"
+                        }
+                    ]
+                },
+                "currency_filter": {
+                    "label_text": "Currency",
+                    "placeholder_text": "Search currency",
+                    "selected_text_prefix": "Currency"
+                },
+                "provider_filter": {
+                    "label_text": "Provider",
+                    "placeholder_text": "Search payment provider",
+                    "selected_text_prefix": "Provider"
+                },
+                "payment_method_filter": {
+                    "label_text": "Payment Method",
+                    "placeholder_text": "Search payment method",
+                    "selected_text_prefix": "Payment Method"
+                },
+                "direction_filter": {
+                    "label_text": "Direction",
+                    "placeholder_text": "Select direction",
+                    "option_list": [
+                        {
+                            "label_text": "Deposit",
+                            "value": "deposit"
+                        },
+                        {
+                            "label_text": "Withdrawal",
+                            "value": "withdrawal"
+                        }
+                    ]
+                },
+                "created_by_filter": {
+                    "label_text": "Linked By",
+                    "placeholder_text": "Search member",
+                    "selected_text_prefix": "Linked By"
+                },
+                "date_range_filter": {
+                    "label_text": "Date Range",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} currency provider method record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} record(s) selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading currency provider method records..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Currency Provider Method Record Found"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "currency_text": "Currency",
+                    "provider_text": "Provider",
+                    "payment_method_text": "Payment Method",
+                    "direction_text": "Direction",
+                    "limits_text": "Limits",
+                    "status_text": "Status",
+                    "linked_by_text": "Linked By",
+                    "created_at_text": "Created At",
+                    "actions_text": "Actions"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "prev_btn_text": "Previous",
+                        "next_btn_text": "Next"
+                    }
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon",
+                        "menu_link": ""
+                    },
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon",
+                        "menu_link": ""
+                    },
+                    "edit_menu_option": {
+                        "menu_text": "Edit",
+                        "menu_icon": "edit_square_pencil_svg_icon",
+                        "menu_link": ""
+                    },
+                    "delete_menu_option": {
+                        "menu_text": "Delete",
+                        "menu_icon": "delete_trash_svg_icon",
+                        "menu_link": ""
+                    }
+                }
+            }
+        },
+        "modals_ui": {
+            "add_new_modal_ui": {
+                "title_text": "Create Currency Provider Method",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "update_modal_ui": {
+                "title_text": "Edit Currency Provider Method",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Currency Provider Method Details",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "delete_modal_ui": {
+                "title_text": "Delete Currency Provider Method",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Permanently delete this currency provider method?",
+                    "message_text": "Are you sure you want to permanently delete this currency provider method link? This cannot be undone.",
+                    "cancel_btn_text": "Cancel",
+                    "confirm_btn_text": "Delete Permanently"
+                }
+            }
+        },
+        "form_view_ui": {
+            "header_text": "",
+            "fieldset": {
+                "currency_id_field": {
+                    "label_text": "Currency",
+                    "placeholder_text": "Search currency",
+                    "selected_text_prefix": "Currency"
+                },
+                "provider_method_id_field": {
+                    "label_text": "Provider Method",
+                    "placeholder_text": "Search provider method",
+                    "selected_text_prefix": "Provider Method"
+                },
+                "min_amount_field": {
+                    "label_text": "Minimum Amount",
+                    "placeholder_text": "Enter minimum amount"
+                },
+                "max_amount_field": {
+                    "label_text": "Maximum Amount",
+                    "placeholder_text": "Enter maximum amount"
+                },
+                "btn_text": "Submit"
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading currency provider method...",
+            "no_description_text": "",
+            "empty_value_text": "-",
+            "header": {
+                "currency_logo_alt_text": "Currency logo"
+            },
+            "sections": {
+                "currency_information": {
+                    "title_text": "Currency Information",
+                    "currency_name_label_text": "Currency:",
+                    "currency_code_label_text": "Currency Code:",
+                    "currency_id_label_text": "Currency ID:"
+                },
+                "provider_method_information": {
+                    "title_text": "Provider Method Information",
+                    "provider_name_label_text": "Provider:",
+                    "provider_code_label_text": "Provider Code:",
+                    "payment_method_name_label_text": "Payment Method:",
+                    "payment_method_code_label_text": "Payment Method Code:",
+                    "provider_method_id_label_text": "Provider Method ID:",
+                    "direction_label_text": "Direction:",
+                    "provider_method_code_label_text": "Provider Method Code:"
+                },
+                "amount_limits": {
+                    "title_text": "Amount Limits",
+                    "min_amount_label_text": "Minimum:",
+                    "max_amount_label_text": "Maximum:"
+                },
+                "status": {
+                    "title_text": "Status",
+                    "active_label_text": "Active:",
+                    "active_status_text": "Active",
+                    "inactive_status_text": "Inactive",
+                    "created_label_text": "Created:",
+                    "updated_label_text": "Updated:"
+                },
+                "linked_by": {
+                    "title_text": "Linked By"
+                }
+            }
         }
     },
     "api_responses": {
         "general_responses": {
+            "invalid_csrf_token": "🔒 Invalid CSRF token. Please refresh the page and try again.",
             "session_expired": "🔒 You are not authorised to perform this action.",
             "invalid_input_config": "⚠️ Invalid input configuration. Please check your request and try again.",
             "unauthorized_app_request": "❌ Unauthorized app request. App identity could not be verified.",
@@ -288,7 +2149,9 @@
             "input_has_not_changed": "ℹ️ No changes were detected in the submitted data.",
             "invalid_record_selection": "⚠️ Invalid record selected. Please try again.",
             "greater_than_max_bulk_input_allowed": "⚠️ The number of items provided/selected exceeds the maximum allowed limit.",
-            "invalid_form_input_provided": "❌ No input was provided. Please complete the form and try again."
+            "invalid_form_input_provided": "❌ No input was provided. Please complete the form and try again.",
+            "invalid_max_amount": "🔢 Please provide a valid maximum amount.",
+            "invalid_min_amount": "🔢 Please provide a valid minimum amount."
         },
         "storage_responses": {
             "missing_mime_type": "⚠️ File type could not be detected. Please upload a valid file.",
@@ -356,40 +2219,131 @@
             "invalid_input_app_name_exist": "⚠️ An application with this name already exists."
         },
         "currency_module_responses": {
-                "invalid_currency_code": "❌ Please provide a valid currency code.",
-                "invalid_currency_code_format": "🔤 Currency code must be exactly 3 uppercase letters (e.g. GBP, USD).",
-                "invalid_currency_name": "❌ Please provide a valid currency name.",
-                "invalid_currency_symbol": "💱 Please provide a valid currency symbol.",
-                "invalid_currency_logo_url": "🖼️ Please provide a valid logo URL.",
-                "invalid_currency_numeric_code": "🔢 Currency numeric code must be a valid number.",
-                "invalid_currency_precision": "🎯 Please provide a valid currency precision value.",
-                "invalid_currency_minor_unit": "🔢 Minor unit must be a valid number.",
-                "invalid_currency_country_code": "🌍 Country code must be exactly 2 uppercase letters (e.g. GB, US).",
-                "invalid_currency_type": "⚖️ Currency type must be specified correctly.",
-                "currency_code_exists": "⚠️ This currency code already exists. Please use a different one.",
+            "invalid_currency_code": "❌ Please provide a valid currency code.",
+            "invalid_currency_code_format": "🔤 Currency code must be exactly 3 uppercase letters (e.g. GBP, USD).",
+            "invalid_currency_name": "❌ Please provide a valid currency name.",
+            "invalid_currency_symbol": "💱 Please provide a valid currency symbol.",
+            "invalid_currency_logo_url": "🖼️ Please provide a valid logo URL.",
+            "invalid_currency_format": "🖼️ Please provide a valid Currency Format <symbol> <#######.#####>.",
+            "invalid_currency_numeric_code": "🔢 Currency numeric code must be a valid number.",
+            "invalid_currency_precision": "🎯 Please provide a valid currency precision value.",
+            "invalid_currency_minor_unit": "🔢 Minor unit must be a valid number.",
+            "invalid_currency_country_code": "🌍 Country code must be exactly 2 uppercase letters (e.g. GB, US).",
+            "invalid_currency_type": "⚖️ Currency type must be specified correctly.",
+            "invalid_currency_sort_order": "🔢 Please provide a valid currency sort order number input.",
+            "invalid_currency_sort_order_must_be_integer": "🔢 currency Sort Order must be a valid number.",
+            "currency_code_exists": "⚠️ This currency code already exists. Please use a different one.",
+            "fiat_currency_requires_country_and_numeric_code": "🌍 Fiat currencies must include a valid country code and numeric code.",
+            "crypto_should_not_have_minor_unit": "🪙 Cryptocurrencies should not have a minor unit defined.",
 
-                "invalid_currency_assign_unassign_action_type": "❌ Invalid action type. Please choose either assign or unassign.",
-                "invalid_input_currency_id": "❌ Invalid currency ID provided.",
-                "invalid_input_app_id": "❌ Invalid application ID provided.",
-                "invalid_input_currency_not_found": "🔍 The selected currency could not be found.",
-                "invalid_input_app_not_found": "🔍 The selected application could not be found.",
-                "currency_already_linked_to_app": "ℹ️ This currency is already linked to the application.",
-                "currency_not_linked_to_app": "ℹ️ This currency is not linked to the application.",
-                "invalid_currency_is_default_flag": "⚠️ Invalid default flag value provided.",
-                "no_currency_provided": "❌ Please provide at least one currency.",
+            "invalid_currency_assign_unassign_action_type": "❌ Invalid action type. Please choose either assign or unassign.",
+            "invalid_input_currency_id": "❌ Invalid currency ID provided.",
+            "invalid_input_app_id": "❌ Invalid application ID provided.",
+            "invalid_input_currency_not_found": "🔍 The selected currency could not be found.",
+            "invalid_input_app_not_found": "🔍 The selected application could not be found.",
+            "currency_already_linked_to_app": "ℹ️ This currency is already linked to the application.",
+            "currency_not_linked_to_app": "ℹ️ This currency is not linked to the application.",
+            "currency_already_linked_in_list": "ℹ️ This currency is already linked to the application.",
+            "invalid_currency_is_default_flag": "⚠️ Invalid default flag value provided.",
+            "no_currency_provided": "❌ Please provide at least one currency.",
 
-                "fetched_currency_list_successfully": "📦 Currency list retrieved successfully.",
-                "fetched_currency_record_successfully": "📄 Currency details retrieved successfully.",
-                "currency_created_successfully": "🎉 Currency created successfully.",
-                "currency_record_not_found_must_be_deactivated": "⚠️ Currency must be deactivated before it can be deleted.",
-                "currency_record_already_deleted": "ℹ️ This currency has already been deleted.",
-                "currency_updated_successfully": "✏️ Currency updated successfully.",
-                "currency_updated_status_successfully": "🔄 Currency status updated successfully.",
-                "currency_deleted_successfully": "🗑️ Currency deleted successfully.",
+            "fetched_currency_list_successfully": "📦 Currency list retrieved successfully.",
+            "fetched_currency_record_successfully": "📄 Currency details retrieved successfully.",
+            "currency_created_successfully": "🎉 Currency created successfully.",
+            "currency_record_not_found_must_be_deactivated": "⚠️ Currency must be deactivated before it can be deleted.",
+            "currency_record_already_deleted": "ℹ️ This currency has already been deleted.",
+            "currency_updated_successfully": "✏️ Currency updated successfully.",
+            "currency_updated_status_successfully": "🔄 Currency status updated successfully.",
+            "currency_deleted_successfully": "🗑️ Currency deleted successfully.",
 
-                "app_currency_bulk_assign_successfully": "✅ Currencies assigned to the application successfully.",
-                "app_currency_bulk_unassign_successfully": "✅ Currencies unassigned from the application successfully.",
-                "app_currency_default_toggled_successfully": "🔄 Default currency updated successfully."
+            "app_currency_bulk_assign_successfully": "✅ Currencies assigned to the application successfully.",
+            "app_currency_bulk_unassign_successfully": "✅ Currencies unassigned from the application successfully.",
+            "app_currency_default_toggled_successfully": "🔄 Default currency updated successfully."
+        },
+        "payment_provider_module_responses": {
+            "fetched_payment_provider_list_successfully": "📦 Payment providers loaded successfully.",
+            "fetched_payment_provider_record_successfully": "📄 Payment provider details loaded successfully.",
+            "invalid_payment_provider_code": "❌ Please provide a valid payment provider code.",
+            "invalid_payment_provider_code_format": "🔤 Provider codes can only contain letters, numbers, underscores, or hyphens.",
+            "invalid_payment_provider_id": "❌ Please select a valid payment provider.",
+            "invalid_payment_provider_logo_url": "🖼️ Please provide a valid payment provider logo URL.",
+            "invalid_payment_provider_name": "❌ Please provide a valid payment provider name.",
+            "invalid_payment_provider_website_url": "🌐 Please provide a valid payment provider website URL.",
+            "payment_provider_created_successfully": "🎉 Payment provider created successfully.",
+            "payment_provider_deleted_successfully": "🗑️ Payment provider deleted successfully.",
+            "payment_provider_exists": "⚠️ A payment provider with this code already exists.",
+            "payment_provider_interaction_layer_missing": "⚠️ This payment provider cannot be activated because no provider interaction layer is registered for it.",
+            "payment_provider_must_be_deactivated_before_delete": "⚠️ Please deactivate this payment provider before deleting it.",
+            "payment_provider_status_updated_successfully": "🔄 Payment provider status updated successfully.",
+            "payment_provider_updated_successfully": "✏️ Payment provider updated successfully."
+        },
+        "payment_method_module_responses": {
+            "fetched_payment_method_list_successfully": "📦 Payment methods loaded successfully.",
+            "fetched_payment_method_record_successfully": "📄 Payment method details loaded successfully.",
+            "invalid_payment_method_code": "❌ Please provide a valid payment method code.",
+            "invalid_payment_method_code_format": "🔤 Method codes can only contain letters, numbers, underscores, or hyphens.",
+            "invalid_payment_method_icon_url": "🖼️ Please provide a valid payment method icon URL.",
+            "invalid_payment_method_id": "❌ Please select a valid payment method.",
+            "invalid_payment_method_name": "❌ Please provide a valid payment method name.",
+            "invalid_payment_method_sort_order": "🔢 Please provide a valid payment method sort order.",
+            "payment_method_code_exists": "⚠️ A payment method with this code already exists.",
+            "payment_method_created_successfully": "🎉 Payment method created successfully.",
+            "payment_method_deleted_successfully": "🗑️ Payment method deleted successfully.",
+            "payment_method_must_be_deactivated_before_delete": "⚠️ Please deactivate this payment method before deleting it.",
+            "payment_method_status_updated_successfully": "🔄 Payment method status updated successfully.",
+            "payment_method_updated_successfully": "✏️ Payment method updated successfully."
+        },
+        "payment_provider_config_module_responses": {
+            "fetched_payment_provider_config_list_successfully": "📦 Payment provider configurations loaded successfully.",
+            "fetched_payment_provider_config_record_successfully": "📄 Payment provider configuration details loaded successfully.",
+            "fetched_payment_provider_config_credentials_successfully": "🔐 Payment provider configuration credentials loaded successfully.",
+            "invalid_payment_provider_config_credentials": "🔐 Please provide valid provider credentials.",
+            "invalid_payment_provider_config_id": "❌ Please select a valid provider configuration.",
+            "invalid_payment_provider_config_settings": "⚙️ Please provide valid provider settings.",
+            "invalid_payment_provider_environment": "🌍 Please choose a valid provider environment.",
+            "invalid_payment_provider_id": "❌ Please select a valid payment provider.",
+            "payment_provider_config_created_successfully": "🎉 Payment provider configuration created successfully.",
+            "payment_provider_config_deleted_successfully": "🗑️ Payment provider configuration deleted successfully.",
+            "payment_provider_config_exists": "⚠️ A configuration already exists for this payment provider.",
+            "payment_provider_config_account_reference_exists": "⚠️ A configuration already exists for this account reference.",
+            "invalid_payment_provider_config_account_reference": "⚠️ The payment provider account reference is invalid.",
+            "payment_provider_config_updated_successfully": "✏️ Payment provider configuration updated successfully.",
+            "payment_provider_not_found": "🔍 We couldn't find the selected payment provider.",
+            "invalid_payment_provider_config_url": "Please provide a valid URL.",
+            "invalid_payment_provider_config_timeout_ms": "Please provide a valid timeout in milliseconds."
+        },
+        "payment_provider_method_module_responses": {
+            "fetched_payment_provider_method_list_successfully": "📦 Payment provider methods loaded successfully.",
+            "fetched_payment_provider_method_record_successfully": "📄 Payment provider method details loaded successfully.",
+            "invalid_payment_direction": "↔️ Please choose a valid payment direction.",
+            "invalid_payment_method_id": "❌ Please select a valid payment method.",
+            "invalid_payment_provider_id": "❌ Please select a valid payment provider.",
+            "invalid_payment_provider_method_id": "❌ Please select a valid payment provider method.",
+            "min_amount_cannot_exceed_max_amount": "⚠️ The minimum amount cannot be greater than the maximum amount.",
+            "payment_method_not_found": "🔍 We couldn't find the selected payment method.",
+            "payment_provider_method_created_successfully": "🎉 Payment provider method created successfully.",
+            "payment_provider_method_deleted_successfully": "🗑️ Payment provider method deleted successfully.",
+            "payment_provider_method_exists": "⚠️ This provider method already exists.",
+            "payment_provider_method_must_be_deactivated_before_delete": "⚠️ Please deactivate this provider method before deleting it.",
+            "payment_provider_method_must_be_deactivated_before_update": "⚠️ Please deactivate this provider method before updating it.",
+            "payment_provider_method_status_updated_successfully": "🔄 Payment provider method status updated successfully.",
+            "payment_provider_method_updated_successfully": "✏️ Payment provider method updated successfully.",
+            "payment_provider_not_found": "🔍 We couldn't find the selected payment provider."
+        },
+        "currency_payment_provider_method_module_responses": {
+            "currency_payment_provider_method_created_successfully": "🎉 Currency provider method created successfully.",
+            "currency_payment_provider_method_deleted_successfully": "🗑️ Currency provider method deleted successfully.",
+            "currency_payment_provider_method_exists": "⚠️ This currency provider method already exists.",
+            "currency_payment_provider_method_must_be_deactivated_before_delete": "⚠️ Please deactivate this currency provider method before deleting it.",
+            "currency_payment_provider_method_status_updated_successfully": "🔄 Currency provider method status updated successfully.",
+            "currency_payment_provider_method_updated_successfully": "✏️ Currency provider method updated successfully.",
+            "fetched_currency_payment_provider_method_list_successfully": "📦 Currency provider methods loaded successfully.",
+            "fetched_currency_payment_provider_method_record_successfully": "📄 Currency provider method details loaded successfully.",
+            "invalid_currency_id": "❌ Please select a valid currency.",
+            "invalid_currency_payment_provider_method_id": "❌ Please select a valid currency provider method.",
+            "invalid_payment_provider_method_id": "❌ Please select a valid payment provider method.",
+            "min_amount_cannot_exceed_max_amount": "⚠️ The minimum amount cannot be greater than the maximum amount.",
+            "payment_provider_method_not_found": "🔍 We couldn't find the selected payment provider method."
         }
     }
 }
