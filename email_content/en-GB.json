@@ -36,7 +36,7 @@
             "complete_setup_button_text": "Complete account setup",
             "link_expires_text": "This link expires at: ",
             "reason_text": "Reason: ",
-            "unexpected_email_text": "If you were not expecting this email, contact your Fibase administrator."
+            "unexpected_email_text": "If you were not expecting this email, contact your Fibase administrators."
         }
 
     }
