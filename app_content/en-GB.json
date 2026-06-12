@@ -51,6 +51,14 @@
         "currency_payment_provider_method_page": {
             "title": "Fibase Admin - Currency Payment Provider Methods",
             "description": "Efficiently manage your currency payment provider methods with the Fibase Admin platform. View detailed information about each currency payment provider method, including method properties, assigned applications, and default method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your currency payment provider method management needs. Navigate through the currency payment provider methods page to efficiently oversee your resources and make informed decisions for your organization."
+        },
+        "activity_page": {
+            "title": "Fibase Admin - Activity Log",
+            "description": "Monitor system activity and audit trails in Fibase Admin. Review recent member actions, access events, and security logs to stay informed about application usage and maintain operational oversight across your platform."
+        },
+        "access_control_page": {
+            "title": "Fibase Admin - Access Control",
+            "description": "Manage roles, permissions, and access policies within the Fibase Admin platform. Review role assignments, secure user access, and ensure governance across applications with powerful access control tools built for compliance and team administration."
         }
     },
     "screen_loader_ui": {
@@ -823,7 +831,10 @@
                 "timeline": {
                     "title_text": "Timeline",
                     "created_label_text": "Created:",
-                    "updated_label_text": "Updated:"
+                    "updated_label_text": "Updated:",
+                    "last_login_at_label_text": "Last Login:",
+                    "last_activity_at_label_text": "Last Activity:",
+                    "recent_activity_count_label_text": "Recent Activity Count:"
                 }
             },
             "devices_view": {
@@ -2625,6 +2636,425 @@
             }
         }
     },
+    "activity_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Activities",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Activities",
+                "header_description": "Inspect activity and audit logs across members, apps, request IDs, and entity types."
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search activity records"
+                },
+                "registered_app_filter": {
+                    "label_text": "Registered App",
+                    "placeholder_text": "Search registered app",
+                    "selected_text_prefix": "Selected app"
+                },
+                "member_filter": {
+                    "label_text": "Member",
+                    "placeholder_text": "Search member",
+                    "selected_text_prefix": "Selected member"
+                },
+                "request_id_filter": {
+                    "label_text": "Request ID",
+                    "placeholder_text": "Enter request ID"
+                },
+                "entity_type_filter": {
+                    "label_text": "Entity Type",
+                    "placeholder_text": "Select entity type",
+                    "option_list": [
+                        {
+                            "label_text": "CSRF Token",
+                            "value": "CsrfToken"
+                        },
+                        {
+                            "label_text": "Member Auth",
+                            "value": "MemberAuth"
+                        },
+                        {
+                            "label_text": "Registered App",
+                            "value": "RegisteredApp"
+                        },
+                        {
+                            "label_text": "File Storage",
+                            "value": "FileStorage"
+                        },
+                        {
+                            "label_text": "Currency",
+                            "value": "Currency"
+                        },
+                        {
+                            "label_text": "App Currency",
+                            "value": "AppCurrency"
+                        },
+                        {
+                            "label_text": "Payment Provider",
+                            "value": "PaymentProvider"
+                        },
+                        {
+                            "label_text": "Payment Method",
+                            "value": "PaymentMethod"
+                        },
+                        {
+                            "label_text": "Payment Provider Config",
+                            "value": "PaymentProviderConfig"
+                        },
+                        {
+                            "label_text": "Payment Provider Method",
+                            "value": "PaymentProviderMethod"
+                        },
+                        {
+                            "label_text": "Currency Payment Provider Method",
+                            "value": "CurrencyPaymentProviderMethod"
+                        },
+                        {
+                            "label_text": "App Event",
+                            "value": "AppEvent"
+                        },
+                        {
+                            "label_text": "Activity Log",
+                            "value": "ActivityLog"
+                        },
+                        {
+                            "label_text": "Member",
+                            "value": "Member"
+                        },
+                        {
+                            "label_text": "Role",
+                            "value": "Role"
+                        },
+                        {
+                            "label_text": "Actor Role",
+                            "value": "ActorRole"
+                        },
+                        {
+                            "label_text": "Login Session",
+                            "value": "LoginSessionHistory"
+                        },
+                        {
+                            "label_text": "Member Setup Token",
+                            "value": "MemberSetupToken"
+                        }
+                    ]
+                },
+                "ip_address_filter": {
+                    "label_text": "IP Address",
+                    "placeholder_text": "Enter IP address"
+                },
+                "status_filter": {
+                    "label_text": "Status",
+                    "placeholder_text": "Select status",
+                    "option_list": [
+                        {
+                            "label_text": "Success",
+                            "value": "success"
+                        },
+                        {
+                            "label_text": "Failed",
+                            "value": "failed"
+                        }
+                    ]
+                },
+                "date_range_filter": {
+                    "label_text": "Activity Date",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} activity record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} record(s) selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading activity records..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Activity Record Found"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "actor_text": "Actor",
+                    "request_id_text": "Request ID",
+                    "action_text": "Action",
+                    "entity_type_text": "Entity Type",
+                    "description_text": "Description",
+                    "ip_address_text": "IP Address",
+                    "user_agent_text": "User Agent",
+                    "status_text": "Status",
+                    "created_at_text": "Created At",
+                    "updated_at_text": "Updated At"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "prev_btn_text": "Previous",
+                        "next_btn_text": "Next"
+                    }
+                }
+            },
+            "card": {
+                "labels": {
+                    "actor_text": "Actor",
+                    "request_id_text": "Request ID",
+                    "entity_type_text": "Entity Type",
+                    "ip_address_text": "IP Address",
+                    "user_agent_text": "User Agent",
+                    "status_text": "Status",
+                    "created_at_text": "Created At",
+                    "updated_at_text": "Updated At"
+                }
+            }
+        }
+    },
+    "access_control_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Access Control",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Access Control",
+                "header_description": "Manage roles, member groups, role permissions, and future actor role assignments.",
+                "create_btn": {
+                    "btn_text": "Add Role"
+                }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search role name, display name, or symbol"
+                },
+                "member_group_filter": {
+                    "label_text": "Member Group",
+                    "placeholder_text": "Select role type",
+                    "option_list": [
+                        {
+                            "label_text": "Member Groups",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "Non Member Groups",
+                            "value": "false"
+                        }
+                    ]
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} role record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} role(s) selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading role records..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Role Record Found"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "role_text": "Role",
+                    "type_text": "Type",
+                    "created_by_text": "Created By",
+                    "updated_by_text": "Updated By",
+                    "created_at_text": "Created At",
+                    "actions_text": "Actions"
+                },
+                "role_type": {
+                    "system_role_text": "System Role",
+                    "member_group_text": "Member Group",
+                    "custom_role_text": "Custom Role"
+                },
+                "role_badges": {
+                    "system_role_text": "System",
+                    "member_group_text": "Member Group"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "prev_btn_text": "Previous",
+                        "next_btn_text": "Next"
+                    }
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon",
+                        "menu_link": ""
+                    },
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon",
+                        "menu_link": ""
+                    },
+                    "edit_menu_option": {
+                        "menu_text": "Edit",
+                        "menu_icon": "edit_square_pencil_svg_icon",
+                        "menu_link": ""
+                    },
+                    "assigned_permissions_menu_option": {
+                        "menu_text": "Permissions",
+                        "menu_icon": "numbered_list_svg_icon",
+                        "menu_link": ""
+                    },
+                    "add_permissions_menu_option": {
+                        "menu_text": "Add Permission(s)",
+                        "menu_icon": "square_grid_plus_svg_icon",
+                        "menu_link": ""
+                    },
+                    "delete_menu_option": {
+                        "menu_text": "Delete",
+                        "menu_icon": "delete_trash_svg_icon",
+                        "menu_link": ""
+                    }
+                }
+            }
+        },
+        "modals_ui": {
+            "add_new_modal_ui": {
+                "title_text": "Add Role",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "update_modal_ui": {
+                "title_text": "Edit Role",
+                "title_icon": "edit_square_pencil_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Role Details",
+                "title_icon": "shield_check_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "permissions_modal_ui": {
+                "title_text": "Role Permissions",
+                "title_icon": "shield_check_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "delete_modal_ui": {
+                "title_text": "Delete Role",
+                "title_icon": "delete_trash_svg_icon",
+                "content": {
+                    "title_text": "Delete {{name}} - {{symbol}}?",
+                    "message_text": "This action will delete the member group role {{name}} - {{symbol}}. This cannot be undone.",
+                    "cancel_btn_text": "Cancel",
+                    "confirm_btn_text": "Delete Role"
+                }
+            }
+        },
+        "form_view_ui": {
+            "header_text": "Role",
+            "fieldset": {
+                "name_field": {
+                    "label_text": "Role Name",
+                    "placeholder_text": "e.g. Operations Manager"
+                },
+                "symbol_field": {
+                    "label_text": "Role Symbol",
+                    "placeholder_text": "e.g. ops_manager"
+                },
+                "is_member_group_field": {
+                    "label_text": "Member Group",
+                    "placeholder_text": "Mark this role as a member group"
+                },
+                "btn_text": "Submit"
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading role...",
+            "no_description_text": "",
+            "empty_value_text": "-",
+            "bool_text": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "role_type": {
+                "system_role_text": "System Role",
+                "member_group_text": "Member Group",
+                "custom_role_text": "Custom Role"
+            },
+            "sections": {
+                "role_information": {
+                    "title_text": "Role Information",
+                    "role_id_label_text": "Role ID:",
+                    "symbol_label_text": "Symbol:",
+                    "type_label_text": "Type:"
+                },
+                "status": {
+                    "title_text": "Role Flags",
+                    "system_role_label_text": "System Role:",
+                    "member_group_label_text": "Member Group:"
+                },
+                "timeline": {
+                    "title_text": "Timeline",
+                    "created_label_text": "Created:",
+                    "updated_label_text": "Updated:"
+                },
+                "created_by": {
+                    "title_text": "Created By"
+                },
+                "updated_by": {
+                    "title_text": "Updated By"
+                }
+            }
+        },
+        "permissions_view_ui": {
+            "loading_text": "Loading assigned permissions...",
+            "empty_state_text": "No permissions",
+            "search_placeholder_text": "Search permissions",
+            "bulk_unassign_button_text": "Remove Selected",
+            "unassign_button_text": "Remove",
+            "unassigning_button_text": "Removing",
+            "empty_value_text": "-",
+            "labels": {
+                "description": "Description",
+                "created_at": "Created",
+                "updated_at": "Updated"
+            }
+        }
+    },
     "api_responses": {
         "general_responses": {
             "invalid_csrf_token": "🔒 Invalid CSRF token. Please refresh the page and try again.",
@@ -2914,6 +3344,7 @@
             "actor_roles_unassigned_successfully": "✅ Roles unassigned successfully.",
             "failed_to_assign_actor_roles": "⚠️ We couldn't assign those roles right now. Please try again.",
             "failed_to_create_role": "⚠️ We couldn't create the role right now. Please try again.",
+            "failed_to_delete_role": "⚠️ We couldn't delete the role right now. Please try again.",
             "failed_to_fetch_role_list": "⚠️ We couldn't load role records right now.",
             "failed_to_fetch_role_permission_list": "⚠️ We couldn't load role permission records right now.",
             "failed_to_unassign_actor_roles": "⚠️ We couldn't unassign those roles right now. Please try again.",
@@ -2932,13 +3363,16 @@
             "no_permission_provided": "⚠️ Please select at least one permission.",
             "no_role_provided": "⚠️ Please select at least one role.",
             "role_created_successfully": "🎉 Role created successfully.",
+            "role_deleted_successfully": "✅ Role deleted successfully.",
             "role_name_or_symbol_exists": "⚠️ A role with this name or symbol already exists.",
             "role_permissions_assigned_successfully": "✅ Permissions assigned to the role successfully.",
             "role_permissions_unassigned_successfully": "✅ Permissions unassigned from the role successfully.",
             "role_symbol_cannot_be_updated": "🚫 The role symbol cannot be changed after creation.",
             "role_updated_successfully": "✏️ Role updated successfully.",
             "super_admin_role_cannot_be_assigned": "🚫 The super admin role cannot be assigned through this action.",
-            "super_admin_role_cannot_be_unassigned": "🚫 The super admin role cannot be unassigned through this action."
+            "super_admin_role_cannot_be_deleted": "🚫 The super admin role cannot be deleted.",
+            "super_admin_role_cannot_be_unassigned": "🚫 The super admin role cannot be unassigned through this action.",
+            "system_role_cannot_be_deleted": "🚫 System roles cannot be deleted."
         }
     }
 }
