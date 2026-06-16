@@ -39,5 +39,20 @@
             "unexpected_email_text": "If you were not expecting this email, contact your Fibase administrator."
         }
 
+    },
+    "admin_member_account_activated_email": {
+        "subject_text": "Welcome to Fibase Admin",
+        "body": {
+            "header_text": "Welcome to Fibase Admin",
+            "hello_text": "Hello ",
+            "welcome_text": "Your Fibase administrator account has been fully activated. Welcome, and we are glad to have you on board.",
+            "admin_responsibility_text": "As an administrator, you are trusted to manage important platform data. Please handle every action with care, integrity, and good judgment.",
+            "integrity_instruction_text": "Act with integrity. Only view, create, update, or delete data when there is a clear and authorised reason to do so.",
+            "ask_before_action_text": "Ask questions before taking action when a request, record, or outcome is unclear.",
+            "think_before_acting_text": "Think before you act. Review the details carefully, confirm the expected impact, and avoid rushed changes.",
+            "audit_notice_text": "All administrative activity is monitored and recorded for security, audit, and accountability purposes.",
+            "security_reminder_text": "Keep your login details and two-factor authentication codes secure. Never share your access with anyone.",
+            "support_text": "If you are unsure about an action, contact your Fibase administrator or support team before proceeding."
+        }
     }
 }

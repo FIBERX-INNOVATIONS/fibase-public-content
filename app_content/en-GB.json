@@ -357,6 +357,11 @@
                         "menu_text": "Edit",
                         "menu_icon": "edit_square_pencil_svg_icon"
                     },
+                    "manage_roles_menu_option": {
+                        "menu_text": "Manage Roles",
+                        "menu_icon": "member_shield_svg_icon",
+                        "menu_link": ""
+                    },
                     "delete_menu_option": {
                         "menu_text": "Delete",
                         "menu_icon": "delete_trash_svg_icon"
@@ -716,6 +721,11 @@
                     "activity_menu_option": {
                         "menu_text": "Activity",
                         "menu_icon": "clock_svg_icon",
+                        "menu_link": ""
+                    },
+                    "manage_roles_menu_option": {
+                        "menu_text": "Manage Roles",
+                        "menu_icon": "member_shield_svg_icon",
                         "menu_link": ""
                     },
                     "send_activation_link_menu_option": {
