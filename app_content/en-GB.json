@@ -3484,6 +3484,7 @@
             "super_admin_member_cannot_be_deactivated": "🚫 The super admin member account cannot be deactivated.",
             "super_admin_member_cannot_be_deleted": "🚫 The super admin member account cannot be deleted.",
             "super_admin_member_cannot_be_reactivated": "🚫 The super admin member account cannot be reactivated through this action.",
+            "super_admin_member_cannot_be_updated": "🚫 A super admin member profile can only be updated by that same super admin.",
             "member_profile_activation_not_allowed": "🚫 Member profiles cannot be activated from this action.",
             "member_profile_deactivation_super_admin_required": "🚫  Only a super admin can deactivate a member profile.",
             "member_profile_super_admin_deactivation_not_allowed": "🚫 A super admin profile cannot be deactivated.",
