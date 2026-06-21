@@ -44,6 +44,10 @@
             "title": "Fibase Admin - Identity Wallets",
             "description": "Monitor and manage identity wallet records in Fibase Admin. Track wallet details, associated identities, and account activity to maintain full visibility over user assets and transactions."
         },
+        "identity_wallet_ledger_page": {
+            "title": "Fibase Admin - Identity Wallet Ledger",
+            "description": ""
+        },
         "payment_method_page": {
             "title": "Fibase Admin - Payment Methods",
             "description": "Efficiently manage your payment methods with the Fibase Admin platform. View detailed information about each payment method, including payment method properties, assigned applications, and default payment method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment method management needs. Navigate through the payment methods page to efficiently oversee your resources and make informed decisions for your organization."
@@ -1753,6 +1757,11 @@
                         "menu_icon": "view_eye_svg_icon",
                         "menu_link": ""
                     },
+                    "ledger_menu_option": {
+                        "menu_text": "Ledger",
+                        "menu_icon": "table_cells_svg_icon",
+                        "menu_link": ""
+                    },
                     "select_menu_option": {
                         "menu_text": "Select",
                         "selected_menu_text": "Deselect",
@@ -1773,6 +1782,9 @@
             "loading_text": "Loading wallet details...",
             "empty_value_text": "-",
             "no_description_text": "",
+            "breadcrumb": {
+                "wallet_text": "Wallet"
+            },
             "status": {
                 "active_text": "Active",
                 "inactive_text": "Inactive",
@@ -1816,6 +1828,154 @@
                     "title_text": "Timeline",
                     "created_at_label_text": "Created",
                     "updated_at_label_text": "Updated"
+                }
+            }
+        }
+    },
+    "identity_wallet_ledger_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Identities",
+                    "menu_icon": "greater_than_caret_svg_icon",
+                    "menu_link": "/identities"
+                },
+                {
+                    "menu_id": "WalletsBreadcrumb",
+                    "menu_text": "Wallets",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                },
+                {
+                    "menu_text": "Wallet Ledger",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Wallet Ledger",
+                "header_description": "Trace and review every balance movement recorded against the selected wallet."
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search description, reason, entry type, or direction"
+                },
+                "entry_type_filter": {
+                    "label_text": "Entry Type",
+                    "placeholder_text": "All entry types",
+                    "option_list": [
+                        {
+                            "label_text": "Transaction",
+                            "value": "transaction"
+                        },
+                        {
+                            "label_text": "Fee",
+                            "value": "fee"
+                        },
+                        {
+                            "label_text": "Adjustment",
+                            "value": "adjustment"
+                        },
+                        {
+                            "label_text": "Refund",
+                            "value": "refund"
+                        }
+                    ]
+                },
+                "direction_filter": {
+                    "label_text": "Direction",
+                    "placeholder_text": "All directions",
+                    "option_list": [
+                        {
+                            "label_text": "Credit",
+                            "value": "credit"
+                        },
+                        {
+                            "label_text": "Debit",
+                            "value": "debit"
+                        }
+                    ]
+                },
+                "balance_field_filter": {
+                    "label_text": "Balance Field",
+                    "placeholder_text": "All balance fields",
+                    "option_list": [
+                        {
+                            "label_text": "Available",
+                            "value": "available_balance"
+                        },
+                        {
+                            "label_text": "Locked",
+                            "value": "locked_balance"
+                        },
+                        {
+                            "label_text": "Pending",
+                            "value": "pending_balance"
+                        },
+                        {
+                            "label_text": "Refunded",
+                            "value": "refunded_balance"
+                        }
+                    ]
+                },
+                "date_range_filter": {
+                    "label_text": "Created Date",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} ledger entries (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} ledger entries selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading wallet ledger..."
+                },
+                "empty_state_section": {
+                    "header_text": "No wallet ledger entries found."
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "created_at_text": "Created At",
+                    "transaction_text": "Transaction",
+                    "entry_type_text": "Entry Type",
+                    "direction_text": "Direction",
+                    "balance_field_text": "Balance Field",
+                    "amount_text": "Amount",
+                    "before_text": "Before",
+                    "after_text": "After",
+                    "created_by_text": "Created By",
+                    "actions_text": "Actions"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "prev_btn_text": "Previous",
+                        "next_btn_text": "Next"
+                    }
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon",
+                        "menu_link": ""
+                    }
                 }
             }
         }
