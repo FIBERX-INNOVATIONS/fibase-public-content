@@ -1,84 +1,92 @@
 {
     "page_meta": {
         "home_page": {
-            "title": "Fibase Admin - Home",
-            "description": "Welcome to Fibase, your all-in-one platform for managing registered applications and currencies. Explore our dashboard to view app details, manage activation status, and securely access public and private keys used for system integrations. Stay organized and in control with Fibase's powerful features designed to streamline your application and currency management needs."
+            "title_text": "Fibase Admin - Home",
+            "description_text": "Welcome to Fibase, your all-in-one platform for managing registered applications and currencies. Explore our dashboard to view app details, manage activation status, and securely access public and private keys used for system integrations. Stay organized and in control with Fibase's powerful features designed to streamline your application and currency management needs."
         },
         "login_page": {
-            "title": "Fibase Admin - Login",
-            "description": "Sign in to your Fibase Admin account to manage registered applications and currencies. Access powerful features to view app details, manage activation status, and securely access public and private keys for system integrations. Stay organized and in control with Fibase's all-in-one platform designed for efficient application and currency management."
+            "title_text": "Fibase Admin - Login",
+            "description_text": "Sign in to your Fibase Admin account to manage registered applications and currencies. Access powerful features to view app details, manage activation status, and securely access public and private keys for system integrations. Stay organized and in control with Fibase's all-in-one platform designed for efficient application and currency management."
         },
         "two_factor_login_page": {
-            "title": "Fibase Admin - Two Factor Login",
-            "description": "Secure your Fibase Admin account with two-factor authentication. Enter the OTP code sent to your registered email or phone number to complete the login process. Enhance your account security and protect your application and currency management with Fibase's robust authentication features."
+            "title_text": "Fibase Admin - Two Factor Login",
+            "description_text": "Secure your Fibase Admin account with two-factor authentication. Enter the OTP code sent to your registered email or phone number to complete the login process. Enhance your account security and protect your application and currency management with Fibase's robust authentication features."
         },
         "logout_page": {
-            "title": "Fibase Admin - Logout",
-            "description": "You have been logged out of your Fibase Admin account. We hope you had a productive session managing your registered applications and currencies. If you need to access your account again, simply sign in with your credentials. Thank you for using Fibase, your all-in-one platform for efficient application and currency management."
+            "title_text": "Fibase Admin - Logout",
+            "description_text": "You have been logged out of your Fibase Admin account. We hope you had a productive session managing your registered applications and currencies. If you need to access your account again, simply sign in with your credentials. Thank you for using Fibase, your all-in-one platform for efficient application and currency management."
         },
         "activate_account_page": {
-            "title": "Fibase Admin - Activate Account",
-            "description": "Complete your account activation by creating a strong password and setting up two-factor authentication. Follow the on-screen steps to verify your email and secure your Fibase Admin access."
+            "title_text": "Fibase Admin - Activate Account",
+            "description_text": "Complete your account activation by creating a strong password and setting up two-factor authentication. Follow the on-screen steps to verify your email and secure your Fibase Admin access."
         },
         "dashboard_page": {
-            "title": "Fibase Admin - Dashboard",
-            "description": "Welcome to the Fibase Admin Dashboard, your central hub for managing registered applications and currencies. Explore detailed insights, view app details, manage activation status, and securely access public and private keys for system integrations. Stay organized and in control with Fibase's powerful features designed to streamline your application and currency management needs. Navigate through the dashboard to efficiently oversee your resources and make informed decisions for your organization."
+            "title_text": "Fibase Admin - Dashboard",
+            "description_text": "Welcome to the Fibase Admin Dashboard, your central hub for managing registered applications and currencies. Explore detailed insights, view app details, manage activation status, and securely access public and private keys for system integrations. Stay organized and in control with Fibase's powerful features designed to streamline your application and currency management needs. Navigate through the dashboard to efficiently oversee your resources and make informed decisions for your organization."
         },
         "registered_app_page": {
-            "title": "Fibase Admin - Registered Applications",
-            "description": "Manage your registered applications with ease using the Fibase Admin platform. View detailed information about each application, including app details, activation status, and securely access public and private keys for system integrations. Stay organized and in control with Fibase's powerful features designed to streamline your application management needs. Navigate through the registered applications page to efficiently oversee your resources and make informed decisions for your organization."
+            "title_text": "Fibase Admin - Registered Applications",
+            "description_text": "Manage your registered applications with ease using the Fibase Admin platform. View detailed information about each application, including app details, activation status, and securely access public and private keys for system integrations. Stay organized and in control with Fibase's powerful features designed to streamline your application management needs. Navigate through the registered applications page to efficiently oversee your resources and make informed decisions for your organization."
         },
         "member_profile_page": {
-            "title": "Fibase Admin - Member Profiles",
-            "description": "Manage member profiles efficiently with the Fibase Admin platform. View detailed information about each member, including profile details, account status, assigned roles, permissions, and verification status. Stay organized and maintain secure access control with Fibase's powerful member management features designed to streamline administration and team oversight across your organization."
-        },
-        "currency_page": {
-            "title": "Fibase Admin - Currencies",
-            "description": "Efficiently manage your currencies with the Fibase Admin platform. View detailed information about each currency, including currency properties, assigned applications, and default currency behavior. Stay organized and in control with Fibase's powerful features designed to streamline your currency management needs. Navigate through the currencies page to efficiently oversee your resources and make informed decisions for your organization."
+            "title_text": "Fibase Admin - Member Profiles",
+            "description_text": "Manage member profiles efficiently with the Fibase Admin platform. View detailed information about each member, including profile details, account status, assigned roles, permissions, and verification status. Stay organized and maintain secure access control with Fibase's powerful member management features designed to streamline administration and team oversight across your organization."
         },
         "identity_page": {
-            "title": "Fibase Admin - Identity Management",
-            "description": "Manage customer and application identities with Fibase Admin. Review identity details, verification status, source applications, and related wallet information to keep your ecosystem organized and secure."
+            "title_text": "Fibase Admin - Identities",
+            "description_text": "Browse and manage customer and application identities in Fibase Admin. Review profile details, verification status, source applications, wallet links, and activity history to keep identity records accurate and secure."
         },
         "identity_wallet_page": {
-            "title": "Fibase Admin - Identity Wallets",
-            "description": "Monitor and manage identity wallet records in Fibase Admin. Track wallet details, associated identities, and account activity to maintain full visibility over user assets and transactions."
+            "title_text": "Fibase Admin - Identity Wallets",
+            "description_text": "View and manage wallet records associated with each identity. Track balances, statuses, currencies, and account activity to maintain clear visibility over user assets and operational performance."
         },
         "identity_wallet_ledger_page": {
-            "title": "Fibase Admin - Identity Wallet Ledger",
-            "description": ""
+            "title_text": "Fibase Admin - Wallet Ledger",
+            "description_text": "Trace wallet balance movements and transaction history for a selected identity wallet. Review credits, debits, and ledger activity to understand asset flow and audit records with confidence."
+        },
+        "transaction_page": {
+            "title_text": "Fibase Admin - Transactions",
+            "description_text": "Monitor transaction records across the platform and review key details such as status, participants, amounts, and payment activity. Use this view to keep financial operations transparent and well-managed."
+        },
+        "transaction_ledger_page": {
+            "title_text": "Fibase Admin - Transaction Ledger",
+            "description_text": "Explore the complete transaction ledger for detailed audit trails and account history. Inspect entries, movement records, and balances to understand activity patterns and resolve financial records efficiently."
+        },
+        "currency_page": {
+            "title_text": "Fibase Admin - Currencies",
+            "description_text": "Efficiently manage your currencies with the Fibase Admin platform. View detailed information about each currency, including currency properties, assigned applications, and default currency behavior. Stay organized and in control with Fibase's powerful features designed to streamline your currency management needs. Navigate through the currencies page to efficiently oversee your resources and make informed decisions for your organization."
         },
         "payment_method_page": {
-            "title": "Fibase Admin - Payment Methods",
-            "description": "Efficiently manage your payment methods with the Fibase Admin platform. View detailed information about each payment method, including payment method properties, assigned applications, and default payment method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment method management needs. Navigate through the payment methods page to efficiently oversee your resources and make informed decisions for your organization."
+            "title_text": "Fibase Admin - Payment Methods",
+            "description_text": "Efficiently manage your payment methods with the Fibase Admin platform. View detailed information about each payment method, including payment method properties, assigned applications, and default payment method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment method management needs. Navigate through the payment methods page to efficiently oversee your resources and make informed decisions for your organization."
         },
         "payment_provider_page": {
-            "title": "Fibase Admin - Payment Providers",
-            "description": "Efficiently manage your payment providers with the Fibase Admin platform. View detailed information about each payment provider, including provider properties, assigned applications, and default provider behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment provider management needs. Navigate through the payment providers page to efficiently oversee your resources and make informed decisions for your organization."
+            "title_text": "Fibase Admin - Payment Providers",
+            "description_text": "Efficiently manage your payment providers with the Fibase Admin platform. View detailed information about each payment provider, including provider properties, assigned applications, and default provider behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment provider management needs. Navigate through the payment providers page to efficiently oversee your resources and make informed decisions for your organization."
         },
         "payment_provider_config_page": {
-            "title": "Fibase Admin - Payment Provider Configurations",
-            "description": "Efficiently manage your payment provider configurations with the Fibase Admin platform. View detailed information about each payment provider configuration, including configuration properties, assigned applications, and default configuration behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment provider configuration management needs. Navigate through the payment provider configurations page to efficiently oversee your resources and make informed decisions for your organization."
+            "title_text": "Fibase Admin - Payment Provider Configurations",
+            "description_text": "Efficiently manage your payment provider configurations with the Fibase Admin platform. View detailed information about each payment provider configuration, including configuration properties, assigned applications, and default configuration behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment provider configuration management needs. Navigate through the payment provider configurations page to efficiently oversee your resources and make informed decisions for your organization."
         },
         "payment_provider_method_page": {
-            "title": "Fibase Admin - Payment Provider Methods",
-            "description": "Efficiently manage your payment provider methods with the Fibase Admin platform. View detailed information about each payment provider method, including method properties, assigned applications, and default method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment provider method management needs. Navigate through the payment provider methods page to efficiently oversee your resources and make informed decisions for your organization."
+            "title_text": "Fibase Admin - Payment Provider Methods",
+            "description_text": "Efficiently manage your payment provider methods with the Fibase Admin platform. View detailed information about each payment provider method, including method properties, assigned applications, and default method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your payment provider method management needs. Navigate through the payment provider methods page to efficiently oversee your resources and make informed decisions for your organization."
         },
         "currency_payment_provider_method_page": {
-            "title": "Fibase Admin - Currency Payment Provider Methods",
-            "description": "Efficiently manage your currency payment provider methods with the Fibase Admin platform. View detailed information about each currency payment provider method, including method properties, assigned applications, and default method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your currency payment provider method management needs. Navigate through the currency payment provider methods page to efficiently oversee your resources and make informed decisions for your organization."
+            "title_text": "Fibase Admin - Currency Payment Provider Methods",
+            "description_text": "Efficiently manage your currency payment provider methods with the Fibase Admin platform. View detailed information about each currency payment provider method, including method properties, assigned applications, and default method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your currency payment provider method management needs. Navigate through the currency payment provider methods page to efficiently oversee your resources and make informed decisions for your organization."
         },
         "activity_page": {
-            "title": "Fibase Admin - Activity Log",
-            "description": "Monitor system activity and audit trails in Fibase Admin. Review recent member actions, access events, and security logs to stay informed about application usage and maintain operational oversight across your platform."
+            "title_text": "Fibase Admin - Activity Log",
+            "description_text": "Monitor system activity and audit trails in Fibase Admin. Review recent member actions, access events, and security logs to stay informed about application usage and maintain operational oversight across your platform."
         },
         "access_control_page": {
-            "title": "Fibase Admin - Access Control",
-            "description": "Manage roles, permissions, and access policies within the Fibase Admin platform. Review role assignments, secure user access, and ensure governance across applications with powerful access control tools built for compliance and team administration."
+            "title_text": "Fibase Admin - Access Control",
+            "description_text": "Manage roles, permissions, and access policies within the Fibase Admin platform. Review role assignments, secure user access, and ensure governance across applications with powerful access control tools built for compliance and team administration."
         },
         "my_profile_page": {
-            "title": "Fibase Admin - My Profile",
-            "description": "View and manage your personal account details and security settings. Update profile information, change your password, and configure two-factor authentication to keep your Fibase Admin account secure and up to date."
+            "title_text": "Fibase Admin - My Profile",
+            "description_text": "View and manage your personal account details and security settings. Update profile information, change your password, and configure two-factor authentication to keep your Fibase Admin account secure and up to date."
         }
     },
     "screen_loader_ui": {
@@ -202,13 +210,6 @@
                     "menu_permission_text": "member_profile_module.get_member_list"
                 },
                 {
-                    "menu_id_text": "CurrencyListView",
-                    "menu_link": "/currencies",
-                    "menu_icon": "dollar_currency_svg_icon",
-                    "menu_text": "Currencies",
-                    "menu_permission_text": "currency_module.get_currency_list"
-                },
-                {
                     "menu_text": "Identities",
                     "menu_icon": "identification_card_svg_icon",
                     "menu_link": "/identities",
@@ -219,6 +220,13 @@
                     "menu_icon": "bullet_lsit_svg_icon",
                     "menu_link": "/transactions",
                     "menu_permission_text": "transaction_module.get_transaction_list"
+                },
+                {
+                    "menu_id_text": "CurrencyListView",
+                    "menu_link": "/currencies",
+                    "menu_icon": "dollar_currency_svg_icon",
+                    "menu_text": "Currencies",
+                    "menu_permission_text": "currency_module.get_currency_list"
                 },
                 {
                     "menu_id_text": "PaymentConfigSidebarMenu",
@@ -995,360 +1003,6 @@
             }
         }
     },
-    "currency_view_ui": {
-        "list_view_ui": {
-            "breadcrumb_list": [
-                {
-                    "menu_text": "Home",
-                    "menu_icon": "home_svg_icon",
-                    "menu_link": "/dashboard"
-                },
-                {
-                    "menu_text": "Currencies",
-                    "menu_icon": "greater_than_caret_svg_icon"
-                }
-            ],
-            "header_section": {
-                "header_text": "Currencies",
-                "header_description": "Manage system currencies, configure currency properties, assign currencies to applications, and control default currency behavior.",
-                "create_btn": {
-                    "btn_icon": "plus_circle_svg_icon",
-                    "btn_text": "Add New Currency"
-                }
-            },
-            "filters_section": {
-                "toggle_btn": {
-                    "btn_icon": "horizontal_filters_svg_icon",
-                    "btn_text": "Filters"
-                },
-                "search_filter": {
-                    "label_text": "Keyword Search",
-                    "placeholder_text": "Search by name, code, symbol..."
-                },
-                "precision_filter": {
-                    "label_text": "Currency Precision",
-                    "placeholder_text": "0, 1,2,3,4..."
-                },
-                "minor_unit_filter": {
-                    "label_text": "Currency Minor Unit",
-                    "placeholder_text": "100, 200, 300"
-                },
-                "numeric_code_filter": {
-                    "label_text": "currency Numeric Code",
-                    "placeholder_text": "566, 840, 826"
-                },
-                "status_filter": {
-                    "label_text": "Currency Status",
-                    "placeholder_text": "Select Status",
-                    "option_list": [
-                        { "label_text": "Active", "value": "true" },
-                        { "label_text": "Inactive", "value": "false" }
-                    ]
-                },
-                "type_filter": {
-                    "label_text": "Currency Type",
-                    "placeholder_text": "Select Type",
-                    "option_list": [
-                        { "label_text": "Fiat", "value": "true" },
-                        { "label_text": "Non-Fiat", "value": "false" }
-                    ]
-                },
-                "app_id_filter": {
-                    "label_text": "Filter by App",
-                    "placeholder_text": "App ID or Public ID...",
-                    "selected_text_prefix": "Selected Registered App"
-                },
-                "unassigned_to_app_filter": {
-                    "label_text": "Unassigned to App",
-                    "placeholder_text": "Select Option",
-                    "option_list": [
-                        { "label_text": "Assigned Only", "value": "false" },
-                        { "label_text": "Unassigned Only", "value": "true" }
-                    ]
-                },
-                "created_by_filter": {
-                    "label_text": "Created By",
-                    "placeholder_text": "Member ID..."
-                },
-                "date_range_filter": {
-                    "label_text": "Created Date Range",
-                    "placeholder_text": "yyyy-mm-dd"
-                },
-                "clear_filters_btn": {
-                    "btn_text": "Clear Filters"
-                },
-                "apply_filters_btn": {
-                    "btn_text": "Apply Filters"
-                }
-            },
-            "table": {
-                "result_section": {
-                    "result_text": "Showing {{showing}} of {{total_records}} currency record(s) (Page {{current_page}} of {{total_pages}})"
-                },
-                "bulk_action_section": {
-                    "btn_text": "{{selected_count}} selected",
-                    "actions": [
-                        {
-                            "label_text": "Assign to App",
-                            "value": "assign"
-                        },
-                        {
-                            "label_text": "Unassign from App",
-                            "value": "unassign"
-                        }
-                    ]
-                },
-                "loading_section": {
-                    "loader_text": "Loading currencies..."
-                },
-                "empty_state_section": {
-                    "header_text": "No Currencies Found"
-                },
-                "header": {
-                    "sn_text": "S/N",
-                    "code_text": "Code",
-                    "name_text": "Name",
-                    "country_code_text": "Country Code",
-                    "type_text": "Type",
-                    "precision_text": "Precision",
-                    "sort_order_text": "Sort Order",
-                    "creator_text": "Created By",
-                    "created_at_text": "Created At",
-                    "status_text": "Status",
-                    "actions_text": "Actions"
-                },
-                "body": {
-                    "fiat_currency_type_text": "Fiat Currency",
-                    "crypto_currency_type_text": "Crypto Currency"
-                },
-                "action_menu_list": {
-                    "view_menu_option": {
-                        "menu_text": "View",
-                        "menu_icon": "view_eye_svg_icon"
-                    },
-                    "select_menu_option": {
-                        "menu_text": "Select",
-                        "menu_icon": "check_circle_svg_icon"
-                    },
-                    "edit_menu_option": {
-                        "menu_text": "Edit",
-                        "menu_icon": "edit_square_pencil_svg_icon"
-                    },
-                    "assign_menu_option": {
-                        "menu_text": "Assign to App",
-                        "menu_icon": "chain_link_svg_icon"
-                    },
-                    "un_assign_menu_option": {
-                        "menu_text": "Unassign from App",
-                        "menu_icon": "chain_unlink_svg_icon"
-                    },
-                    "set_default_menu_option": {
-                        "menu_text": "Set As Default",
-                        "menu_icon": "star_svg_icon"
-                    },
-                    "delete_menu_option": {
-                        "menu_text": "Delete",
-                        "menu_icon": "delete_trash_svg_icon"
-                    }
-                },
-                "bulk_action_menu_list": {
-                    "assign_menu_option": {
-                        "menu_text": "Assign to App",
-                        "menu_icon": "chain_link_svg_icon"
-                    },
-                    "un_assign_menu_option": {
-                        "menu_text": "Unassign from App",
-                        "menu_icon": "chain_unlink_svg_icon"
-                    }
-                },
-                "pagination_section": {
-                    "btn_content": {
-                        "next_btn_text": "Next",
-                        "prev_btn_text": "Prev"
-                    }
-                }
-            }
-        },
-        "modals_ui": {
-            "add_new_modal_ui": {
-                "title_text": "Create Currency",
-                "title_icon": "square_grid_plus_svg_icon",
-                "title_img": "/assets/img/modal_icon.png"
-            },
-            "update_modal_ui": {
-                "title_text": "Edit Currency",
-                "title_icon": "square_grid_plus_svg_icon",
-                "title_img": "/assets/img/modal_icon.png"
-            },
-            "profile_details_modal_ui": {
-                "title_text": "Currency Details",
-                "title_icon": "square_grid_plus_svg_icon",
-                "title_img": "/assets/img/modal_icon.png"
-            },
-            "delete_modal_ui": {
-                "title_text": "Delete Currency",
-                "title_icon": "square_grid_plus_svg_icon",
-                "title_img": "/assets/img/modal_icon.png",
-                "content": {
-                    "title_text": "Delete {{name}} ({{code}})",
-                    "message_text": "Are you sure you want to delete {{name}} ({{code}})?",
-                    "cancel_btn_text": "No, cancel",
-                    "confirm_btn_text": "Yes Delete"
-                }
-            },
-            "assign_currency_modal_ui": {
-                "title_text": "Assign Currency to App",
-                "title_img": "/assets/img/modal_icon.png",
-                "title_icon": ""
-            },
-            "unassign_currency_modal_ui": {
-                "title_text": "Unassign Currency from App",
-                "title_icon": "",
-                "title_img": "/assets/img/modal_icon.png",
-                "content": {
-                    "title_text": "Unasign Currency {{name}} ({{code}}) From App {{app.name}}",
-                    "message_text": "Are you sure you want to un-assign currency {{name}} ({{code}}) from App {{app.name}}?",
-                    "cancel_btn_text": "No, cancel",
-                    "confirm_btn_text": "Yes Un-Assign"
-                }
-            },
-            "bulk_unassign_currency_modal_ui": {
-                "title_text": "Unassign Currencies from App",
-                "title_icon": "",
-                "title_img": "/assets/img/modal_icon.png",
-                "content": {
-                    "title_text": "Unasign {{currency_count}} Currencies  From App {{app_name}}",
-                    "message_text": "Are you sure you want to un-assign currency {{currencies}} from App {{app_name}}?",
-                    "cancel_btn_text": "No, cancel",
-                    "confirm_btn_text": "Yes Un-Assign"
-                }
-            },
-            "set_default_currency_modal_ui": {
-                "title_text": "Set As App Default Currency",
-                "title_icon": "",
-                "title_img": "/assets/img/modal_icon.png",
-                "content": {
-                    "title_text": "Set Currency {{name}} ({{code}}) For App {{app.name}} As Default",
-                    "message_text": "Are you sure you want to set currency {{name}} ({{code}}) for App {{app.name}} as Default?",
-                    "cancel_btn_text": "No, cancel",
-                    "confirm_btn_text": "Set As Default"
-                }
-            }
-        },
-        "form_view_ui": {
-            "header_text": "",
-            "fieldset": {
-                "code_field": {
-                    "label_text": "Currency Code",
-                    "placeholder_text": "e.g. USD, EUR, GBP"
-                },
-                "name_field": {
-                    "label_text": "Currency Name",
-                    "placeholder_text": "e.g. United States Dollar"
-                },
-                "symbol_field": {
-                    "label_text": "Symbol",
-                    "placeholder_text": "$, €, £"
-                },
-                "numeric_code_field": {
-                    "label_text": "Numeric Code",
-                    "placeholder_text": "e.g. 840"
-                },
-                "precision_field": {
-                    "label_text": "Precision",
-                    "placeholder_text": "e.g. 2"
-                },
-                "minor_unit_field": {
-                    "label_text": "Minor Unit",
-                    "placeholder_text": "e.g. 100"
-                },
-                "format_field": {
-                    "label_text": "Format",
-                    "placeholder_text": "Optional display format"
-                },
-                "country_code_field": {
-                    "label_text": "Country Code",
-                    "placeholder_text": "e.g. US, GB"
-                },
-                "sort_order_field": {
-                    "label_text": "Sort Order",
-                    "placeholder_text": "e.g. 1, 2, 3"
-                },
-                "logo_url_field": {
-                    "label_text": "Logo URL",
-                    "placeholder_text": "https://..."
-                },
-                "is_fiat_field": {
-                    "label_text": "Is Fiat Currency",
-                    "option_list": [
-                        { "label_text": "Yes", "value": "true" },
-                        { "label_text": "No", "value": "false" }
-                    ]
-                },
-                "btn_text": "Submit"
-            }
-        },
-        "assign_currency_form_view_ui": {
-            "header_text": "",
-            "fieldset": {
-                "registered_app_id_field": {
-                    "label_text": "Select Registered App",
-                    "placeholder_text": "Select Registered App to assign too",
-                    "selected_text_prefix": "Selected Registered App"
-                },
-                "currency_list_field": {
-                    "label_text": "Select Currencies to Assign",
-                    "placeholder_text": "Select Currencies to Assign to Assign to registered App"
-                },
-                "btn_text": "Submit"
-            }
-        },
-        "profile_view_ui": {
-            "loading_text": "Loading currency...",
-            "no_description_text": "",
-            "empty_value_text": "-",
-            "header": {
-                "currency_logo_alt_text": "Currency logo",
-                "symbol_label_text": "Symbol:",
-                "format_label_text": "Format:",
-                "no_format_text": "No format defined"
-            },
-            "sections": {
-                "currency_information": {
-                    "title_text": "Currency Information",
-                    "code_label_text": "Code:",
-                    "numeric_code_label_text": "Numeric Code:",
-                    "country_code_label_text": "Country:",
-                    "precision_label_text": "Precision:",
-                    "minor_unit_label_text": "Minor Unit:",
-                    "sort_order_label_text": "Sort Order:"
-                },
-                "status": {
-                    "title_text": "Status",
-                    "type_label_text": "Type:",
-                    "fiat_type_text": "Fiat",
-                    "crypto_type_text": "Crypto",
-                    "active_label_text": "Active:",
-                    "active_status_text": "Active",
-                    "inactive_status_text": "Inactive",
-                    "created_label_text": "Created:",
-                    "updated_label_text": "Updated:"
-                },
-                "assigned_apps": {
-                    "title_text": "Apps Using This Currency",
-                    "app_prefix_label_text": "Prefix:",
-                    "default_badge_text": "Default",
-                    "no_assigned_apps_text": "No apps assigned"
-                },
-                "created_by": {
-                    "title_text": "Created By"
-                },
-                "updated_by": {
-                    "title_text": "Updated By"
-                }
-            }
-        }
-    },
     "identity_view_ui": {
         "list_view_ui": {
             "breadcrumb_list": [
@@ -1976,6 +1630,828 @@
                         "menu_icon": "view_eye_svg_icon",
                         "menu_link": ""
                     }
+                }
+            }
+        }
+    },
+     "transaction_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Transactions",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Transactions",
+                "header_description": "Review payment activity, parties, processing state, receipts, and ledger movements."
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "more_filters_btn": {
+                    "show_btn_text": "More Filters",
+                    "hide_btn_text": "Fewer Filters"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "active_filter_chip": {
+                    "remove_btn_text": "Remove {{filter_name}} filter",
+                    "clear_all_btn_text": "Clear all filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search transaction ID, reference, app, wallet, or provider"
+                },
+                "transaction_type_filter": {
+                    "label_text": "Transaction Type",
+                    "placeholder_text": "Select type",
+                    "option_list": [
+                        {
+                            "label_text": "Deposit",
+                            "value": "deposit"
+                        },
+                        {
+                            "label_text": "Withdrawal",
+                            "value": "withdrawal"
+                        },
+                        {
+                            "label_text": "Transfer",
+                            "value": "transfer"
+                        },
+                        {
+                            "label_text": "Payment",
+                            "value": "payment"
+                        },
+                        {
+                            "label_text": "Refund",
+                            "value": "refund"
+                        }
+                    ]
+                },
+                "direction_filter": {
+                    "label_text": "Direction",
+                    "placeholder_text": "Select direction",
+                    "option_list": [
+                        {
+                            "label_text": "Inbound",
+                            "value": "inbound"
+                        },
+                        {
+                            "label_text": "Outbound",
+                            "value": "outbound"
+                        },
+                        {
+                            "label_text": "Internal",
+                            "value": "internal"
+                        }
+                    ]
+                },
+                "status_filter": {
+                    "label_text": "Status",
+                    "placeholder_text": "Select status",
+                    "option_list": [
+                        {
+                            "label_text": "Pending",
+                            "value": "pending"
+                        },
+                        {
+                            "label_text": "Processing",
+                            "value": "processing"
+                        },
+                        {
+                            "label_text": "Settled",
+                            "value": "settled"
+                        },
+                        {
+                            "label_text": "Failed",
+                            "value": "failed"
+                        },
+                        {
+                            "label_text": "Cancelled",
+                            "value": "cancelled"
+                        },
+                        {
+                            "label_text": "Reversed",
+                            "value": "reversed"
+                        },
+                        {
+                            "label_text": "Refunded",
+                            "value": "refunded"
+                        }
+                    ]
+                },
+                "app_filter": {
+                    "label_text": "App",
+                    "placeholder_text": "Search app",
+                    "selected_text_prefix": "Selected app"
+                },
+                "currency_filter": {
+                    "label_text": "Currency",
+                    "placeholder_text": "Search currency",
+                    "selected_text_prefix": "Selected currency"
+                },
+                "provider_filter": {
+                    "label_text": "Provider",
+                    "placeholder_text": "Search provider",
+                    "selected_text_prefix": "Selected provider"
+                },
+                "payment_method_filter": {
+                    "label_text": "Payment Method",
+                    "placeholder_text": "Search payment method",
+                    "selected_text_prefix": "Selected method"
+                },
+                "wallet_filter": {
+                    "label_text": "Any Wallet",
+                    "placeholder_text": "Enter source or destination wallet ID"
+                },
+                "source_wallet_filter": {
+                    "label_text": "Source Wallet",
+                    "placeholder_text": "Enter source wallet ID"
+                },
+                "destination_wallet_filter": {
+                    "label_text": "Destination Wallet",
+                    "placeholder_text": "Enter destination wallet ID"
+                },
+                "identity_filter": {
+                    "label_text": "Any Identity",
+                    "placeholder_text": "Enter initiating, source, or destination identity ID"
+                },
+                "initiated_by_identity_filter": {
+                    "label_text": "Initiated By Identity",
+                    "placeholder_text": "Enter initiating identity ID"
+                },
+                "parent_transaction_filter": {
+                    "label_text": "Parent Transaction",
+                    "placeholder_text": "Enter parent transaction ID"
+                },
+                "date_range_filter": {
+                    "label_text": "Created Date",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} transaction(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "selection_section": {
+                    "selected_text": "{{selected_count}} transaction(s) selected",
+                    "clear_btn_text": "Clear selection"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} transaction(s) selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading transactions..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Transactions Found",
+                    "description_text": "Try changing or clearing the active filters."
+                },
+                "error_state_section": {
+                    "header_text": "Transactions Could Not Be Loaded",
+                    "retry_btn_text": "Retry"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "transaction_text": "Transaction",
+                    "type_text": "Type",
+                    "parties_text": "Parties",
+                    "amount_text": "Amount",
+                    "currency_text": "Currency",
+                    "provider_text": "Provider",
+                    "status_text": "Status",
+                    "created_at_text": "Created At",
+                    "actions_text": "Actions"
+                },
+                "values": {
+                    "fee_label_text": "Fee",
+                    "net_label_text": "Net",
+                    "source_label_text": "From",
+                    "destination_label_text": "To",
+                    "external_destination_text": "External destination"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "prev_btn_text": "Previous",
+                        "next_btn_text": "Next"
+                    }
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon",
+                        "menu_link": ""
+                    },
+                    "ledger_menu_option": {
+                        "menu_text": "Ledger",
+                        "menu_icon": "clock_svg_icon",
+                        "menu_link": ""
+                    },
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "selected_menu_text": "Deselect",
+                        "menu_icon": "check_circle_svg_icon",
+                        "menu_link": ""
+                    }
+                }
+            }
+        },
+        "modals_ui": {
+            "profile_details_modal_ui": {
+                "title_text": "Transaction Details",
+                "title_icon": "view_eye_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading transaction details...",
+            "empty_value_text": "-",
+            "no_description_text":"No description provided.",
+            "tabs": {
+                "profile_tab": {
+                    "label_text": "Profile",
+                    "tab_icon": "view_eye_svg_icon"
+                },
+                "receipts_tab": {
+                    "label_text": "Receipts",
+                    "tab_icon": "receipt_percentage_svg_icon"
+                }
+            },
+            "header": {
+                "fallback_name_text": "Transaction",
+                "public_id_label_text": "Transaction ID"
+            },
+            "sections": {
+                "amounts": {
+                    "title_text": "Amounts",
+                    "amount_label_text": "Amount",
+                    "fee_amount_label_text": "Fee",
+                    "net_amount_label_text": "Net Amount",
+                    "currency_label_text": "Currency"
+                },
+                "references": {
+                    "title_text": "References",
+                    "public_id_label_text": "Transaction ID",
+                    "app_reference_label_text": "App Reference",
+                    "provider_reference_label_text": "Provider Reference",
+                    "external_reference_label_text": "External Reference"
+                },
+                "parties": {
+                    "title_text": "Parties",
+                    "initiated_by_label_text": "Initiated By",
+                    "source_identity_label_text": "Source Identity",
+                    "source_wallet_label_text": "Source Wallet",
+                    "destination_identity_label_text": "Destination Identity",
+                    "destination_wallet_label_text": "Destination Wallet",
+                    "external_destination_label_text": "External Destination"
+                },
+                "processing": {
+                    "title_text": "Processing",
+                    "app_label_text": "App",
+                    "provider_label_text": "Provider",
+                    "payment_method_label_text": "Payment Method",
+                    "provider_account_label_text": "Provider Account"
+                },
+                "description": {
+                    "title_text": "Description",
+                    "description_label_text": "Description",
+                    "reason_label_text": "Reason"
+                },
+                "relationship": {
+                    "title_text": "Related Records",
+                    "parent_transaction_label_text": "Parent Transaction",
+                    "current_receipt_label_text": "Current Receipt"
+                },
+                "timeline": {
+                    "title_text": "Timeline",
+                    "created_at_label_text": "Created",
+                    "updated_at_label_text": "Updated",
+                    "initiated_at_label_text": "Initiated",
+                    "authorized_at_label_text": "Authorized",
+                    "settled_at_label_text": "Settled",
+                    "failed_at_label_text": "Failed",
+                    "cancelled_at_label_text": "Cancelled",
+                    "reversed_at_label_text": "Reversed",
+                    "refunded_at_label_text": "Refunded"
+                }
+            },
+            "receipts_view": {
+                "coming_soon_text": "Receipt history will be added in the next module slice.",
+                "loading_text": "Loading receipts...",
+                "empty_state_text": "No receipts found for this transaction.",
+                "error_state_text": "Receipts could not be loaded.",
+                "retry_btn_text": "Retry",
+                "search_placeholder_text": "Search receipt ID, number, status, error, or member",
+                "status_filter_placeholder_text": "All statuses",
+                "generated_by_filter_placeholder_text": "Search generating member",
+                "apply_filters_btn_text": "Apply",
+                "clear_filters_btn_text": "Clear",
+                "view_receipt_btn_text": "View Receipt",
+                "receipt_unavailable_text": "Receipt file unavailable",
+                "permission_denied_text": "You do not have permission to view transaction receipts.",
+                "previous_button_text": "Previous",
+                "next_button_text": "Next",
+                "pagination_btn_content": {
+                    "prev_btn_text": "Previous",
+                    "next_btn_text": "Next"
+                },
+                "pagination_result_text": "Page {{current_page}} of {{total_pages}} ({{total_items}} receipts)",
+                "labels": {
+                    "receipt_number": "Receipt Number",
+                    "public_id": "Receipt ID",
+                    "status": "Status",
+                    "generated_by": "Generated By",
+                    "generated_at": "Generated",
+                    "processor_attempts": "Processor Attempts",
+                    "last_error": "Last Error",
+                    "created_at": "Created",
+                    "updated_at": "Updated"
+                }
+            }
+        },
+        "ledger_list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Transactions",
+                    "menu_icon": "greater_than_caret_svg_icon",
+                    "menu_link": "/transactions"
+                },
+                {
+                    "menu_text": "{{transaction_public_id}}",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                },
+                {
+                    "menu_text": "Ledger",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Transaction Ledger",
+                "header_description": "Review every wallet balance movement created by this transaction.",
+                "view_transaction_btn": {
+                    "btn_text": "View Transaction",
+                    "btn_icon": "view_eye_svg_icon"
+                }
+            },
+            "context_section": {
+                "title_text": "Transaction Summary",
+                "transaction_id_label_text": "Transaction ID",
+                "type_label_text": "Type",
+                "status_label_text": "Status",
+                "amount_label_text": "Amount",
+                "created_at_label_text": "Created"
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search ledger, wallet, identity, or currency"
+                },
+                "entry_type_filter": {
+                    "label_text": "Entry Type",
+                    "placeholder_text": "Select entry type"
+                },
+                "direction_filter": {
+                    "label_text": "Direction",
+                    "placeholder_text": "Select direction"
+                },
+                "balance_field_filter": {
+                    "label_text": "Balance Field",
+                    "placeholder_text": "Select balance field"
+                },
+                "wallet_filter": {
+                    "label_text": "Wallet",
+                    "placeholder_text": "Enter wallet ID"
+                },
+                "identity_filter": {
+                    "label_text": "Identity",
+                    "placeholder_text": "Enter identity ID"
+                },
+                "currency_filter": {
+                    "label_text": "Currency",
+                    "placeholder_text": "Enter currency ID or code"
+                },
+                "date_range_filter": {
+                    "label_text": "Created Date",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} ledger entries (Page {{current_page}} of {{total_pages}})"
+                },
+                "loading_section": {
+                    "loader_text": "Loading transaction ledger..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Transaction Ledger Entries Found",
+                    "description_text": "No ledger entries match the current filters."
+                },
+                "error_state_section": {
+                    "header_text": "Transaction Ledger Could Not Be Loaded",
+                    "retry_btn_text": "Retry"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "created_at_text": "Created At",
+                    "wallet_text": "Wallet",
+                    "identity_text": "Identity",
+                    "entry_text": "Entry",
+                    "balance_field_text": "Balance Field",
+                    "amount_text": "Amount",
+                    "before_text": "Before",
+                    "after_text": "After",
+                    "description_text": "Description",
+                    "created_by_text": "Created By"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "prev_btn_text": "Previous",
+                        "next_btn_text": "Next"
+                    }
+                },
+                "system_actor_text": "System"
+            }
+        }
+    },
+    "currency_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Currencies",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Currencies",
+                "header_description": "Manage system currencies, configure currency properties, assign currencies to applications, and control default currency behavior.",
+                "create_btn": {
+                    "btn_icon": "plus_circle_svg_icon",
+                    "btn_text": "Add New Currency"
+                }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_icon": "horizontal_filters_svg_icon",
+                    "btn_text": "Filters"
+                },
+                "search_filter": {
+                    "label_text": "Keyword Search",
+                    "placeholder_text": "Search by name, code, symbol..."
+                },
+                "precision_filter": {
+                    "label_text": "Currency Precision",
+                    "placeholder_text": "0, 1,2,3,4..."
+                },
+                "minor_unit_filter": {
+                    "label_text": "Currency Minor Unit",
+                    "placeholder_text": "100, 200, 300"
+                },
+                "numeric_code_filter": {
+                    "label_text": "currency Numeric Code",
+                    "placeholder_text": "566, 840, 826"
+                },
+                "status_filter": {
+                    "label_text": "Currency Status",
+                    "placeholder_text": "Select Status",
+                    "option_list": [
+                        { "label_text": "Active", "value": "true" },
+                        { "label_text": "Inactive", "value": "false" }
+                    ]
+                },
+                "type_filter": {
+                    "label_text": "Currency Type",
+                    "placeholder_text": "Select Type",
+                    "option_list": [
+                        { "label_text": "Fiat", "value": "true" },
+                        { "label_text": "Non-Fiat", "value": "false" }
+                    ]
+                },
+                "app_id_filter": {
+                    "label_text": "Filter by App",
+                    "placeholder_text": "App ID or Public ID...",
+                    "selected_text_prefix": "Selected Registered App"
+                },
+                "unassigned_to_app_filter": {
+                    "label_text": "Unassigned to App",
+                    "placeholder_text": "Select Option",
+                    "option_list": [
+                        { "label_text": "Assigned Only", "value": "false" },
+                        { "label_text": "Unassigned Only", "value": "true" }
+                    ]
+                },
+                "created_by_filter": {
+                    "label_text": "Created By",
+                    "placeholder_text": "Member ID..."
+                },
+                "date_range_filter": {
+                    "label_text": "Created Date Range",
+                    "placeholder_text": "yyyy-mm-dd"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear Filters"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} currency record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} selected",
+                    "actions": [
+                        {
+                            "label_text": "Assign to App",
+                            "value": "assign"
+                        },
+                        {
+                            "label_text": "Unassign from App",
+                            "value": "unassign"
+                        }
+                    ]
+                },
+                "loading_section": {
+                    "loader_text": "Loading currencies..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Currencies Found"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "code_text": "Code",
+                    "name_text": "Name",
+                    "country_code_text": "Country Code",
+                    "type_text": "Type",
+                    "precision_text": "Precision",
+                    "sort_order_text": "Sort Order",
+                    "creator_text": "Created By",
+                    "created_at_text": "Created At",
+                    "status_text": "Status",
+                    "actions_text": "Actions"
+                },
+                "body": {
+                    "fiat_currency_type_text": "Fiat Currency",
+                    "crypto_currency_type_text": "Crypto Currency"
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon"
+                    },
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon"
+                    },
+                    "edit_menu_option": {
+                        "menu_text": "Edit",
+                        "menu_icon": "edit_square_pencil_svg_icon"
+                    },
+                    "assign_menu_option": {
+                        "menu_text": "Assign to App",
+                        "menu_icon": "chain_link_svg_icon"
+                    },
+                    "un_assign_menu_option": {
+                        "menu_text": "Unassign from App",
+                        "menu_icon": "chain_unlink_svg_icon"
+                    },
+                    "set_default_menu_option": {
+                        "menu_text": "Set As Default",
+                        "menu_icon": "star_svg_icon"
+                    },
+                    "delete_menu_option": {
+                        "menu_text": "Delete",
+                        "menu_icon": "delete_trash_svg_icon"
+                    }
+                },
+                "bulk_action_menu_list": {
+                    "assign_menu_option": {
+                        "menu_text": "Assign to App",
+                        "menu_icon": "chain_link_svg_icon"
+                    },
+                    "un_assign_menu_option": {
+                        "menu_text": "Unassign from App",
+                        "menu_icon": "chain_unlink_svg_icon"
+                    }
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "next_btn_text": "Next",
+                        "prev_btn_text": "Prev"
+                    }
+                }
+            }
+        },
+        "modals_ui": {
+            "add_new_modal_ui": {
+                "title_text": "Create Currency",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "update_modal_ui": {
+                "title_text": "Edit Currency",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Currency Details",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "delete_modal_ui": {
+                "title_text": "Delete Currency",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Delete {{name}} ({{code}})",
+                    "message_text": "Are you sure you want to delete {{name}} ({{code}})?",
+                    "cancel_btn_text": "No, cancel",
+                    "confirm_btn_text": "Yes Delete"
+                }
+            },
+            "assign_currency_modal_ui": {
+                "title_text": "Assign Currency to App",
+                "title_img": "/assets/img/modal_icon.png",
+                "title_icon": ""
+            },
+            "unassign_currency_modal_ui": {
+                "title_text": "Unassign Currency from App",
+                "title_icon": "",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Unasign Currency {{name}} ({{code}}) From App {{app.name}}",
+                    "message_text": "Are you sure you want to un-assign currency {{name}} ({{code}}) from App {{app.name}}?",
+                    "cancel_btn_text": "No, cancel",
+                    "confirm_btn_text": "Yes Un-Assign"
+                }
+            },
+            "bulk_unassign_currency_modal_ui": {
+                "title_text": "Unassign Currencies from App",
+                "title_icon": "",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Unasign {{currency_count}} Currencies  From App {{app_name}}",
+                    "message_text": "Are you sure you want to un-assign currency {{currencies}} from App {{app_name}}?",
+                    "cancel_btn_text": "No, cancel",
+                    "confirm_btn_text": "Yes Un-Assign"
+                }
+            },
+            "set_default_currency_modal_ui": {
+                "title_text": "Set As App Default Currency",
+                "title_icon": "",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Set Currency {{name}} ({{code}}) For App {{app.name}} As Default",
+                    "message_text": "Are you sure you want to set currency {{name}} ({{code}}) for App {{app.name}} as Default?",
+                    "cancel_btn_text": "No, cancel",
+                    "confirm_btn_text": "Set As Default"
+                }
+            }
+        },
+        "form_view_ui": {
+            "header_text": "",
+            "fieldset": {
+                "code_field": {
+                    "label_text": "Currency Code",
+                    "placeholder_text": "e.g. USD, EUR, GBP"
+                },
+                "name_field": {
+                    "label_text": "Currency Name",
+                    "placeholder_text": "e.g. United States Dollar"
+                },
+                "symbol_field": {
+                    "label_text": "Symbol",
+                    "placeholder_text": "$, €, £"
+                },
+                "numeric_code_field": {
+                    "label_text": "Numeric Code",
+                    "placeholder_text": "e.g. 840"
+                },
+                "precision_field": {
+                    "label_text": "Precision",
+                    "placeholder_text": "e.g. 2"
+                },
+                "minor_unit_field": {
+                    "label_text": "Minor Unit",
+                    "placeholder_text": "e.g. 100"
+                },
+                "format_field": {
+                    "label_text": "Format",
+                    "placeholder_text": "Optional display format"
+                },
+                "country_code_field": {
+                    "label_text": "Country Code",
+                    "placeholder_text": "e.g. US, GB"
+                },
+                "sort_order_field": {
+                    "label_text": "Sort Order",
+                    "placeholder_text": "e.g. 1, 2, 3"
+                },
+                "logo_url_field": {
+                    "label_text": "Logo URL",
+                    "placeholder_text": "https://..."
+                },
+                "is_fiat_field": {
+                    "label_text": "Is Fiat Currency",
+                    "option_list": [
+                        { "label_text": "Yes", "value": "true" },
+                        { "label_text": "No", "value": "false" }
+                    ]
+                },
+                "btn_text": "Submit"
+            }
+        },
+        "assign_currency_form_view_ui": {
+            "header_text": "",
+            "fieldset": {
+                "registered_app_id_field": {
+                    "label_text": "Select Registered App",
+                    "placeholder_text": "Select Registered App to assign too",
+                    "selected_text_prefix": "Selected Registered App"
+                },
+                "currency_list_field": {
+                    "label_text": "Select Currencies to Assign",
+                    "placeholder_text": "Select Currencies to Assign to Assign to registered App"
+                },
+                "btn_text": "Submit"
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading currency...",
+            "no_description_text": "",
+            "empty_value_text": "-",
+            "header": {
+                "currency_logo_alt_text": "Currency logo",
+                "symbol_label_text": "Symbol:",
+                "format_label_text": "Format:",
+                "no_format_text": "No format defined"
+            },
+            "sections": {
+                "currency_information": {
+                    "title_text": "Currency Information",
+                    "code_label_text": "Code:",
+                    "numeric_code_label_text": "Numeric Code:",
+                    "country_code_label_text": "Country:",
+                    "precision_label_text": "Precision:",
+                    "minor_unit_label_text": "Minor Unit:",
+                    "sort_order_label_text": "Sort Order:"
+                },
+                "status": {
+                    "title_text": "Status",
+                    "type_label_text": "Type:",
+                    "fiat_type_text": "Fiat",
+                    "crypto_type_text": "Crypto",
+                    "active_label_text": "Active:",
+                    "active_status_text": "Active",
+                    "inactive_status_text": "Inactive",
+                    "created_label_text": "Created:",
+                    "updated_label_text": "Updated:"
+                },
+                "assigned_apps": {
+                    "title_text": "Apps Using This Currency",
+                    "app_prefix_label_text": "Prefix:",
+                    "default_badge_text": "Default",
+                    "no_assigned_apps_text": "No apps assigned"
+                },
+                "created_by": {
+                    "title_text": "Created By"
+                },
+                "updated_by": {
+                    "title_text": "Updated By"
                 }
             }
         }
