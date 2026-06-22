@@ -1634,7 +1634,7 @@
             }
         }
     },
-     "transaction_view_ui": {
+    "transaction_view_ui": {
         "list_view_ui": {
             "breadcrumb_list": [
                 {
@@ -1857,7 +1857,7 @@
                     },
                     "ledger_menu_option": {
                         "menu_text": "Ledger",
-                        "menu_icon": "clock_svg_icon",
+                        "menu_icon": "table_cells_svg_icon",
                         "menu_link": ""
                     },
                     "select_menu_option": {
@@ -1879,7 +1879,7 @@
         "profile_view_ui": {
             "loading_text": "Loading transaction details...",
             "empty_value_text": "-",
-            "no_description_text":"No description provided.",
+            "no_description_text": "No description provided.",
             "tabs": {
                 "profile_tab": {
                     "label_text": "Profile",
@@ -1981,8 +1981,10 @@
                     "updated_at": "Updated"
                 }
             }
-        },
-        "ledger_list_view_ui": {
+        }
+    },
+    "transaction_ledger_view_ui": {
+        "list_view_ui": {
             "breadcrumb_list": [
                 {
                     "menu_text": "Home",
@@ -1995,7 +1997,8 @@
                     "menu_link": "/transactions"
                 },
                 {
-                    "menu_text": "{{transaction_public_id}}",
+                    "menu_id": "TransactionBreadcrumb",
+                    "menu_text": "Transaction",
                     "menu_icon": "greater_than_caret_svg_icon"
                 },
                 {
@@ -2005,19 +2008,7 @@
             ],
             "header_section": {
                 "header_text": "Transaction Ledger",
-                "header_description": "Review every wallet balance movement created by this transaction.",
-                "view_transaction_btn": {
-                    "btn_text": "View Transaction",
-                    "btn_icon": "view_eye_svg_icon"
-                }
-            },
-            "context_section": {
-                "title_text": "Transaction Summary",
-                "transaction_id_label_text": "Transaction ID",
-                "type_label_text": "Type",
-                "status_label_text": "Status",
-                "amount_label_text": "Amount",
-                "created_at_label_text": "Created"
+                "header_description": "Review every wallet balance movement created by this transaction."
             },
             "filters_section": {
                 "toggle_btn": {
@@ -2036,15 +2027,31 @@
                 },
                 "entry_type_filter": {
                     "label_text": "Entry Type",
-                    "placeholder_text": "Select entry type"
+                    "placeholder_text": "All entry types",
+                    "option_list": [
+                        { "label_text": "Transaction", "value": "transaction" },
+                        { "label_text": "Fee", "value": "fee" },
+                        { "label_text": "Adjustment", "value": "adjustment" },
+                        { "label_text": "Refund", "value": "refund" }
+                    ]
                 },
                 "direction_filter": {
                     "label_text": "Direction",
-                    "placeholder_text": "Select direction"
+                    "placeholder_text": "All directions",
+                    "option_list": [
+                        { "label_text": "Credit", "value": "credit" },
+                        { "label_text": "Debit", "value": "debit" }
+                    ]
                 },
                 "balance_field_filter": {
                     "label_text": "Balance Field",
-                    "placeholder_text": "Select balance field"
+                    "placeholder_text": "All balance fields",
+                    "option_list": [
+                        { "label_text": "Available", "value": "available_balance" },
+                        { "label_text": "Locked", "value": "locked_balance" },
+                        { "label_text": "Pending", "value": "pending_balance" },
+                        { "label_text": "Refunded", "value": "refunded_balance" }
+                    ]
                 },
                 "wallet_filter": {
                     "label_text": "Wallet",
@@ -2052,11 +2059,13 @@
                 },
                 "identity_filter": {
                     "label_text": "Identity",
-                    "placeholder_text": "Enter identity ID"
+                    "placeholder_text": "Search identities",
+                    "selected_text_prefix": "Selected identity"
                 },
                 "currency_filter": {
                     "label_text": "Currency",
-                    "placeholder_text": "Enter currency ID or code"
+                    "placeholder_text": "Search currencies",
+                    "selected_text_prefix": "Selected currency"
                 },
                 "date_range_filter": {
                     "label_text": "Created Date",
@@ -2072,12 +2081,7 @@
                     "loader_text": "Loading transaction ledger..."
                 },
                 "empty_state_section": {
-                    "header_text": "No Transaction Ledger Entries Found",
-                    "description_text": "No ledger entries match the current filters."
-                },
-                "error_state_section": {
-                    "header_text": "Transaction Ledger Could Not Be Loaded",
-                    "retry_btn_text": "Retry"
+                    "header_text": "No transaction ledger entries found."
                 },
                 "header": {
                     "sn_text": "S/N",
@@ -2089,7 +2093,7 @@
                     "amount_text": "Amount",
                     "before_text": "Before",
                     "after_text": "After",
-                    "description_text": "Description",
+                    "description_text": "Description / Reason",
                     "created_by_text": "Created By"
                 },
                 "pagination_section": {
@@ -2097,8 +2101,7 @@
                         "prev_btn_text": "Previous",
                         "next_btn_text": "Next"
                     }
-                },
-                "system_actor_text": "System"
+                }
             }
         }
     },
