@@ -76,6 +76,10 @@
             "title_text": "Fibase Admin - Currency Payment Provider Methods",
             "description_text": "Efficiently manage your currency payment provider methods with the Fibase Admin platform. View detailed information about each currency payment provider method, including method properties, assigned applications, and default method behavior. Stay organized and in control with Fibase's powerful features designed to streamline your currency payment provider method management needs. Navigate through the currency payment provider methods page to efficiently oversee your resources and make informed decisions for your organization."
         },
+        "service_fee_configuration_page": {
+            "title_text": "Fibase Admin - Service Fee Configurations",
+            "description_text": "Manage transaction fees across currencies and configuration scopes in Fibase Admin. Review fee structures, effective dates, and applicable currencies to ensure accurate fee application and maintain financial oversight across your platform."
+        },
         "activity_page": {
             "title_text": "Fibase Admin - Activity Log",
             "description_text": "Monitor system activity and audit trails in Fibase Admin. Review recent member actions, access events, and security logs to stay informed about application usage and maintain operational oversight across your platform."
@@ -269,6 +273,13 @@
                             "menu_permission_text": "currency_payment_provider_method_module.get_currency_payment_provider_method_list"
                         }
                     ]
+                },
+                {
+                    "menu_id_text": "ServiceFeeConfigurationListView",
+                    "menu_link": "/service-fee-configurations",
+                    "menu_icon": "settings_configuration_svg_icon",
+                    "menu_text": "Service Fee Configurations",
+                    "menu_permission_text": "service_fee_configuration_module.get_service_fee_configuration_list"
                 },
                 {
                     "menu_id_text": "ActivityLogListView",
@@ -3188,10 +3199,6 @@
                         }
                     ]
                 },
-                "account_reference_field": {
-                    "label_text": "Account Reference",
-                    "placeholder_text": "Optional merchant or account reference"
-                },
                 "api_key_field": {
                     "label_text": "API Key",
                     "placeholder_text": "Enter API key",
@@ -3253,6 +3260,31 @@
                     "placeholder_text": "Enter signing secret",
                     "helper_text": "Leave blank when editing to keep the stored value."
                 },
+                "api_secret_field": {
+                    "label_text": "API Secret",
+                    "placeholder_text": "Enter API secret",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "access_token_field": {
+                    "label_text": "Access Token",
+                    "placeholder_text": "Enter access token",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "key_version_field": {
+                    "label_text": "Key Version",
+                    "placeholder_text": "Enter key version",
+                    "helper_text": "Leave blank when editing to keep the stored value."
+                },
+                "base_api_url_field": {
+                    "label_text": "Base API URL",
+                    "placeholder_text": "https://..."
+                },
+                "create_sub_account_field": {
+                    "label_text": "Create Sub-account"
+                },
+                "create_dedicated_account_field": {
+                    "label_text": "Create Dedicated Account"
+                },
                 "webhook_url_field": {
                     "label_text": "Webhook URL",
                     "placeholder_text": "https://..."
@@ -3293,6 +3325,42 @@
                     "label_text": "Timeout (MS)",
                     "placeholder_text": "e.g. 30000"
                 },
+                "recv_window_field": {
+                    "label_text": "Receive Window (MS)",
+                    "placeholder_text": "e.g. 5000"
+                },
+                "supports_deposit_field": { "label_text": "Supports Deposits" },
+                "supports_withdrawal_field": { "label_text": "Supports Withdrawals" },
+                "supports_refund_field": { "label_text": "Supports Refunds" },
+                "supports_webhook_field": { "label_text": "Supports Webhooks" },
+                "supports_polling_field": { "label_text": "Supports Polling" },
+                "supported_methods_field": {
+                    "label_text": "Supported Methods",
+                    "placeholder_text": "e.g. card, bank_transfer"
+                },
+                "supported_currencies_field": {
+                    "label_text": "Supported Currencies",
+                    "placeholder_text": "Search currencies"
+                },
+                "account_strategy_field": {
+                    "label_text": "Account Strategy",
+                    "placeholder_text": "Select account strategy",
+                    "options_list": [
+                        { "label_text": "None", "value": "none" },
+                        { "label_text": "Provider Customer", "value": "provider_customer" },
+                        { "label_text": "Virtual Account", "value": "virtual_account" },
+                        { "label_text": "Main Wallet Address", "value": "main_wallet_address" },
+                        { "label_text": "Sub-account", "value": "sub_account" },
+                        { "label_text": "Wallet Address", "value": "wallet_address" }
+                    ]
+                },
+                "requires_provider_kyc_for_subaccount_field": {
+                    "label_text": "Provider KYC Required for Sub-account"
+                },
+                "transaction_fees_field": {
+                    "label_text": "Transaction Fees (JSON)",
+                    "placeholder_text": "Enter deposit and withdrawal fee configuration as JSON"
+                },
                 "btn_text": "Submit"
             }
         },
@@ -3324,6 +3392,20 @@
                     "payout_schedule_label_text": "Payout Schedule:",
                     "capture_mode_label_text": "Capture Mode:",
                     "timeout_ms_label_text": "Timeout (MS):",
+                    "base_api_url_label_text": "Base API URL:",
+                    "create_sub_account_label_text": "Create Sub-account:",
+                    "create_dedicated_account_label_text": "Create Dedicated Account:",
+                    "recv_window_label_text": "Receive Window (MS):",
+                    "supports_deposit_label_text": "Supports Deposits:",
+                    "supports_withdrawal_label_text": "Supports Withdrawals:",
+                    "supports_refund_label_text": "Supports Refunds:",
+                    "supports_webhook_label_text": "Supports Webhooks:",
+                    "supports_polling_label_text": "Supports Polling:",
+                    "supported_methods_label_text": "Supported Methods:",
+                    "supported_currencies_label_text": "Supported Currencies:",
+                    "account_strategy_label_text": "Account Strategy:",
+                    "requires_provider_kyc_for_subaccount_label_text": "Provider KYC Required for Sub-account:",
+                    "transaction_fees_label_text": "Transaction Fees:",
                     "no_settings_text": "No settings configured."
                 },
                 "credentials": {
@@ -3346,7 +3428,10 @@
                     "password_label_text": "Password:",
                     "webhook_hash_label_text": "Webhook Hash:",
                     "webhook_secret_label_text": "Webhook Secret:",
-                    "signing_secret_label_text": "Signing Secret:"
+                    "signing_secret_label_text": "Signing Secret:",
+                    "api_secret_label_text": "API Secret:",
+                    "access_token_label_text": "Access Token:",
+                    "key_version_label_text": "Key Version:"
                 },
                 "status": {
                     "title_text": "Status",
@@ -3840,6 +3925,331 @@
                 "linked_by": {
                     "title_text": "Linked By"
                 }
+            }
+        }
+    },
+    "service_fee_configuration_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "Service Fee Configurations",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Service Fee Configurations",
+                "header_description": "Manage transaction fees across currencies and configuration scopes.",
+                "create_btn": {
+                    "btn_icon": "plus_circle_svg_icon",
+                    "btn_text": "Create Fee Configuration"
+                }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search fee configurations"
+                },
+                "is_active_filter": {
+                    "label_text": "Status",
+                    "placeholder_text": "Select status",
+                    "option_list": [
+                        { "label_text": "Active", "value": "true" },
+                        { "label_text": "Inactive", "value": "false" }
+                    ]
+                },
+                "currency_id_filter": {
+                    "label_text": "Currency",
+                    "placeholder_text": "Search currency"
+                },
+                "registered_app_id_filter": {
+                    "label_text": "Registered App",
+                    "placeholder_text": "Search application"
+                },
+                "provider_id_filter": {
+                    "label_text": "Provider",
+                    "placeholder_text": "Search provider"
+                },
+                "identity_id_filter": {
+                    "label_text": "Identity",
+                    "placeholder_text": "Search identity"
+                },
+                "transaction_type_filter": {
+                    "label_text": "Transaction Type",
+                    "placeholder_text": "Select transaction type",
+                    "option_list": [
+                        { "label_text": "Deposit", "value": "deposit" },
+                        { "label_text": "Withdrawal", "value": "withdrawal" },
+                        { "label_text": "Transfer", "value": "transfer" },
+                        { "label_text": "Exchange", "value": "exchange" }
+                    ]
+                },
+                "configuration_level_filter": {
+                    "label_text": "Configuration Level",
+                    "placeholder_text": "Select level",
+                    "option_list": [
+                        { "label_text": "Level 1", "value": 1 },
+                        { "label_text": "Level 2", "value": 2 },
+                        { "label_text": "Level 3", "value": 3 },
+                        { "label_text": "Level 4", "value": 4 }
+                    ]
+                },
+                "fee_type_filter": {
+                    "label_text": "Fee Type",
+                    "placeholder_text": "Select fee type",
+                    "option_list": [
+                        { "label_text": "Flat", "value": "flat" },
+                        { "label_text": "Percentage", "value": "percentage" },
+                        { "label_text": "Range", "value": "range" }
+                    ]
+                },
+                "effective_state_filter": {
+                    "label_text": "Effective State",
+                    "placeholder_text": "Select effective state",
+                    "option_list": [
+                        { "label_text": "Current", "value": "current" },
+                        { "label_text": "Scheduled", "value": "scheduled" },
+                        { "label_text": "Expired", "value": "expired" },
+                        { "label_text": "Unbounded", "value": "unbounded" }
+                    ]
+                },
+                "min_amount_filter": {
+                    "label_text": "Minimum Amount",
+                    "placeholder_text": "Minimum amount"
+                },
+                "max_amount_filter": {
+                    "label_text": "Maximum Amount",
+                    "placeholder_text": "Maximum amount"
+                },
+                "created_by_filter": {
+                    "label_text": "Created By",
+                    "placeholder_text": "Search member"
+                },
+                "updated_by_filter": {
+                    "label_text": "Updated By",
+                    "placeholder_text": "Search member"
+                },
+                "effective_from_range_filter": {
+                    "label_text": "Effective From",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                },
+                "effective_until_range_filter": {
+                    "label_text": "Effective Until",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                },
+                "date_range_filter": {
+                    "label_text": "Created Date",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} fee configuration record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} record(s) selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading service fee configurations..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Service Fee Configuration Found"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "currency_text": "Currency",
+                    "transaction_type_text": "Transaction Type",
+                    "scope_text": "Scope",
+                    "fee_text": "Fee",
+                    "effective_period_text": "Effective Period",
+                    "status_text": "Status",
+                    "created_at_text": "Created At",
+                    "actions_text": "Actions"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "prev_btn_text": "Previous",
+                        "next_btn_text": "Next"
+                    }
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon"
+                    },
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon",
+                        "menu_link": ""
+                    },
+                    "edit_menu_option": {
+                        "menu_text": "Edit",
+                        "menu_icon": "edit_square_pencil_svg_icon"
+                    }
+                }
+            }
+        },
+        "modals_ui": {
+            "add_new_modal_ui": {
+                "title_text": "Create Service Fee Configuration",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "update_modal_ui": {
+                "title_text": "Edit Service Fee Configuration",
+                "title_icon": "edit_square_pencil_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Service Fee Configuration Details",
+                "title_icon": "view_eye_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            }
+        },
+        "form_view_ui": {
+            "header_text": "",
+            "fieldset": {
+                "currency_id_field": {
+                    "label_text": "Currency",
+                    "placeholder_text": "Search currency",
+                    "selected_text_prefix": "Selected"
+                },
+                "registered_app_id_field": {
+                    "label_text": "Registered App",
+                    "placeholder_text": "Optional application scope",
+                    "selected_text_prefix": "Selected"
+                },
+                "provider_id_field": {
+                    "label_text": "Payment Provider",
+                    "placeholder_text": "Optional provider scope",
+                    "selected_text_prefix": "Selected"
+                },
+                "identity_id_field": {
+                    "label_text": "Identity",
+                    "placeholder_text": "Optional identity scope",
+                    "selected_text_prefix": "Selected"
+                },
+                "transaction_type_field": {
+                    "label_text": "Transaction Type",
+                    "placeholder_text": "Select transaction type",
+                    "options_list": [
+                        { "label_text": "Deposit", "value": "deposit" },
+                        { "label_text": "Withdrawal", "value": "withdrawal" },
+                        { "label_text": "Transfer", "value": "transfer" },
+                        { "label_text": "Exchange", "value": "exchange" }
+                    ]
+                },
+                "fee_type_field": {
+                    "label_text": "Fee Type",
+                    "placeholder_text": "Select fee type",
+                    "options_list": [
+                        { "label_text": "Flat", "value": "flat" },
+                        { "label_text": "Percentage", "value": "percentage" },
+                        { "label_text": "Range", "value": "range" }
+                    ]
+                },
+                "amount_field": {
+                    "label_text": "Fee Amount",
+                    "placeholder_text": "Enter fee amount"
+                },
+                "ranges_section_title": "Fee Ranges",
+                "range_min_value_field": {
+                    "label_text": "Minimum Value",
+                    "placeholder_text": "Enter lower bound"
+                },
+                "range_max_value_field": {
+                    "label_text": "Maximum Value",
+                    "placeholder_text": "Leave empty for no upper bound"
+                },
+                "range_fee_type_field": {
+                    "label_text": "Range Fee Type",
+                    "placeholder_text": "Select fee type",
+                    "options_list": [
+                        { "label_text": "Flat", "value": "flat" },
+                        { "label_text": "Percentage", "value": "percentage" }
+                    ]
+                },
+                "range_amount_field": {
+                    "label_text": "Range Fee Amount",
+                    "placeholder_text": "Enter fee amount"
+                },
+                "add_range_btn_text": "Add Range",
+                "remove_range_btn_text": "Remove Range",
+                "is_active_field": { "label_text": "Active" },
+                "effective_from_field": {
+                    "label_text": "Effective From",
+                    "placeholder_text": "Optional start date"
+                },
+                "effective_until_field": {
+                    "label_text": "Effective Until",
+                    "placeholder_text": "Optional end date"
+                },
+                "btn_text": "Save Fee Configuration"
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading service fee configuration...",
+            "no_description_text": "",
+            "empty_value_text": "-",
+            "header": { "currency_logo_alt_text": "Currency logo" },
+            "sections": {
+                "configuration_information": {
+                    "title_text": "Configuration Information",
+                    "configuration_id_label_text": "Configuration ID:",
+                    "currency_label_text": "Currency:",
+                    "transaction_type_label_text": "Transaction Type:",
+                    "configuration_level_label_text": "Configuration Level:"
+                },
+                "fee_details": {
+                    "title_text": "Fee Details",
+                    "fee_type_label_text": "Fee Type:",
+                    "amount_label_text": "Amount:"
+                },
+                "ranges": {
+                    "title_text": "Fee Ranges",
+                    "range_item_title_text": "Tier",
+                    "minimum_label_text": "Minimum:",
+                    "maximum_label_text": "Maximum:",
+                    "fee_type_label_text": "Fee Type:",
+                    "amount_label_text": "Amount:",
+                    "open_ended_text": "No upper limit",
+                    "no_ranges_text": "No fee ranges configured."
+                },
+                "scope": {
+                    "title_text": "Configuration Scope",
+                    "registered_app_label_text": "Registered App:",
+                    "provider_label_text": "Payment Provider:",
+                    "identity_label_text": "Identity:"
+                },
+                "lifecycle": {
+                    "title_text": "Status and Lifecycle",
+                    "active_label_text": "Active:",
+                    "active_status_text": "Active",
+                    "inactive_status_text": "Inactive",
+                    "effective_from_label_text": "Effective From:",
+                    "effective_until_label_text": "Effective Until:",
+                    "created_label_text": "Created:",
+                    "updated_label_text": "Updated:"
+                },
+                "created_by": { "title_text": "Created By" },
+                "updated_by": { "title_text": "Updated By" }
             }
         }
     },
@@ -4665,7 +5075,376 @@
             "worldfirst_withdrawal_initialized": "✅ Your WorldFirst withdrawal has been initiated successfully.",
             "worldfirst_withdrawal_recipient_is_required": "👤 Please provide a WorldFirst withdrawal recipient.",
             "worldfirst_withdrawal_recipient_ready": "✅ The WorldFirst withdrawal recipient is ready.",
-            "worldfirst_withdrawal_verified": "✅ Your WorldFirst withdrawal has been verified successfully."
+            "worldfirst_withdrawal_verified": "✅ Your WorldFirst withdrawal has been verified successfully.",
+            "binance_currency_network_is_not_configured": "⚙️ Binance currency network is not configured yet.",
+            "binance_currency_network_is_not_supported": "🚫 Binance currency network is not supported for this request.",
+            "binance_currency_network_withdrawal_is_disabled": "⏸️ Binance currency network withdrawal is currently unavailable.",
+            "binance_currency_withdrawal_is_disabled": "⏸️ Binance currency withdrawal is currently unavailable.",
+            "binance_deposit_address_is_required": "📝 Please provide Binance deposit address.",
+            "binance_deposit_address_tag_is_invalid": "❌ Binance deposit address tag is invalid. Please check it and try again.",
+            "binance_deposit_fee_quoted": "💰 Binance deposit fee was calculated successfully.",
+            "binance_deposit_is_not_supported": "🚫 Binance deposit is not supported for this request.",
+            "binance_deposit_transaction_fetched": "✅ Binance deposit transaction was retrieved successfully.",
+            "binance_deposit_transaction_hash_is_invalid": "❌ Binance deposit transaction hash is invalid. Please check it and try again.",
+            "binance_deposit_transaction_initiated": "✅ Binance deposit transaction was initiated successfully.",
+            "binance_exchange_amount_precision_is_invalid": "❌ Binance exchange amount precision is invalid. Please check it and try again.",
+            "binance_exchange_currency_does_not_match_interactor_currency": "⚠️ The Binance exchange currency does not match the selected transaction currency.",
+            "binance_exchange_destination_currency_is_required": "📝 Please provide Binance exchange destination currency.",
+            "binance_exchange_initiated": "✅ Binance exchange was initiated successfully.",
+            "binance_exchange_order_or_quote_reference_is_required": "📝 Please provide Binance exchange order or quote reference.",
+            "binance_exchange_provider_quote_reference_is_required": "📝 Please provide Binance exchange provider quote reference.",
+            "binance_exchange_quote_amount_is_invalid": "❌ Binance exchange quote amount is invalid. Please check it and try again.",
+            "binance_exchange_quote_created": "🎉 Binance exchange quote was created successfully.",
+            "binance_exchange_quote_currency_does_not_match_interactor_currency": "⚠️ The Binance quote currency does not match the selected transaction currency.",
+            "binance_exchange_quote_does_not_match_request": "⚠️ Binance exchange quote does not match this request.",
+            "binance_exchange_quote_input_is_invalid": "❌ Binance exchange quote input is invalid. Please check it and try again.",
+            "binance_exchange_transaction_does_not_match_request": "⚠️ Binance exchange transaction does not match this request.",
+            "binance_exchange_transaction_fetched": "✅ Binance exchange transaction was retrieved successfully.",
+            "binance_exchange_transaction_lookup_details_are_required": "📝 Please provide Binance exchange transaction lookup details.",
+            "binance_exchange_type_or_mode_is_not_supported": "🚫 Binance exchange type or mode is not supported for this request.",
+            "binance_failed_to_create_sub_account": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "binance_failed_to_get_coin_config": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "binance_failed_to_get_deposit_address": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "binance_failed_to_get_sub_account": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "binance_failed_to_initiate_withdrawal": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "binance_internal_transfer_destination_sub_account_email_is_invalid": "❌ Binance internal transfer destination sub account email is invalid. Please check it and try again.",
+            "binance_internal_transfer_failed": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "binance_internal_transfer_initiated": "✅ Binance internal transfer was initiated successfully.",
+            "binance_internal_transfer_source_sub_account_email_is_invalid": "❌ Binance internal transfer source sub account email is invalid. Please check it and try again.",
+            "binance_require_whitelisted_address_value_is_invalid": "❌ Binance require whitelisted address value is invalid. Please check it and try again.",
+            "binance_sub_account_email_is_invalid": "❌ Binance sub account email is invalid. Please check it and try again.",
+            "binance_sub_account_email_is_not_configured": "⚙️ Binance sub account email is not configured yet.",
+            "binance_sub_account_string_is_invalid": "❌ Binance sub account string is invalid. Please check it and try again.",
+            "binance_transaction_amount_is_invalid": "❌ Binance transaction amount is invalid. Please check it and try again.",
+            "binance_transaction_end_time_is_invalid": "❌ Binance transaction end time is invalid. Please check it and try again.",
+            "binance_transaction_expected_amount_must_be_a_decimal_string": "⚠️ Please provide a valid Binance transaction amount.",
+            "binance_transaction_fee_activity_is_not_supported": "🚫 Binance transaction fee activity is not supported for this request.",
+            "binance_transaction_fee_amount_is_invalid": "❌ Binance transaction fee amount is invalid. Please check it and try again.",
+            "binance_transaction_start_time_is_invalid": "❌ Binance transaction start time is invalid. Please check it and try again.",
+            "binance_transaction_time_range_is_invalid": "❌ Binance transaction time range is invalid. Please check it and try again.",
+            "binance_withdrawal_address_is_invalid": "❌ Binance withdrawal address is invalid. Please check it and try again.",
+            "binance_withdrawal_address_is_required": "📝 Please provide Binance withdrawal address.",
+            "binance_withdrawal_address_tag_is_invalid": "❌ Binance withdrawal address tag is invalid. Please check it and try again.",
+            "binance_withdrawal_address_tag_is_not_supported": "🚫 Binance withdrawal address tag is not supported for this request.",
+            "binance_withdrawal_address_tag_is_required": "📝 Please provide Binance withdrawal address tag.",
+            "binance_withdrawal_fee_quoted": "💰 Binance withdrawal fee was calculated successfully.",
+            "binance_withdrawal_is_not_supported": "🚫 Binance withdrawal is not supported for this request.",
+            "binance_withdrawal_name_is_invalid": "❌ Binance withdrawal name is invalid. Please check it and try again.",
+            "binance_withdrawal_network_is_disabled": "⏸️ Binance withdrawal network is currently unavailable.",
+            "binance_withdrawal_network_validation_is_unavailable": "⚠️ Binance withdrawal network validation is unavailable. Please check the details and try again.",
+            "binance_withdrawal_recipient_type_is_not_supported": "🚫 Binance withdrawal recipient type is not supported for this request.",
+            "binance_withdrawal_recipient_validated": "✅ Binance withdrawal recipient was validated successfully.",
+            "binance_withdrawal_reference_time_range_is_invalid": "❌ Binance withdrawal reference time range is invalid. Please check it and try again.",
+            "binance_withdrawal_transaction_fetched": "✅ Binance withdrawal transaction was retrieved successfully.",
+            "binance_withdrawal_transaction_initiated": "✅ Binance withdrawal transaction was initiated successfully.",
+            "binance_withdrawal_wallet_type_is_invalid": "❌ Binance withdrawal wallet type is invalid. Please check it and try again.",
+            "flutterwave_create_virtual_account_value_is_invalid": "❌ Flutterwave create virtual account value is invalid. Please check it and try again.",
+            "flutterwave_customer_email_is_invalid": "❌ Flutterwave customer email is invalid. Please check it and try again.",
+            "flutterwave_customer_email_mismatch": "⚠️ Flutterwave customer email does not match the transaction details.",
+            "flutterwave_customer_name_is_invalid": "❌ Flutterwave customer name is invalid. Please check it and try again.",
+            "flutterwave_customer_ready": "✅ Flutterwave customer is ready.",
+            "flutterwave_customer_reference_is_invalid": "❌ Flutterwave customer reference is invalid. Please check it and try again.",
+            "flutterwave_customer_sub_account_input_is_required": "📝 Please provide the Flutterwave customer sub-account details.",
+            "flutterwave_customer_virtual_account_ready": "✅ Flutterwave customer virtual account is ready.",
+            "flutterwave_deposit_amount_is_invalid": "❌ Flutterwave deposit amount is invalid. Please check it and try again.",
+            "flutterwave_deposit_customer_reference_is_required": "📝 Please provide Flutterwave deposit customer reference.",
+            "flutterwave_deposit_initiation_failed": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "flutterwave_deposit_is_not_supported": "🚫 Flutterwave deposit is not supported for this request.",
+            "flutterwave_deposit_payment_method_or_virtual_account_is_required": "📝 Please provide Flutterwave deposit payment method or virtual account.",
+            "flutterwave_deposit_payment_method_reference_is_invalid": "❌ Flutterwave deposit payment method reference is invalid. Please check it and try again.",
+            "flutterwave_deposit_transaction_initiated": "✅ Flutterwave deposit transaction was initiated successfully.",
+            "flutterwave_deposit_transaction_retrieved": "✅ Flutterwave deposit transaction was retrieved successfully.",
+            "flutterwave_exchange_amount_precision_is_invalid": "❌ Flutterwave exchange amount precision is invalid. Please check it and try again.",
+            "flutterwave_exchange_currency_does_not_match_interactor_currency": "⚠️ The Flutterwave exchange currency does not match the selected transaction currency.",
+            "flutterwave_exchange_currency_pair_is_not_supported": "🚫 Flutterwave exchange currency pair is not supported for this request.",
+            "flutterwave_exchange_destination_currency_is_required": "📝 Please provide Flutterwave exchange destination currency.",
+            "flutterwave_exchange_provider_quote_reference_is_required": "📝 Please provide Flutterwave exchange provider quote reference.",
+            "flutterwave_exchange_provider_reference_is_required": "📝 Please provide Flutterwave exchange provider reference.",
+            "flutterwave_exchange_quote_created": "🎉 Flutterwave exchange quote was created successfully.",
+            "flutterwave_exchange_quote_currency_does_not_match_interactor_currency": "⚠️ The Flutterwave quote currency does not match the selected transaction currency.",
+            "flutterwave_exchange_quote_input_is_invalid": "❌ Flutterwave exchange quote input is invalid. Please check it and try again.",
+            "flutterwave_exchange_source_amount_is_required": "📝 Please provide Flutterwave exchange source amount.",
+            "flutterwave_exchange_trade_resolved": "✅ Flutterwave exchange trade was resolved successfully.",
+            "flutterwave_exchange_transaction_does_not_match_request": "⚠️ Flutterwave exchange transaction does not match this request.",
+            "flutterwave_exchange_transaction_lookup_details_are_required": "📝 Please provide Flutterwave exchange transaction lookup details.",
+            "flutterwave_exchange_type_or_mode_is_not_supported": "🚫 Flutterwave exchange type or mode is not supported for this request.",
+            "flutterwave_failed_to_create_virtual_account": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "flutterwave_failed_to_get_customer": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "flutterwave_failed_to_get_deposit_transaction": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "flutterwave_failed_to_get_or_create_customer": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "flutterwave_failed_to_get_withdrawal_transaction": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "flutterwave_transaction_fee_activity_is_not_supported": "🚫 Flutterwave transaction fee activity is not supported for this request.",
+            "flutterwave_transaction_fee_quoted": "💰 Flutterwave transaction fee was calculated successfully.",
+            "flutterwave_transaction_narration_is_invalid": "❌ Flutterwave transaction narration is invalid. Please check it and try again.",
+            "flutterwave_transaction_reference_length_is_invalid": "❌ Flutterwave transaction reference length is invalid. Please check it and try again.",
+            "flutterwave_virtual_account_bank_code_is_invalid": "❌ Flutterwave virtual account bank code is invalid. Please check it and try again.",
+            "flutterwave_withdrawal_amount_is_invalid": "❌ Flutterwave withdrawal amount is invalid. Please check it and try again.",
+            "flutterwave_withdrawal_initiation_failed": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "flutterwave_withdrawal_is_not_supported": "🚫 Flutterwave withdrawal is not supported for this request.",
+            "flutterwave_withdrawal_recipient_currency_mismatch": "⚠️ Flutterwave withdrawal recipient currency does not match the transaction details.",
+            "flutterwave_withdrawal_recipient_fetched": "✅ Flutterwave withdrawal recipient was retrieved successfully.",
+            "flutterwave_withdrawal_recipient_ready": "✅ Flutterwave withdrawal recipient is ready.",
+            "flutterwave_withdrawal_recipient_reference_is_required": "📝 Please provide Flutterwave withdrawal recipient reference.",
+            "flutterwave_withdrawal_recipient_type_is_not_supported": "🚫 Flutterwave withdrawal recipient type is not supported for this request.",
+            "flutterwave_withdrawal_transaction_initiated": "✅ Flutterwave withdrawal transaction was initiated successfully.",
+            "flutterwave_withdrawal_transaction_retrieved": "✅ Flutterwave withdrawal transaction was retrieved successfully.",
+            "get_or_create_customer_sub_account_not_implemented": "🛠️ This payment provider action is not available yet.",
+            "get_or_create_withdrawal_recipient_not_implemented": "🛠️ This payment provider action is not available yet.",
+            "get_payment_provider_exchange_quote_not_implemented": "🛠️ This payment provider action is not available yet.",
+            "get_payment_provider_exchange_transaction_not_implemented": "🛠️ This payment provider action is not available yet.",
+            "get_payment_provider_transaction_not_implemented": "🛠️ This payment provider action is not available yet.",
+            "initiate_payment_provider_exchange_not_implemented": "🛠️ This payment provider action is not available yet.",
+            "initiate_payment_provider_transaction_not_implemented": "🛠️ This payment provider action is not available yet.",
+            "invalid_binance_deposit_address_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_binance_internal_transfer_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_binance_transaction_fee_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_binance_withdrawal_initiation_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_flutterwave_deposit_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_flutterwave_exchange_quote_values": "❌ Invalid Flutterwave exchange quote values. Please check the details and try again.",
+            "invalid_flutterwave_exchange_trade_values": "❌ Invalid Flutterwave exchange trade values. Please check the details and try again.",
+            "invalid_flutterwave_transaction_fee_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_flutterwave_withdrawal_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_quidax_deposit_amount_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_quidax_exchange_quote_amount": "❌ Invalid Quidax exchange quote amount. Please check the details and try again.",
+            "invalid_quidax_exchange_transaction_amount": "❌ Invalid Quidax exchange transaction amount. Please check the details and try again.",
+            "invalid_quidax_withdrawal_amount_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_quidax_withdrawal_fee_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_quidax_withdrawal_initiation_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_worldfirst_beneficiary_list_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_worldfirst_bind_beneficiary_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_worldfirst_cashier_action_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_worldfirst_cashier_payment_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_worldfirst_exchange_inquiry_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_worldfirst_exchange_quote_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_worldfirst_payment_inquiry_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_worldfirst_payout_fee_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_worldfirst_payout_inquiry_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "invalid_worldfirst_payout_response": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "payment_provider_exchange_amount_or_rate_is_invalid": "❌ payment provider exchange amount or rate is invalid. Please check it and try again.",
+            "payment_provider_exchange_callback_url_is_invalid": "❌ payment provider exchange callback URL is invalid. Please check it and try again.",
+            "payment_provider_exchange_currencies_are_invalid": "❌ payment provider exchange currencies are invalid. Please check them and try again.",
+            "payment_provider_exchange_description_is_required": "📝 Please provide payment provider exchange description.",
+            "payment_provider_exchange_input_is_required": "📝 Please provide the exchange details.",
+            "payment_provider_exchange_metadata_is_invalid": "❌ payment provider exchange metadata is invalid. Please check it and try again.",
+            "payment_provider_exchange_mode_is_invalid": "❌ payment provider exchange mode is invalid. Please check it and try again.",
+            "payment_provider_exchange_references_are_required": "📝 Please provide payment provider exchange references.",
+            "payment_provider_exchange_settlement_time_is_invalid": "❌ payment provider exchange settlement time is invalid. Please check it and try again.",
+            "payment_provider_exchange_trade_type_is_invalid": "❌ payment provider exchange trade type is invalid. Please check it and try again.",
+            "payment_provider_exchange_transaction_currencies_are_required": "📝 Please provide payment provider exchange transaction currencies.",
+            "payment_provider_exchange_transaction_currencies_must_differ": "⚠️ payment provider exchange transaction currencies must differ. Please check the details and try again.",
+            "payment_provider_exchange_transaction_expected_amount_is_invalid": "❌ payment provider exchange transaction expected amount is invalid. Please check it and try again.",
+            "payment_provider_exchange_transaction_lookup_input_is_required": "📝 Please provide the exchange transaction details.",
+            "payment_provider_exchange_transaction_lookup_reference_is_required": "📝 Please provide payment provider exchange transaction lookup reference.",
+            "payment_provider_internal_transfer_account_route_is_invalid": "❌ payment provider internal transfer account route is invalid. Please check it and try again.",
+            "payment_provider_internal_transfer_amount_is_invalid": "❌ payment provider internal transfer amount is invalid. Please check it and try again.",
+            "payment_provider_internal_transfer_destination_account_reference_is_required": "📝 Please provide payment provider internal transfer destination account reference.",
+            "payment_provider_internal_transfer_input_is_required": "📝 Please provide the internal transfer details.",
+            "payment_provider_internal_transfer_metadata_is_invalid": "❌ payment provider internal transfer metadata is invalid. Please check it and try again.",
+            "payment_provider_internal_transfer_not_implemented": "🛠️ This payment provider action is not available yet.",
+            "payment_provider_internal_transfer_reference_is_required": "📝 Please provide payment provider internal transfer reference.",
+            "payment_provider_internal_transfer_source_account_reference_is_required": "📝 Please provide payment provider internal transfer source account reference.",
+            "payment_provider_recipient_currency_mismatch": "⚠️ payment provider recipient currency does not match the transaction details.",
+            "payment_provider_recipient_reference_mismatch": "⚠️ payment provider recipient reference does not match the transaction details.",
+            "payment_provider_transaction_amount_is_invalid": "❌ payment provider transaction amount is invalid. Please check it and try again.",
+            "payment_provider_transaction_amount_mismatch": "⚠️ payment provider transaction amount does not match the transaction details.",
+            "payment_provider_transaction_amount_must_be_a_decimal_string": "⚠️ Please provide a valid transaction amount.",
+            "payment_provider_transaction_blockchain_hash_mismatch": "⚠️ payment provider transaction blockchain hash does not match the transaction details.",
+            "payment_provider_transaction_currency_mismatch": "⚠️ payment provider transaction currency does not match the transaction details.",
+            "payment_provider_transaction_description_is_required": "📝 Please provide payment provider transaction description.",
+            "payment_provider_transaction_expected_amount_is_invalid": "❌ payment provider transaction expected amount is invalid. Please check it and try again.",
+            "payment_provider_transaction_fee_activity_is_not_supported": "🚫 payment provider transaction fee activity is not supported for this request.",
+            "payment_provider_transaction_fee_amount_is_invalid": "❌ payment provider transaction fee amount is invalid. Please check it and try again.",
+            "payment_provider_transaction_fee_could_not_be_resolved": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "payment_provider_transaction_fee_quoted": "💰 payment provider transaction fee was calculated successfully.",
+            "payment_provider_transaction_fees_amount_is_invalid": "❌ payment provider transaction fees amount is invalid. Please check it and try again.",
+            "payment_provider_transaction_fees_input_is_required": "📝 Please provide the transaction fee details.",
+            "payment_provider_transaction_fees_network_is_invalid": "❌ payment provider transaction fees network is invalid. Please check it and try again.",
+            "payment_provider_transaction_fees_type_is_invalid": "❌ payment provider transaction fees type is invalid. Please check it and try again.",
+            "payment_provider_transaction_has_no_configured_fee": "ℹ️ No payment provider fee applies to this transaction.",
+            "payment_provider_transaction_input_is_required": "📝 Please provide the transaction details.",
+            "payment_provider_transaction_lookup_input_is_required": "📝 Please provide the transaction lookup details.",
+            "payment_provider_transaction_lookup_reference_is_required": "📝 Please provide payment provider transaction lookup reference.",
+            "payment_provider_transaction_metadata_is_invalid": "❌ payment provider transaction metadata is invalid. Please check it and try again.",
+            "payment_provider_transaction_network_mismatch": "⚠️ payment provider transaction network does not match the transaction details.",
+            "payment_provider_transaction_order_id_is_invalid": "❌ payment provider transaction order ID is invalid. Please check it and try again.",
+            "payment_provider_transaction_provider_reference_mismatch": "⚠️ payment provider transaction provider reference does not match the transaction details.",
+            "payment_provider_transaction_reference_is_required": "📝 Please provide payment provider transaction reference.",
+            "payment_provider_transaction_reference_mismatch": "⚠️ payment provider transaction reference does not match the transaction details.",
+            "payment_provider_transaction_type_is_invalid": "❌ payment provider transaction type is invalid. Please check it and try again.",
+            "payment_provider_withdrawal_recipient_account_number_is_required": "📝 Please provide payment provider withdrawal recipient account number.",
+            "payment_provider_withdrawal_recipient_authorization_code_is_required": "📝 Please provide payment provider withdrawal recipient authorization code.",
+            "payment_provider_withdrawal_recipient_bank_code_is_required": "📝 Please provide payment provider withdrawal recipient bank code.",
+            "payment_provider_withdrawal_recipient_currency_is_invalid": "❌ payment provider withdrawal recipient currency is invalid. Please check it and try again.",
+            "payment_provider_withdrawal_recipient_email_is_invalid": "❌ payment provider withdrawal recipient email is invalid. Please check it and try again.",
+            "payment_provider_withdrawal_recipient_first_name_is_required": "📝 Please provide payment provider withdrawal recipient first name.",
+            "payment_provider_withdrawal_recipient_input_is_required": "📝 Please provide the withdrawal recipient details.",
+            "payment_provider_withdrawal_recipient_last_name_is_required": "📝 Please provide payment provider withdrawal recipient last name.",
+            "payment_provider_withdrawal_recipient_metadata_is_invalid": "❌ payment provider withdrawal recipient metadata is invalid. Please check it and try again.",
+            "payment_provider_withdrawal_recipient_reference_is_invalid": "❌ payment provider withdrawal recipient reference is invalid. Please check it and try again.",
+            "payment_provider_withdrawal_recipient_reference_is_required": "📝 Please provide payment provider withdrawal recipient reference.",
+            "payment_provider_withdrawal_recipient_type_is_invalid": "❌ payment provider withdrawal recipient type is invalid. Please check it and try again.",
+            "payment_provider_withdrawal_recipient_wallet_address_is_required": "📝 Please provide payment provider withdrawal recipient wallet address.",
+            "paystack_create_dedicated_account_value_is_invalid": "❌ Paystack create dedicated account value is invalid. Please check it and try again.",
+            "paystack_customer_and_dedicated_account_ready": "✅ Paystack customer and dedicated account is ready.",
+            "paystack_customer_code_is_required": "📝 Please provide Paystack customer code.",
+            "paystack_customer_fetched": "✅ Paystack customer was retrieved successfully.",
+            "paystack_customer_provider_reference_is_required": "📝 Please provide Paystack customer provider reference.",
+            "paystack_customer_ready": "✅ Paystack customer is ready.",
+            "paystack_customer_sub_account_input_is_required": "📝 Please provide the Paystack customer sub-account details.",
+            "paystack_dedicated_account_country_is_not_supported": "🚫 Paystack dedicated account country is not supported for this request.",
+            "paystack_dedicated_account_option_is_invalid": "❌ Paystack dedicated account option is invalid. Please check it and try again.",
+            "paystack_deposit_action_data_is_missing": "📝 Paystack deposit action data is required to continue.",
+            "paystack_deposit_initiated": "✅ Paystack deposit was initiated successfully.",
+            "paystack_deposit_is_not_supported": "🚫 Paystack deposit is not supported for this request.",
+            "paystack_deposit_transaction_fetched": "✅ Paystack deposit transaction was retrieved successfully.",
+            "paystack_failed_to_create_customer_record": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "paystack_failed_to_create_dedicated_account": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "paystack_failed_to_get_customer": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "paystack_failed_to_get_deposit_transaction": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "paystack_failed_to_get_or_create_customer": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "paystack_failed_to_get_or_create_dedicated_account": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "paystack_failed_to_get_or_create_withdrawal_recipient": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "paystack_failed_to_get_withdrawal_transaction": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "paystack_failed_to_initiate_deposit": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "paystack_failed_to_initiate_withdrawal": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "paystack_transaction_channels_are_invalid": "❌ Paystack transaction channels are invalid. Please check them and try again.",
+            "paystack_transaction_charge_is_invalid": "❌ Paystack transaction charge is invalid. Please check it and try again.",
+            "paystack_transaction_reference_is_required": "📝 Please provide Paystack transaction reference.",
+            "paystack_transfer_provider_reference_is_missing": "📝 Paystack transfer provider reference is required to continue.",
+            "paystack_withdrawal_initiated": "✅ Paystack withdrawal was initiated successfully.",
+            "paystack_withdrawal_is_not_supported": "🚫 Paystack withdrawal is not supported for this request.",
+            "paystack_withdrawal_recipient_code_is_required": "📝 Please provide Paystack withdrawal recipient code.",
+            "paystack_withdrawal_recipient_email_is_required": "📝 Please provide Paystack withdrawal recipient email.",
+            "paystack_withdrawal_recipient_fetched": "✅ Paystack withdrawal recipient was retrieved successfully.",
+            "paystack_withdrawal_recipient_ready": "✅ Paystack withdrawal recipient is ready.",
+            "paystack_withdrawal_recipient_type_is_not_supported": "🚫 Paystack withdrawal recipient type is not supported for this request.",
+            "paystack_withdrawal_transaction_fetched": "✅ Paystack withdrawal transaction was retrieved successfully.",
+            "quidax_create_dedicated_account_value_is_invalid": "❌ Quidax create dedicated account value is invalid. Please check it and try again.",
+            "quidax_currency_network_is_not_configured": "⚙️ Quidax currency network is not configured yet.",
+            "quidax_customer_email_is_invalid": "❌ Quidax customer email is invalid. Please check it and try again.",
+            "quidax_customer_name_is_invalid": "❌ Quidax customer name is invalid. Please check it and try again.",
+            "quidax_customer_sub_account_input_is_required": "📝 Please provide the Quidax customer sub-account details.",
+            "quidax_customer_sub_account_reference_is_invalid": "❌ Quidax customer sub account reference is invalid. Please check it and try again.",
+            "quidax_deposit_address_is_pending": "⚠️ Quidax deposit address is pending. Please check the details and try again.",
+            "quidax_deposit_address_tag_is_invalid": "❌ Quidax deposit address tag is invalid. Please check it and try again.",
+            "quidax_deposit_end_time_is_invalid": "❌ Quidax deposit end time is invalid. Please check it and try again.",
+            "quidax_deposit_fee_quoted": "💰 Quidax deposit fee was calculated successfully.",
+            "quidax_deposit_is_not_supported": "🚫 Quidax deposit is not supported for this request.",
+            "quidax_deposit_start_time_is_invalid": "❌ Quidax deposit start time is invalid. Please check it and try again.",
+            "quidax_deposit_transaction_fetched": "✅ Quidax deposit transaction was retrieved successfully.",
+            "quidax_deposit_transaction_hash_is_invalid": "❌ Quidax deposit transaction hash is invalid. Please check it and try again.",
+            "quidax_deposit_transaction_initiated": "✅ Quidax deposit transaction was initiated successfully.",
+            "quidax_deposit_transaction_match_is_ambiguous": "⚠️ Quidax deposit transaction match is ambiguous. Please check the details and try again.",
+            "quidax_deposit_transaction_not_found": "🔍 We couldn’t find Quidax deposit transaction.",
+            "quidax_deposit_wallet_address_is_required": "📝 Please provide Quidax deposit wallet address.",
+            "quidax_exchange_amount_precision_is_invalid": "❌ Quidax exchange amount precision is invalid. Please check it and try again.",
+            "quidax_exchange_currency_does_not_match_interactor_currency": "⚠️ The Quidax exchange currency does not match the selected transaction currency.",
+            "quidax_exchange_destination_currency_is_required": "📝 Please provide Quidax exchange destination currency.",
+            "quidax_exchange_provider_quote_reference_is_required": "📝 Please provide Quidax exchange provider quote reference.",
+            "quidax_exchange_provider_reference_is_required": "📝 Please provide Quidax exchange provider reference.",
+            "quidax_exchange_quote_amount_is_invalid": "❌ Quidax exchange quote amount is invalid. Please check it and try again.",
+            "quidax_exchange_quote_created": "🎉 Quidax exchange quote was created successfully.",
+            "quidax_exchange_quote_currency_does_not_match_interactor_currency": "⚠️ The Quidax quote currency does not match the selected transaction currency.",
+            "quidax_exchange_quote_does_not_match_request": "⚠️ Quidax exchange quote does not match this request.",
+            "quidax_exchange_quote_input_is_required": "📝 Please provide the Quidax exchange quote details.",
+            "quidax_exchange_quote_reference_is_required": "📝 Please provide Quidax exchange quote reference.",
+            "quidax_exchange_transaction_does_not_match_request": "⚠️ Quidax exchange transaction does not match this request.",
+            "quidax_exchange_transaction_lookup_details_are_required": "📝 Please provide Quidax exchange transaction lookup details.",
+            "quidax_exchange_transaction_resolved": "✅ Quidax exchange transaction was resolved successfully.",
+            "quidax_exchange_type_or_mode_is_not_supported": "🚫 Quidax exchange type or mode is not supported for this request.",
+            "quidax_failed_to_create_sub_account": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_failed_to_create_wallet_address": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_failed_to_get_deposit_address": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_failed_to_get_deposit_history": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_failed_to_get_deposit_transaction": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_failed_to_get_or_create_sub_account": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_failed_to_get_or_create_withdrawal_recipient": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_failed_to_get_sub_account": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_failed_to_get_wallet_address": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_failed_to_get_withdrawal_fee": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_failed_to_get_withdrawal_transaction": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_failed_to_initiate_withdrawal": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_internal_transfer_accounts_must_be_different": "⚠️ Quidax internal transfer accounts must be different.",
+            "quidax_internal_transfer_destination_sub_account_is_required": "📝 Please provide Quidax internal transfer destination sub account.",
+            "quidax_internal_transfer_failed": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_internal_transfer_initiated": "✅ Quidax internal transfer was initiated successfully.",
+            "quidax_internal_withdrawal_address_tag_is_not_supported": "🚫 Quidax internal withdrawal address tag is not supported for this request.",
+            "quidax_reansaction_fee_fetched_sucessfully": "✅ Quidax transaction fee was retrieved successfully.",
+            "quidax_sub_account_is_not_configured": "⚙️ Quidax sub account is not configured yet.",
+            "quidax_transaction_amount_is_invalid": "❌ Quidax transaction amount is invalid. Please check it and try again.",
+            "quidax_transaction_fee_activity_is_not_supported": "🚫 Quidax transaction fee activity is not supported for this request.",
+            "quidax_transaction_fee_amount_is_invalid": "❌ Quidax transaction fee amount is invalid. Please check it and try again.",
+            "quidax_transaction_fetch_fee_failed": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_wallet_address_created": "🎉 Quidax wallet address was created successfully.",
+            "quidax_wallet_address_found": "✅ Quidax wallet address was found successfully.",
+            "quidax_withdrawal_address_tag_is_invalid": "❌ Quidax withdrawal address tag is invalid. Please check it and try again.",
+            "quidax_withdrawal_destination_is_required": "📝 Please provide Quidax withdrawal destination.",
+            "quidax_withdrawal_destination_type_is_invalid": "❌ Quidax withdrawal destination type is invalid. Please check it and try again.",
+            "quidax_withdrawal_fee_quoted": "💰 Quidax withdrawal fee was calculated successfully.",
+            "quidax_withdrawal_fee_rule_could_not_be_resolved": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_withdrawal_initiation_response_mismatch": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
+            "quidax_withdrawal_is_not_supported": "🚫 Quidax withdrawal is not supported for this request.",
+            "quidax_withdrawal_note_is_invalid": "❌ Quidax withdrawal note is invalid. Please check it and try again.",
+            "quidax_withdrawal_recipient_address_tag_is_invalid": "❌ Quidax withdrawal recipient address tag is invalid. Please check it and try again.",
+            "quidax_withdrawal_recipient_created": "🎉 Quidax withdrawal recipient was created successfully.",
+            "quidax_withdrawal_recipient_fetched": "✅ Quidax withdrawal recipient was retrieved successfully.",
+            "quidax_withdrawal_recipient_network_is_invalid": "❌ Quidax withdrawal recipient network is invalid. Please check it and try again.",
+            "quidax_withdrawal_recipient_reference_is_required": "📝 Please provide Quidax withdrawal recipient reference.",
+            "quidax_withdrawal_recipient_type_is_not_supported": "🚫 Quidax withdrawal recipient type is not supported for this request.",
+            "quidax_withdrawal_transaction_fetched": "✅ Quidax withdrawal transaction was retrieved successfully.",
+            "quidax_withdrawal_transaction_initiated": "✅ Quidax withdrawal transaction was initiated successfully.",
+            "quidax_withdrawal_transaction_lookup_requires_user_and_reference": "⚠️ Quidax withdrawal transaction lookup requires user and reference. Please check the details and try again.",
+            "worldfirst_appointed_exchange_quote_does_not_match": "⚠️ WorldFirst appointed exchange quote does not match the expected details.",
+            "worldfirst_appointed_exchange_quote_is_required": "📝 Please provide WorldFirst appointed exchange quote.",
+            "worldfirst_beneficiary_bank_account_details_are_invalid": "❌ WorldFirst beneficiary bank account details are invalid. Please check them and try again.",
+            "worldfirst_beneficiary_country_code_is_invalid": "❌ WorldFirst beneficiary country code is invalid. Please check it and try again.",
+            "worldfirst_beneficiary_identity_details_are_invalid": "❌ WorldFirst beneficiary identity details are invalid. Please check them and try again.",
+            "worldfirst_beneficiary_template_category_is_invalid": "❌ WorldFirst beneficiary template category is invalid. Please check it and try again.",
+            "worldfirst_beneficiary_type_is_invalid": "❌ WorldFirst beneficiary type is invalid. Please check it and try again.",
+            "worldfirst_deposit_initiated": "✅ WorldFirst deposit was initiated successfully.",
+            "worldfirst_deposit_is_not_supported": "🚫 WorldFirst deposit is not supported for this request.",
+            "worldfirst_deposit_transaction_does_not_match_request": "⚠️ WorldFirst deposit transaction does not match this request.",
+            "worldfirst_deposit_transaction_fetched": "✅ WorldFirst deposit transaction was retrieved successfully.",
+            "worldfirst_deposit_transaction_has_no_fee": "ℹ️ No payment provider fee applies to this transaction.",
+            "worldfirst_deposit_transaction_not_found": "🔍 We couldn’t find WorldFirst deposit transaction.",
+            "worldfirst_exchange_account_authorization_is_required": "📝 Please provide WorldFirst exchange account authorization.",
+            "worldfirst_exchange_account_reference_is_required": "📝 Please provide WorldFirst exchange account reference.",
+            "worldfirst_exchange_currencies_do_not_match_interactor_currencies": "⚠️ The WorldFirst exchange currencies do not match the selected transaction currencies.",
+            "worldfirst_exchange_destination_amount_precision_is_invalid": "❌ WorldFirst exchange destination amount precision is invalid. Please check it and try again.",
+            "worldfirst_exchange_destination_currency_does_not_match_interactor_currency": "⚠️ The WorldFirst destination currency does not match the selected transaction currency.",
+            "worldfirst_exchange_destination_currency_is_required": "📝 Please provide WorldFirst exchange destination currency.",
+            "worldfirst_exchange_initiated": "✅ WorldFirst exchange was initiated successfully.",
+            "worldfirst_exchange_quote_amount_is_invalid": "❌ WorldFirst exchange quote amount is invalid. Please check it and try again.",
+            "worldfirst_exchange_quote_created": "🎉 WorldFirst exchange quote was created successfully.",
+            "worldfirst_exchange_quote_currencies_do_not_match_interactor_currencies": "⚠️ The WorldFirst quote currencies do not match the selected transaction currencies.",
+            "worldfirst_exchange_quote_input_is_required": "📝 Please provide the WorldFirst exchange quote details.",
+            "worldfirst_exchange_quote_reference_is_invalid": "❌ WorldFirst exchange quote reference is invalid. Please check it and try again.",
+            "worldfirst_exchange_quote_requires_appointed_mode": "⚠️ WorldFirst exchange quote requires appointed mode. Please check the details and try again.",
+            "worldfirst_exchange_quote_response_amount_does_not_match": "⚠️ WorldFirst exchange quote response amount does not match the expected details.",
+            "worldfirst_exchange_quote_trade_type_is_invalid": "❌ WorldFirst exchange quote trade type is invalid. Please check it and try again.",
+            "worldfirst_exchange_quote_unfunded_info_is_required": "📝 Please provide WorldFirst exchange quote unfunded info.",
+            "worldfirst_exchange_response_does_not_match_request": "⚠️ WorldFirst exchange response does not match this request.",
+            "worldfirst_exchange_source_amount_precision_is_invalid": "❌ WorldFirst exchange source amount precision is invalid. Please check it and try again.",
+            "worldfirst_exchange_source_currency_does_not_match_interactor_currency": "⚠️ The WorldFirst source currency does not match the selected transaction currency.",
+            "worldfirst_exchange_transaction_does_not_match_request": "⚠️ WorldFirst exchange transaction does not match this request.",
+            "worldfirst_exchange_transaction_fetched": "✅ WorldFirst exchange transaction was retrieved successfully.",
+            "worldfirst_exchange_transaction_lookup_details_are_required": "📝 Please provide WorldFirst exchange transaction lookup details.",
+            "worldfirst_exchange_transaction_reference_is_required": "📝 Please provide WorldFirst exchange transaction reference.",
+            "worldfirst_exchange_transaction_reference_is_too_long": "✏️ WorldFirst exchange transaction reference is too long.",
+            "worldfirst_payout_business_scene_code_is_invalid": "❌ WorldFirst payout business scene code is invalid. Please check it and try again.",
+            "worldfirst_payout_business_scene_code_is_required": "📝 Please provide WorldFirst payout business scene code.",
+            "worldfirst_payout_response_does_not_match_request": "⚠️ WorldFirst payout response does not match this request.",
+            "worldfirst_redirect_and_webhook_urls_are_required": "📝 Please provide WorldFirst redirect and webhook URLs.",
+            "worldfirst_transaction_reference_is_too_long": "✏️ WorldFirst transaction reference is too long.",
+            "worldfirst_withdrawal_initiated": "✅ WorldFirst withdrawal was initiated successfully.",
+            "worldfirst_withdrawal_is_not_supported": "🚫 WorldFirst withdrawal is not supported for this request.",
+            "worldfirst_withdrawal_recipient_fetched": "✅ WorldFirst withdrawal recipient was retrieved successfully.",
+            "worldfirst_withdrawal_recipient_not_found": "🔍 We couldn’t find WorldFirst withdrawal recipient.",
+            "worldfirst_withdrawal_recipient_reference_is_required": "📝 Please provide WorldFirst withdrawal recipient reference.",
+            "worldfirst_withdrawal_recipient_type_is_not_supported": "🚫 WorldFirst withdrawal recipient type is not supported for this request.",
+            "worldfirst_withdrawal_transaction_does_not_match_request": "⚠️ WorldFirst withdrawal transaction does not match this request.",
+            "worldfirst_withdrawal_transaction_fee_quoted": "💰 WorldFirst withdrawal transaction fee was calculated successfully.",
+            "worldfirst_withdrawal_transaction_fetched": "✅ WorldFirst withdrawal transaction was retrieved successfully."
         },
         "currency_module_responses": {
             "invalid_currency_code": "❌ Please provide a valid currency code.",
@@ -4748,6 +5527,14 @@
             "fetched_payment_provider_config_record_successfully": "📄 Payment provider configuration details loaded successfully.",
             "fetched_payment_provider_config_credentials_successfully": "🔐 Payment provider configuration credentials loaded successfully.",
             "invalid_payment_provider_config_credentials": "🔐 Please provide valid provider credentials.",
+            "invalid_payment_provider_fee_amount": "💰 Please provide a valid provider fee amount.",
+            "invalid_payment_provider_fee_percentage": "📊 Provider fee percentages must be between 0 and 100.",
+            "invalid_payment_provider_fee_range": "📏 Please provide a valid provider fee range.",
+            "invalid_payment_provider_fee_range_amount": "💰 Please provide valid minimum, maximum, and fee amounts for every range.",
+            "invalid_payment_provider_fee_range_bounds": "📏 Each provider fee range maximum must be greater than its minimum.",
+            "invalid_payment_provider_fee_ranges": "📏 Please provide at least one valid provider fee range.",
+            "invalid_payment_provider_fee_structure": "⚙️ Please choose a valid flat, percentage, or range provider fee structure.",
+            "invalid_payment_provider_transaction_fees": "💳 Please provide valid deposit or withdrawal provider fee settings.",
             "invalid_payment_provider_config_id": "❌ Please select a valid provider configuration.",
             "invalid_payment_provider_config_settings": "⚙️ Please provide valid provider settings.",
             "invalid_payment_provider_environment": "🌍 Please choose a valid provider environment.",
@@ -4759,16 +5546,20 @@
             "invalid_payment_provider_config_account_reference": "⚠️ The payment provider account reference is invalid.",
             "payment_provider_config_updated_successfully": "✏️ Payment provider configuration updated successfully.",
             "payment_provider_not_found": "🔍 We couldn't find the selected payment provider.",
-            "invalid_payment_provider_config_url": "Please provide a valid URL.",
-            "invalid_payment_provider_config_timeout_ms": "Please provide a valid timeout in milliseconds."
+            "invalid_payment_provider_config_url": "🌐 Please provide a valid provider configuration URL.",
+            "invalid_payment_provider_config_timeout_ms": "⏱️ Please provide a positive whole-number timeout in milliseconds.",
+            "payment_provider_fee_ranges_overlap": "⚠️ Provider fee ranges must not overlap."
         },
         "payment_provider_method_module_responses": {
             "fetched_payment_provider_method_list_successfully": "📦 Payment provider methods loaded successfully.",
             "fetched_payment_provider_method_record_successfully": "📄 Payment provider method details loaded successfully.",
             "invalid_payment_direction": "↔️ Please choose a valid payment direction.",
+            "invalid_max_amount": "🔢 Please provide a valid non-negative maximum amount.",
             "invalid_payment_method_id": "❌ Please select a valid payment method.",
             "invalid_payment_provider_id": "❌ Please select a valid payment provider.",
+            "invalid_payment_provider_method_code": "🔗 Please provide a valid provider-specific method code.",
             "invalid_payment_provider_method_id": "❌ Please select a valid payment provider method.",
+            "invalid_min_amount": "🔢 Please provide a valid non-negative minimum amount.",
             "min_amount_cannot_exceed_max_amount": "⚠️ The minimum amount cannot be greater than the maximum amount.",
             "payment_method_not_found": "🔍 We couldn't find the selected payment method.",
             "payment_provider_method_created_successfully": "🎉 Payment provider method created successfully.",
@@ -4791,9 +5582,59 @@
             "fetched_currency_payment_provider_method_record_successfully": "📄 Currency provider method details loaded successfully.",
             "invalid_currency_id": "❌ Please select a valid currency.",
             "invalid_currency_payment_provider_method_id": "❌ Please select a valid currency provider method.",
+            "invalid_max_amount": "🔢 Please provide a valid non-negative maximum amount.",
+            "invalid_min_amount": "🔢 Please provide a valid non-negative minimum amount.",
             "invalid_payment_provider_method_id": "❌ Please select a valid payment provider method.",
             "min_amount_cannot_exceed_max_amount": "⚠️ The minimum amount cannot be greater than the maximum amount.",
             "payment_provider_method_not_found": "🔍 We couldn't find the selected payment provider method."
+        },
+        "service_fee_configuration_module_responses": {
+            "currency_not_found": "🔍 We couldn't find an active currency matching your selection.",
+            "fetched_service_fee_configuration_list_successfully": "💳 Service fee configurations loaded successfully.",
+            "fetched_service_fee_configuration_record_successfully": "💳 Service fee configuration details loaded successfully.",
+            "identity_not_found": "🔍 We couldn't find an active identity matching your selection.",
+            "identity_not_linked_to_registered_app": "⚠️ The selected identity is not linked to this registered app.",
+            "invalid_service_fee_active_status": "⚠️ Please provide a valid active status.",
+            "service_fee_configuration_status_managed_separately": "🔒 Please use the status action to activate or deactivate this fee configuration.",
+            "invalid_service_fee_amount": "⚠️ Please provide a valid non-negative fee amount.",
+            "invalid_service_fee_configuration_scope": "⚠️ The selected app, provider, and identity do not form a valid fee configuration level.",
+            "invalid_service_fee_effective_from": "📅 Please provide a valid effective-from date.",
+            "invalid_service_fee_effective_until": "📅 Please provide a valid effective-until date.",
+            "invalid_service_fee_configuration_id": "❌ Please select a valid service fee configuration.",
+            "invalid_service_fee_ranges": "⚠️ Please provide continuous fee ranges starting at zero and ending with an open upper range.",
+            "invalid_service_fee_transaction_type": "⚠️ Please select a valid transaction type.",
+            "invalid_service_fee_type": "⚠️ Please select a valid fee type.",
+            "min_amount_cannot_exceed_max_amount": "⚠️ The minimum fee amount cannot be greater than the maximum fee amount.",
+            "payment_provider_not_found": "🔍 We couldn't find an active payment provider matching your selection.",
+            "range_service_fee_amount_must_be_empty": "⚠️ A range-based fee must use tier amounts instead of a configuration amount.",
+            "registered_app_not_found": "🔍 We couldn't find an active registered app matching your selection.",
+            "scalar_service_fee_cannot_have_ranges": "⚠️ Flat and percentage fees cannot include range tiers.",
+            "service_fee_configuration_created_successfully": "🎉 Service fee configuration created successfully.",
+            "service_fee_configuration_exists": "⚠️ A service fee configuration already exists for this currency and transaction type. Please update the existing configuration instead.",
+            "service_fee_effective_until_must_be_later": "📅 The effective-until date must be later than the effective-from date.",
+            "service_fee_percentage_cannot_exceed_100": "⚠️ A percentage fee cannot be greater than 100%.",
+            "service_fee_configuration_updated_successfully": "✅ Service fee configuration updated successfully.",
+            "service_fee_configuration_status_updated_successfully": "🔄 Service fee configuration status updated successfully.",
+            "invalid_service_fee_currency_id": "Please select a valid currency.",
+            "invalid_service_fee_effective_period": "The effective-until date must be later than the effective-from date.",
+            "service_fee_ranges_required": "Add at least one fee range.",
+            "invalid_service_fee_range": "Each fee range needs valid bounds, fee type, and amount.",
+            "service_fee_ranges_must_start_at_zero": "The first fee range must start at zero.",
+            "service_fee_ranges_must_end_open": "The final fee range must have no maximum value.",
+            "non_contiguous_service_fee_ranges": "Fee ranges must be contiguous without gaps or overlaps."
+        },
+        "app_service_fee_module_responses": {
+            "app_service_fee_quote_resolved_successfully": "💰 Service fee quote calculated successfully.",
+            "currency_not_assigned_to_app": "⚠️ This currency is not available for your app.",
+            "failed_to_resolve_service_fee_quote": "⚠️ We couldn't calculate the service fee right now. Please try again.",
+            "identity_not_found": "🔍 We couldn't find the selected identity.",
+            "identity_not_linked_to_registered_app": "⚠️ This identity is not linked to your app.",
+            "invalid_currency_id": "❌ Please provide a valid currency.",
+            "invalid_identity_id": "❌ Please provide a valid identity.",
+            "invalid_payment_provider_id": "❌ Please provide a valid payment provider.",
+            "invalid_service_fee_quote_amount": "⚠️ Please provide a valid amount greater than zero.",
+            "invalid_service_fee_transaction_type": "⚠️ Please provide a valid transaction type.",
+            "payment_provider_not_found": "🔍 We couldn't find the selected payment provider."
         },
         "identity_module_responses": {
             "invalid_identity_id": "❌ Please select a valid identity.",
