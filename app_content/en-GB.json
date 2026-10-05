@@ -1,4 +1,5 @@
 {
+    "invalid_transaction_redirect_url": "Enter a valid HTTP or HTTPS checkout return URL.",
     "page_meta": {
         "home_page": {
             "title_text": "Fibase Admin - Home",
@@ -84,9 +85,17 @@
             "title_text": "Fibase Admin - Activity Log",
             "description_text": "Monitor system activity and audit trails in Fibase Admin. Review recent member actions, access events, and security logs to stay informed about application usage and maintain operational oversight across your platform."
         },
+        "app_webhook_delivery_page": {
+            "title_text": "Fibase Admin - App Webhook Deliveries",
+            "description_text": "Review registered-app webhook delivery history, inspect delivery attempts and failures, send endpoint tests, and replay eligible failed deliveries."
+        },
         "access_control_page": {
             "title_text": "Fibase Admin - Access Control",
             "description_text": "Manage roles, permissions, and access policies within the Fibase Admin platform. Review role assignments, secure user access, and ensure governance across applications with powerful access control tools built for compliance and team administration."
+        },
+        "my_wallet_page": {
+            "title_text": "Fibase - My Wallets",
+            "description_text": "View your personal wallet balances and recent transactions across all currencies."
         },
         "my_profile_page": {
             "title_text": "Fibase Admin - My Profile",
@@ -179,6 +188,12 @@
                     "menu_text": "Profile",
                     "menu_icon": "member_icon",
                     "menu_link": "/my-profile"
+                },
+                {
+                    "menu_text": "My Wallets",
+                    "menu_icon": "wallet_svg_icon",
+                    "menu_link": "/my-wallets",
+                    "menu_permission_text": "my_wallet_management_module.get_my_wallet_list"
                 },
                 {
                     "menu_text": "Logout",
@@ -287,6 +302,13 @@
                     "menu_icon": "numbered_list_svg_icon",
                     "menu_text": "Activity Log",
                     "menu_permission_text": "activity_module.get_activity_list"
+                },
+                {
+                    "menu_id_text": "AppWebhookDeliveryListView",
+                    "menu_link": "/app-webhook-deliveries",
+                    "menu_icon": "share_svg_icon",
+                    "menu_text": "App Webhook Deliveries",
+                    "menu_permission_text": "app_webhook_delivery_management_module.get_delivery_list"
                 },
                 {
                     "menu_id_text": "AccessControlListView",
@@ -1837,7 +1859,8 @@
                 },
                 "header": {
                     "sn_text": "S/N",
-                    "transaction_text": "Transaction",
+                    "transaction_text": "Transaction ID",
+                    "app_reference_text": "App Reference",
                     "type_text": "Type",
                     "parties_text": "Parties",
                     "amount_text": "Amount",
@@ -2537,6 +2560,7 @@
                     "placeholder_text": "Enter display group",
                     "options_list": [
                         { "label_text": "Bank transfer", "value": "bank_transfer" },
+                        { "label_text": "Bank account", "value": "bank_account" },
                         { "label_text": "Card payment", "value": "card" },
                         { "label_text": "Digital wallet", "value": "digital_wallet" },
                         { "label_text": "Mobile money", "value": "mobile_money" },
@@ -2714,6 +2738,7 @@
                     "placeholder_text": "Select a display group",
                     "options_list": [
                         { "label_text": "Bank transfer", "value": "bank_transfer" },
+                        { "label_text": "Bank account", "value": "bank_account" },
                         { "label_text": "Card payment", "value": "card" },
                         { "label_text": "Digital wallet", "value": "digital_wallet" },
                         { "label_text": "Mobile money", "value": "mobile_money" },
@@ -4448,6 +4473,320 @@
             }
         }
     },
+    "app_webhook_delivery_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "App Webhook Deliveries",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "App Webhook Deliveries",
+                "header_description": "Monitor webhook deliveries to registered apps, review failures, and test app endpoints.",
+                "test_btn": {
+                    "btn_text": "Send Test Webhook",
+                    "btn_icon": "plus_circle_svg_icon"
+                },
+                "refresh_btn": {
+                    "btn_text": "Refresh"
+                }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "app_id_filter": {
+                    "label_text": "Registered App",
+                    "placeholder_text": "Search registered apps",
+                    "selected_text_prefix": "Selected app"
+                },
+                "event_type_filter": {
+                    "label_text": "Event Type",
+                    "placeholder_text": "All event types",
+                    "option_list": [
+                        {
+                            "label_text": "Identity created",
+                            "value": "identity.created"
+                        },
+                        {
+                            "label_text": "Identity member linked",
+                            "value": "identity.member.linked"
+                        },
+                        {
+                            "label_text": "Transaction requires action",
+                            "value": "transaction.requires_action"
+                        },
+                        {
+                            "label_text": "Transaction partially paid",
+                            "value": "transaction.partially_paid"
+                        },
+                        {
+                            "label_text": "Transaction overpaid",
+                            "value": "transaction.overpaid"
+                        },
+                        {
+                            "label_text": "Transaction successful",
+                            "value": "transaction.successful"
+                        },
+                        {
+                            "label_text": "Transaction failed",
+                            "value": "transaction.failed"
+                        },
+                        {
+                            "label_text": "Transaction cancelled",
+                            "value": "transaction.cancelled"
+                        },
+                        {
+                            "label_text": "Transaction expired",
+                            "value": "transaction.expired"
+                        },
+                        {
+                            "label_text": "Transaction reversed",
+                            "value": "transaction.reversed"
+                        },
+                        {
+                            "label_text": "Transaction refunded",
+                            "value": "transaction.refunded"
+                        },
+                        {
+                            "label_text": "Wallet created",
+                            "value": "wallet.created"
+                        },
+                        {
+                            "label_text": "Wallet balance updated",
+                            "value": "wallet.balance.updated"
+                        },
+                        {
+                            "label_text": "Wallet status updated",
+                            "value": "wallet.status.updated"
+                        },
+                        {
+                            "label_text": "App configuration updated",
+                            "value": "app.configuration.updated"
+                        },
+                        {
+                            "label_text": "App activated",
+                            "value": "app.activated"
+                        },
+                        {
+                            "label_text": "App deactivated",
+                            "value": "app.deactivated"
+                        },
+                        {
+                            "label_text": "App webhook test",
+                            "value": "app.webhook.test"
+                        }
+                    ]
+                },
+                "status_filter": {
+                    "label_text": "Delivery Status",
+                    "placeholder_text": "All statuses",
+                    "option_list": [
+                        {
+                            "label_text": "Queued",
+                            "value": "queued"
+                        },
+                        {
+                            "label_text": "Delivering",
+                            "value": "delivering"
+                        },
+                        {
+                            "label_text": "Delivered",
+                            "value": "delivered"
+                        },
+                        {
+                            "label_text": "Retrying",
+                            "value": "retrying"
+                        },
+                        {
+                            "label_text": "Failed",
+                            "value": "failed"
+                        },
+                        {
+                            "label_text": "Dead letter",
+                            "value": "dead_letter"
+                        }
+                    ]
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear Filters"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "active_filter_chip": {
+                    "remove_btn_text": "Remove {{filter_name}} filter",
+                    "clear_all_btn_text": "Clear all filters"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} delivery record(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} record(s) selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading webhook deliveries..."
+                },
+                "empty_state_section": {
+                    "header_text": "No Webhook Deliveries Found",
+                    "description_text": "Try changing the filters or send a test webhook to a registered app."
+                },
+                "error_state_section": {
+                    "header_text": "Webhook Deliveries Could Not Be Loaded",
+                    "retry_btn_text": "Retry"
+                },
+                "header": {
+                    "sn_text": "S/N",
+                    "public_id_text": "Delivery ID",
+                    "app_text": "Registered App",
+                    "event_type_text": "Event Type",
+                    "status_text": "Status",
+                    "attempts_text": "Attempts",
+                    "response_status_code_text": "HTTP Response Status",
+                    "last_attempt_at_text": "Last Attempt",
+                    "created_at_text": "Created At",
+                    "actions_text": "Actions"
+                },
+                "values": {
+                    "empty_value_text": "-",
+                    "attempts_text": "{{attempts}} of {{max_attempts}}"
+                },
+                "action_menu_list": {
+                    "view_menu_option": {
+                        "menu_text": "View Details",
+                        "menu_icon": "view_eye_svg_icon"
+                    },
+                    "replay_menu_option": {
+                        "menu_text": "Replay Delivery",
+                        "menu_icon": "clock_svg_icon"
+                    },
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon"
+                    }
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "prev_btn_text": "Previous",
+                        "next_btn_text": "Next"
+                    }
+                }
+            }
+        },
+        "status_labels": {
+            "queued": "Queued",
+            "delivering": "Delivering",
+            "delivered": "Delivered",
+            "retrying": "Retrying",
+            "failed": "Failed",
+            "dead_letter": "Dead letter"
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading webhook delivery details...",
+            "empty_value_text": "-",
+            "no_error_text": "No error recorded.",
+            "no_description_text": "",
+            "header_section": {
+                "header_text": "Webhook Delivery Details",
+                "header_description": "Review the event, delivery status, attempts, and response information.",
+                "delivery_label_text": "Webhook delivery",
+                "endpoint_label_text": "Destination endpoint"
+            },
+            "sections": {
+                "event_information": {
+                    "title_text": "Event Information",
+                    "public_id_label_text": "Delivery ID",
+                    "event_id_label_text": "Event ID",
+                    "event_type_label_text": "Event Type",
+                    "event_version_label_text": "Event Version",
+                    "app_label_text": "Registered App",
+                    "transaction_public_id_label_text": "Transaction ID"
+                },
+                "delivery_information": {
+                    "title_text": "Delivery Information",
+                    "status_label_text": "Status",
+                    "attempts_label_text": "Attempts",
+                    "max_attempts_label_text": "Maximum Attempts",
+                    "response_status_code_label_text": "HTTP Response Status",
+                    "last_error_label_text": "Last Error"
+                },
+                "timestamps": {
+                    "title_text": "Delivery Timeline",
+                    "created_at_label_text": "Created At",
+                    "updated_at_label_text": "Updated At",
+                    "last_attempt_at_label_text": "Last Attempt",
+                    "next_attempt_at_label_text": "Next Attempt",
+                    "delivered_at_label_text": "Delivered At"
+                }
+            },
+            "replay_btn": {
+                "btn_text": "Replay Delivery"
+            },
+            "refresh_btn": {
+                "btn_text": "Refresh"
+            },
+            "metrics": {
+                "attempts_text": "{{attempts}} / {{max_attempts}}"
+            }
+        },
+        "form_view_ui": {
+            "header_text": "Send Test Webhook",
+            "header_description": "Send a signed app.webhook.test event to an active registered app’s configured webhook endpoint.",
+            "fieldset": {
+                "app_id_field": {
+                    "label_text": "Registered App",
+                    "placeholder_text": "Search registered apps",
+                    "helper_text": "Choose an active registered app with a configured webhook endpoint.",
+                    "selected_text_prefix": "Selected app"
+                },
+                "btn_text": "Send Test Webhook"
+            },
+            "submitting_text": "Sending test webhook...",
+            "cancel_btn_text": "Cancel",
+            "queued_text": "Test webhook queued. Refresh the delivery history to check its status."
+        },
+        "replay_view_ui": {
+            "header_text": "Replay Webhook Delivery",
+            "message_text": "Replay delivery {{public_id}}? This resets its attempt count and sends the event again.",
+            "eligibility_text": "Only failed or dead-letter deliveries can be replayed.",
+            "confirm_btn_text": "Replay Delivery",
+            "cancel_btn_text": "Cancel",
+            "submitting_text": "Requesting replay...",
+            "queued_text": "Delivery queued for replay. Refresh to check its status."
+        },
+        "modals_ui": {
+            "test_delivery_modal_ui": {
+                "title_text": "Send Test Webhook",
+                "title_icon": "plus_circle_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Webhook Delivery Details",
+                "title_icon": "view_eye_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "replay_delivery_modal_ui": {
+                "title_text": "Replay Webhook Delivery",
+                "title_icon": "clock_svg_icon",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Replay Webhook Delivery",
+                    "message_text": "Replay delivery {{public_id}}? This resets its attempt count and sends the event again.",
+                    "cancel_btn_text": "Cancel",
+                    "confirm_btn_text": "Replay Delivery"
+                }
+            }
+        }
+    },
     "access_control_view_ui": {
         "list_view_ui": {
             "breadcrumb_list": [
@@ -4698,6 +5037,17 @@
     },
     "my_profile_view_ui": {
         "form_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "My Profile",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
             "header_text": "",
             "content": {
                 "eyebrow_text": "My account",
@@ -4786,6 +5136,139 @@
             }
         }
     },
+    "my_wallet_view_ui": {
+        "home_text": "Home",
+        "title_text": "My Wallets",
+        "eyebrow_text": "YOUR MONEY, AT A GLANCE",
+        "subtitle_text": "A home for every currency. Your balances and latest activity, together.",
+        "brand_text": "FIBASE",
+        "currency_text": "Wallet currency",
+        "available_text": "Available balance",
+        "holder_text": "Wallet holder",
+        "card_note_text": "Your personal wallet",
+        "overview_text": "Wallet overview",
+        "locked_text": "Locked balance",
+        "pending_text": "Pending balance",
+        "wallet_id_text": "Wallet reference",
+        "deposit_text": "Deposit",
+        "withdrawal_text": "Withdrawal",
+        "coming_soon_text": "Withdrawals are coming soon.",
+        "transactions_text": "Recent transactions",
+        "all_wallets_text": "All wallets",
+        "transactions_description_text": "Your latest activity across every currency.",
+        "loading_text": "Loading your wallets…",
+        "loading_transactions_text": "Loading transactions…",
+        "empty_text": "No currencies are available yet.",
+        "no_wallet_text": "No wallet is available for this currency yet.",
+        "no_transactions_text": "No transactions yet. Your wallet activity will appear here.",
+        "wallet_error_text": "We could not load your wallets. Please try again.",
+        "transaction_error_text": "We could not load your transactions. Please try again.",
+        "permission_text": "You do not have permission to view this section.",
+        "retry_text": "Try again",
+        "pagination_text": "Page {page} of {pages} · {total} transactions",
+        "transaction_text": "Transaction",
+        "type_text": "Type",
+        "amount_text": "Amount",
+        "status_text": "Status",
+        "date_text": "Date",
+        "pagination_buttons": {
+            "prev_btn_text": "Previous",
+            "next_btn_text": "Next"
+        },
+        "api_responses": {
+            "my_wallet_load_failed_text": "We could not load your wallets. Please try again.",
+            "my_wallet_transactions_load_failed_text": "We could not load your transactions. Please try again.",
+            "my_wallet_transaction_status_unchanged_text": "The transaction status has not changed.",
+            "my_wallet_transaction_status_check_failed_text": "We could not check this transaction. Please try again."
+        },
+        "breadcrumb_list": [
+            {
+                "menu_text": "Home",
+                "menu_icon": "home_svg_icon",
+                "menu_link": "/dashboard"
+            },
+            {
+                "menu_text": "My Wallets",
+                "menu_icon": "greater_than_caret_svg_icon"
+            }
+        ],
+        "deposit_flow": {
+            "title_text": "Deposit",
+            "subtitle_text": "Choose how you would like to fund your wallet.",
+            "currency_label_text": "Currency",
+            "amount_label_text": "Amount",
+            "description_label_text": "Description (required)",
+            "next_btn_text": "Continue",
+            "back_btn_text": "Back",
+            "empty_text": "No payment options are available for this currency and amount.",
+            "invalid_text": "Choose a currency, enter a positive amount within its decimal precision, and add a description.",
+            "invalid_amount_input_text": "Enter a positive {{currency_code}} amount with no more than {{precision}} decimal places.",
+            "fee_label_text": "Total fees",
+            "net_label_text": "Net amount",
+            "reference_label_text": "Transaction reference",
+            "review_note_text": "Check the details before confirming. You can edit this deposit until you confirm and start payment.",
+            "search_text": "Search currencies",
+            "details_title_text": "Deposit details",
+            "provider_title_text": "Choose a payment provider",
+            "method_title_text": "Choose a payment method",
+            "review_title_text": "Review your deposit",
+            "loading_text": "Please hold on, Preparing Deposit Form Information...",
+            "retry_text": "Try again",
+            "request_error_text": "We could not prepare this deposit. Please try again.",
+            "storage_error_text": "Your draft could not be saved. Allow browser storage and try again.",
+            "update_unavailable_text": "This draft could not be changed safely. Restore its submitted details or reopen the deposit to reload it.",
+            "provisioning_unavailable_text": "This provider needs an account setup service that is not available yet.",
+            "selection_required_text": "Select a payment option to continue.",
+            "details_subtitle_text": "Choose a currency and enter the amount you want to add.",
+            "provider_subtitle_text": "Select a provider for your deposit.",
+            "method_subtitle_text": "Choose how you would like to pay.",
+            "review_subtitle_text": "Check your deposit details and fees.",
+            "confirm_btn_text": "Confirm deposit",
+            "checkout": {
+                "title_text": "Complete your deposit",
+                "subtitle_text": "Follow the payment instructions, then check your payment status here.",
+                "open_checkout_text": "Open checkout",
+                "open_tab_text": "Open checkout in a new tab",
+                "refresh_text": "Check payment status",
+                "new_deposit_text": "Make another deposit",
+                "reference_text": "Transaction reference",
+                "amount_text": "Amount to pay",
+                "account_number_text": "Account number",
+                "account_name_text": "Account name",
+                "bank_name_text": "Bank",
+                "bank_code_text": "Bank code",
+                "wallet_address_text": "Wallet address",
+                "network_text": "Network",
+                "memo_text": "Memo / destination tag",
+                "expires_at_text": "Instructions expire at",
+                "redirect_text": "Your checkout is ready. Open it to complete payment, then return here to check the result.",
+                "bank_transfer_text": "Transfer the exact amount shown, including any added fees, to this account before the instructions expire.",
+                "wallet_transfer_text": "Send the exact amount using the displayed asset, network, and address. Include the memo or destination tag when shown.",
+                "pending_text": "We are waiting for the provider. Check the status before making another payment.",
+                "review_text": "This payment needs review. Do not send another payment while it is being resolved.",
+                "expired_instructions_text": "These payment instructions have expired. Check the status before taking any further action.",
+                "unsupported_text": "This payment route cannot be completed here yet. Do not send another payment; check its status or contact support.",
+                "no_action_text": "No payment action is available right now. Check the status for an update.",
+                "success_text": "Your deposit has been confirmed.",
+                "failed_text": "This transaction is closed without an active payment. Check your transaction history for details.",
+                "cancelled_text": "This deposit was cancelled.",
+                "expired_text": "This deposit has expired.",
+                "launch_error_text": "We could not open checkout or refresh its status. Try the hosted checkout link or check the status again.",
+                "frame_note_text": "If checkout does not load here, use the link below to open it in a new tab.",
+                "iframe_title_text": "Secure payment checkout"
+            }
+        },
+        "modals_ui": {
+            "deposit_modal_ui": {
+                "title_text": "Wallet deposit",
+                "title_icon": "wallet_svg_icon"
+            }
+        },
+        "provider_fee_label_text": "Provider fee",
+        "actions_text": "Actions",
+        "check_status_text": "Check status",
+        "checking_status_text": "Checking…"
+    },
     "api_responses": {
         "general_responses": {
             "invalid_csrf_token": "🔒 Invalid CSRF token. Please refresh the page and try again.",
@@ -4866,6 +5349,13 @@
             "app_deposit_intent_idempotent_replay": "ℹ️ The existing deposit intent and fee summary were returned.",
             "deposit_intent_fee_summary_not_found": "⚠️ The stored deposit intent fee summary is unavailable.",
             "failed_to_create_app_deposit_intent": "⚠️ The deposit intent could not be created right now.",
+            "transaction_intent_field_not_editable": "One or more supplied transaction fields cannot be edited.",
+            "transaction_intent_changes_required": "Provide at least one transaction detail to update.",
+            "invalid_intent_version": "Provide the version from your latest transaction summary.",
+            "transaction_intent_not_editable": "This transaction can no longer be edited. Start a new transaction.",
+            "transaction_intent_version_conflict": "Your transaction summary has changed. Refresh it before trying again.",
+            "failed_to_update_app_transaction_intent": "Unable to update the transaction. Please try again.",
+            "updated_app_transaction_intent_successfully": "Transaction summary updated successfully.",
             "created_app_transaction_intent_successfully": "🧾 The transaction intent was created successfully.",
             "app_transaction_intent_idempotent_replay": "ℹ️ The existing transaction intent was returned.",
             "app_transaction_intent_context_not_found": "⚠️ An eligible transaction route could not be resolved.",
@@ -5056,6 +5546,7 @@
             "app_webhook_delivery_replay_queued_successfully": "✅ The webhook delivery has been queued for replay.",
             "app_webhook_payload_is_too_large": "⚠️ The webhook event payload is too large.",
             "app_webhook_test_queued_successfully": "✅ The webhook endpoint test has been queued.",
+            "app_webhook_test_queue_failed": "✅ The webhook endpoint test has failed.",
             "fetched_app_webhook_delivery_list_successfully": "📦 Webhook delivery history loaded successfully.",
             "fetched_app_webhook_delivery_successfully": "📄 Webhook delivery details retrieved successfully.",
             "invalid_app_webhook_delivery_id": "⚠️ Please provide a valid webhook delivery identifier.",
@@ -5065,7 +5556,8 @@
             "registered_app_webhook_destination_not_found": "🔍 The registered app does not have an active webhook destination.",
             "valid_app_webhook_delivery_id": "✅ The webhook delivery identifier is valid.",
             "valid_app_webhook_event": "✅ The webhook event is valid.",
-            "valid_app_webhook_test": "✅ The webhook endpoint test is valid."
+            "valid_app_webhook_test": "✅ The webhook endpoint test is valid.",
+            "invalid_registered_app_id": "Please select a registered app."
         },
         "payment_provider_interaction_module_responses": {
             "binance_deposit_initialized": "✅ Your Binance deposit has been initiated successfully.",
@@ -5285,6 +5777,10 @@
             "flutterwave_customer_sub_account_input_is_required": "📝 Please provide the Flutterwave customer sub-account details.",
             "flutterwave_customer_virtual_account_ready": "✅ Flutterwave customer virtual account is ready.",
             "flutterwave_deposit_amount_is_invalid": "❌ Flutterwave deposit amount is invalid. Please check it and try again.",
+            "flutterwave_hosted_payment_method_currency_is_not_supported": "This payment method is not available for the selected currency.",
+            "flutterwave_hosted_payment_method_is_not_supported": "This payment method is not available for Flutterwave checkout.",
+            "flutterwave_standard_secret_key_is_required": "Flutterwave checkout is not configured. Please contact support.",
+            "flutterwave_checkout_redirect_url_is_required": "Please configure a valid checkout return URL.",
             "flutterwave_deposit_customer_reference_is_required": "📝 Please provide Flutterwave deposit customer reference.",
             "flutterwave_deposit_initiation_failed": "⚠️ We couldn’t complete this payment provider request right now. Please try again.",
             "flutterwave_deposit_is_not_supported": "🚫 Flutterwave deposit is not supported for this request.",
@@ -5602,7 +6098,6 @@
             "currency_code_exists": "⚠️ This currency code already exists. Please use a different one.",
             "fiat_currency_requires_country_and_numeric_code": "🌍 Fiat currencies must include a valid country code and numeric code.",
             "crypto_should_not_have_minor_unit": "🪙 Cryptocurrencies should not have a minor unit defined.",
-
             "invalid_currency_assign_unassign_action_type": "❌ Invalid action type. Please choose either assign or unassign.",
             "invalid_input_currency_id": "❌ Invalid currency ID provided.",
             "invalid_input_app_id": "❌ Invalid application ID provided.",
@@ -5613,7 +6108,6 @@
             "currency_already_linked_in_list": "ℹ️ This currency is already linked to the application.",
             "invalid_currency_is_default_flag": "⚠️ Invalid default flag value provided.",
             "no_currency_provided": "❌ Please provide at least one currency.",
-
             "fetched_currency_list_successfully": "📦 Currency list retrieved successfully.",
             "fetched_currency_record_successfully": "📄 Currency details retrieved successfully.",
             "currency_created_successfully": "🎉 Currency created successfully.",
@@ -5622,7 +6116,6 @@
             "currency_updated_successfully": "✏️ Currency updated successfully.",
             "currency_updated_status_successfully": "🔄 Currency status updated successfully.",
             "currency_deleted_successfully": "🗑️ Currency deleted successfully.",
-
             "app_currency_bulk_assign_successfully": "✅ Currencies assigned to the application successfully.",
             "app_currency_bulk_unassign_successfully": "✅ Currencies unassigned from the application successfully.",
             "app_currency_default_toggled_successfully": "🔄 Default currency updated successfully."
