@@ -1,6 +1,9 @@
 {
-    "invalid_transaction_redirect_url": "Enter a valid HTTP or HTTPS checkout return URL.",
     "page_meta": {
+        "withdrawal_recipient_page": {
+            "title_text": "Fibase - Withdrawal Recipients",
+            "description_text": "View and filter your saved withdrawal recipients."
+        },
         "home_page": {
             "title_text": "Fibase Admin - Home",
             "description_text": "Welcome to Fibase, your all-in-one platform for managing registered applications and currencies. Explore our dashboard to view app details, manage activation status, and securely access public and private keys used for system integrations. Stay organized and in control with Fibase's powerful features designed to streamline your application and currency management needs."
@@ -113,6 +116,10 @@
             "powered_by_text": "Powered by",
             "author_text": "FiberX Innovations Ltd."
         }
+    },
+    "default_form_view_ui": {
+        "header_text": "Form",
+        "submit_btn_text": "Submit"
     },
     "login_view_ui": {
         "header_text": "Sign In",
@@ -364,8 +371,14 @@
                     "label_text": "App Status",
                     "placeholder_text": "App Status",
                     "option_list": [
-                        { "label_text": "Is Active", "value": "true" },
-                        { "label_text": "Is In-Active", "value": "false" }
+                        {
+                            "label_text": "Is Active",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "Is In-Active",
+                            "value": "false"
+                        }
                     ]
                 },
                 "created_by_filter": {
@@ -2063,28 +2076,58 @@
                     "label_text": "Entry Type",
                     "placeholder_text": "All entry types",
                     "option_list": [
-                        { "label_text": "Transaction", "value": "transaction" },
-                        { "label_text": "Fee", "value": "fee" },
-                        { "label_text": "Adjustment", "value": "adjustment" },
-                        { "label_text": "Refund", "value": "refund" }
+                        {
+                            "label_text": "Transaction",
+                            "value": "transaction"
+                        },
+                        {
+                            "label_text": "Fee",
+                            "value": "fee"
+                        },
+                        {
+                            "label_text": "Adjustment",
+                            "value": "adjustment"
+                        },
+                        {
+                            "label_text": "Refund",
+                            "value": "refund"
+                        }
                     ]
                 },
                 "direction_filter": {
                     "label_text": "Direction",
                     "placeholder_text": "All directions",
                     "option_list": [
-                        { "label_text": "Credit", "value": "credit" },
-                        { "label_text": "Debit", "value": "debit" }
+                        {
+                            "label_text": "Credit",
+                            "value": "credit"
+                        },
+                        {
+                            "label_text": "Debit",
+                            "value": "debit"
+                        }
                     ]
                 },
                 "balance_field_filter": {
                     "label_text": "Balance Field",
                     "placeholder_text": "All balance fields",
                     "option_list": [
-                        { "label_text": "Available", "value": "available_balance" },
-                        { "label_text": "Locked", "value": "locked_balance" },
-                        { "label_text": "Pending", "value": "pending_balance" },
-                        { "label_text": "Refunded", "value": "refunded_balance" }
+                        {
+                            "label_text": "Available",
+                            "value": "available_balance"
+                        },
+                        {
+                            "label_text": "Locked",
+                            "value": "locked_balance"
+                        },
+                        {
+                            "label_text": "Pending",
+                            "value": "pending_balance"
+                        },
+                        {
+                            "label_text": "Refunded",
+                            "value": "refunded_balance"
+                        }
                     ]
                 },
                 "wallet_filter": {
@@ -2185,24 +2228,42 @@
                     "label_text": "Currency Network Symbol",
                     "placeholder_text": "Select network symbol",
                     "option_list": [
-                        { "label_text": "BNB Smart Chain (BEP-20)", "value": "BSC" },
-                        { "label_text": "Ethereum (ERC-20)", "value": "ETH" }
+                        {
+                            "label_text": "BNB Smart Chain (BEP-20)",
+                            "value": "BSC"
+                        },
+                        {
+                            "label_text": "Ethereum (ERC-20)",
+                            "value": "ETH"
+                        }
                     ]
                 },
                 "status_filter": {
                     "label_text": "Currency Status",
                     "placeholder_text": "Select Status",
                     "option_list": [
-                        { "label_text": "Active", "value": "true" },
-                        { "label_text": "Inactive", "value": "false" }
+                        {
+                            "label_text": "Active",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "Inactive",
+                            "value": "false"
+                        }
                     ]
                 },
                 "type_filter": {
                     "label_text": "Currency Type",
                     "placeholder_text": "Select Type",
                     "option_list": [
-                        { "label_text": "Fiat", "value": "true" },
-                        { "label_text": "Non-Fiat", "value": "false" }
+                        {
+                            "label_text": "Fiat",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "Non-Fiat",
+                            "value": "false"
+                        }
                     ]
                 },
                 "app_id_filter": {
@@ -2214,8 +2275,14 @@
                     "label_text": "Unassigned to App",
                     "placeholder_text": "Select Option",
                     "option_list": [
-                        { "label_text": "Assigned Only", "value": "false" },
-                        { "label_text": "Unassigned Only", "value": "true" }
+                        {
+                            "label_text": "Assigned Only",
+                            "value": "false"
+                        },
+                        {
+                            "label_text": "Unassigned Only",
+                            "value": "true"
+                        }
                     ]
                 },
                 "created_by_filter": {
@@ -2430,8 +2497,14 @@
                     "label_text": "Currency Network Symbol",
                     "placeholder_text": "Select crypto network symbol",
                     "option_list": [
-                        { "label_text": "BNB Smart Chain (BEP-20)", "value": "BSC" },
-                        { "label_text": "Ethereum (ERC-20)", "value": "ETH" }
+                        {
+                            "label_text": "BNB Smart Chain (BEP-20)",
+                            "value": "BSC"
+                        },
+                        {
+                            "label_text": "Ethereum (ERC-20)",
+                            "value": "ETH"
+                        }
                     ]
                 },
                 "logo_url_field": {
@@ -2441,8 +2514,14 @@
                 "is_fiat_field": {
                     "label_text": "Is Fiat Currency",
                     "option_list": [
-                        { "label_text": "Yes", "value": "true" },
-                        { "label_text": "No", "value": "false" }
+                        {
+                            "label_text": "Yes",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "No",
+                            "value": "false"
+                        }
                     ]
                 },
                 "btn_text": "Submit"
@@ -2551,53 +2630,104 @@
                     "label_text": "Status",
                     "placeholder_text": "Select status",
                     "option_list": [
-                        { "label_text": "Active", "value": "true" },
-                        { "label_text": "Inactive", "value": "false" }
+                        {
+                            "label_text": "Active",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "Inactive",
+                            "value": "false"
+                        }
                     ]
                 },
                 "display_group_filter": {
                     "label_text": "Display Group",
                     "placeholder_text": "Enter display group",
                     "options_list": [
-                        { "label_text": "Bank transfer", "value": "bank_transfer" },
-                        { "label_text": "Bank account", "value": "bank_account" },
-                        { "label_text": "Card payment", "value": "card" },
-                        { "label_text": "Digital wallet", "value": "digital_wallet" },
-                        { "label_text": "Mobile money", "value": "mobile_money" },
-                        { "label_text": "Cryptocurrency", "value": "crypto" },
-                        { "label_text": "Cash", "value": "cash" }
+                        {
+                            "label_text": "Bank transfer",
+                            "value": "bank_transfer"
+                        },
+                        {
+                            "label_text": "Bank account",
+                            "value": "bank_account"
+                        },
+                        {
+                            "label_text": "Card payment",
+                            "value": "card"
+                        },
+                        {
+                            "label_text": "Digital wallet",
+                            "value": "digital_wallet"
+                        },
+                        {
+                            "label_text": "Mobile money",
+                            "value": "mobile_money"
+                        },
+                        {
+                            "label_text": "Cryptocurrency",
+                            "value": "crypto"
+                        },
+                        {
+                            "label_text": "Cash",
+                            "value": "cash"
+                        }
                     ]
                 },
                 "supports_deposit_filter": {
                     "label_text": "Supports Deposit",
                     "placeholder_text": "Select option",
                     "option_list": [
-                        { "label_text": "Yes", "value": "true" },
-                        { "label_text": "No", "value": "false" }
+                        {
+                            "label_text": "Yes",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "No",
+                            "value": "false"
+                        }
                     ]
                 },
                 "supports_withdrawal_filter": {
                     "label_text": "Supports Withdrawal",
                     "placeholder_text": "Select option",
                     "option_list": [
-                        { "label_text": "Yes", "value": "true" },
-                        { "label_text": "No", "value": "false" }
+                        {
+                            "label_text": "Yes",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "No",
+                            "value": "false"
+                        }
                     ]
                 },
                 "supports_refund_filter": {
                     "label_text": "Supports Refund",
                     "placeholder_text": "Select option",
                     "option_list": [
-                        { "label_text": "Yes", "value": "true" },
-                        { "label_text": "No", "value": "false" }
+                        {
+                            "label_text": "Yes",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "No",
+                            "value": "false"
+                        }
                     ]
                 },
                 "requires_redirect_filter": {
                     "label_text": "Requires Redirect",
                     "placeholder_text": "Select option",
                     "option_list": [
-                        { "label_text": "Yes", "value": "true" },
-                        { "label_text": "No", "value": "false" }
+                        {
+                            "label_text": "Yes",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "No",
+                            "value": "false"
+                        }
                     ]
                 },
                 "created_by_filter": {
@@ -2737,13 +2867,34 @@
                     "label_text": "Display group",
                     "placeholder_text": "Select a display group",
                     "options_list": [
-                        { "label_text": "Bank transfer", "value": "bank_transfer" },
-                        { "label_text": "Bank account", "value": "bank_account" },
-                        { "label_text": "Card payment", "value": "card" },
-                        { "label_text": "Digital wallet", "value": "digital_wallet" },
-                        { "label_text": "Mobile money", "value": "mobile_money" },
-                        { "label_text": "Cryptocurrency", "value": "crypto" },
-                        { "label_text": "Cash", "value": "cash" }
+                        {
+                            "label_text": "Bank transfer",
+                            "value": "bank_transfer"
+                        },
+                        {
+                            "label_text": "Bank account",
+                            "value": "bank_account"
+                        },
+                        {
+                            "label_text": "Card payment",
+                            "value": "card"
+                        },
+                        {
+                            "label_text": "Digital wallet",
+                            "value": "digital_wallet"
+                        },
+                        {
+                            "label_text": "Mobile money",
+                            "value": "mobile_money"
+                        },
+                        {
+                            "label_text": "Cryptocurrency",
+                            "value": "crypto"
+                        },
+                        {
+                            "label_text": "Cash",
+                            "value": "cash"
+                        }
                     ]
                 },
                 "processing_time_text_field": {
@@ -2754,9 +2905,18 @@
                     "label_text": "Fee label",
                     "placeholder_text": "Select a fee label",
                     "options_list": [
-                        { "label_text": "Free", "value": "Free" },
-                        { "label_text": "Fees apply", "value": "Fees apply" },
-                        { "label_text": "Varies by provider", "value": "Varies by provider" }
+                        {
+                            "label_text": "Free",
+                            "value": "Free"
+                        },
+                        {
+                            "label_text": "Fees apply",
+                            "value": "Fees apply"
+                        },
+                        {
+                            "label_text": "Varies by provider",
+                            "value": "Varies by provider"
+                        }
                     ]
                 },
                 "supported_country_codes_field": {
@@ -2884,18 +3044,36 @@
                     "label_text": "Status",
                     "placeholder_text": "Select status",
                     "option_list": [
-                        { "label_text": "Active", "value": "true" },
-                        { "label_text": "Inactive", "value": "false" }
+                        {
+                            "label_text": "Active",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "Inactive",
+                            "value": "false"
+                        }
                     ]
                 },
                 "provider_type_filter": {
                     "label_text": "Provider Type",
                     "placeholder_text": "Select provider type",
                     "option_list": [
-                        { "label_text": "Payment Gateway", "value": "payment_gateway" },
-                        { "label_text": "Banking Partner", "value": "banking_partner" },
-                        { "label_text": "Crypto Exchange", "value": "crypto_exchange" },
-                        { "label_text": "Wallet Provider", "value": "wallet_provider" }
+                        {
+                            "label_text": "Payment Gateway",
+                            "value": "payment_gateway"
+                        },
+                        {
+                            "label_text": "Banking Partner",
+                            "value": "banking_partner"
+                        },
+                        {
+                            "label_text": "Crypto Exchange",
+                            "value": "crypto_exchange"
+                        },
+                        {
+                            "label_text": "Wallet Provider",
+                            "value": "wallet_provider"
+                        }
                     ]
                 },
                 "created_by_filter": {
@@ -3011,10 +3189,22 @@
                     "label_text": "Provider Type",
                     "placeholder_text": "Select a provider type",
                     "options_list": [
-                        { "label_text": "Payment Gateway", "value": "payment_gateway" },
-                        { "label_text": "Banking Partner", "value": "banking_partner" },
-                        { "label_text": "Crypto Exchange", "value": "crypto_exchange" },
-                        { "label_text": "Wallet Provider", "value": "wallet_provider" }
+                        {
+                            "label_text": "Payment Gateway",
+                            "value": "payment_gateway"
+                        },
+                        {
+                            "label_text": "Banking Partner",
+                            "value": "banking_partner"
+                        },
+                        {
+                            "label_text": "Crypto Exchange",
+                            "value": "crypto_exchange"
+                        },
+                        {
+                            "label_text": "Wallet Provider",
+                            "value": "wallet_provider"
+                        }
                     ]
                 },
                 "logo_url_field": {
@@ -3102,8 +3292,14 @@
                     "label_text": "Environment",
                     "placeholder_text": "Select environment",
                     "option_list": [
-                        { "label_text": "Production", "value": "live" },
-                        { "label_text": "Sandbox", "value": "test" }
+                        {
+                            "label_text": "Production",
+                            "value": "live"
+                        },
+                        {
+                            "label_text": "Sandbox",
+                            "value": "test"
+                        }
                     ]
                 },
                 "account_reference_filter": {
@@ -3354,11 +3550,21 @@
                     "label_text": "Receive Window (MS)",
                     "placeholder_text": "e.g. 5000"
                 },
-                "supports_deposit_field": { "label_text": "Supports Deposits" },
-                "supports_withdrawal_field": { "label_text": "Supports Withdrawals" },
-                "supports_refund_field": { "label_text": "Supports Refunds" },
-                "supports_webhook_field": { "label_text": "Supports Webhooks" },
-                "supports_polling_field": { "label_text": "Supports Polling" },
+                "supports_deposit_field": {
+                    "label_text": "Supports Deposits"
+                },
+                "supports_withdrawal_field": {
+                    "label_text": "Supports Withdrawals"
+                },
+                "supports_refund_field": {
+                    "label_text": "Supports Refunds"
+                },
+                "supports_webhook_field": {
+                    "label_text": "Supports Webhooks"
+                },
+                "supports_polling_field": {
+                    "label_text": "Supports Polling"
+                },
                 "supported_methods_field": {
                     "label_text": "Supported Methods",
                     "placeholder_text": "e.g. card, bank_transfer"
@@ -3371,12 +3577,30 @@
                     "label_text": "Account Strategy",
                     "placeholder_text": "Select account strategy",
                     "options_list": [
-                        { "label_text": "None", "value": "none" },
-                        { "label_text": "Provider Customer", "value": "provider_customer" },
-                        { "label_text": "Virtual Account", "value": "virtual_account" },
-                        { "label_text": "Main Wallet Address", "value": "main_wallet_address" },
-                        { "label_text": "Sub-account", "value": "sub_account" },
-                        { "label_text": "Wallet Address", "value": "wallet_address" }
+                        {
+                            "label_text": "None",
+                            "value": "none"
+                        },
+                        {
+                            "label_text": "Provider Customer",
+                            "value": "provider_customer"
+                        },
+                        {
+                            "label_text": "Virtual Account",
+                            "value": "virtual_account"
+                        },
+                        {
+                            "label_text": "Main Wallet Address",
+                            "value": "main_wallet_address"
+                        },
+                        {
+                            "label_text": "Sub-account",
+                            "value": "sub_account"
+                        },
+                        {
+                            "label_text": "Wallet Address",
+                            "value": "wallet_address"
+                        }
                     ]
                 },
                 "requires_provider_kyc_for_subaccount_field": {
@@ -3993,8 +4217,14 @@
                     "label_text": "Status",
                     "placeholder_text": "Select status",
                     "option_list": [
-                        { "label_text": "Active", "value": "true" },
-                        { "label_text": "Inactive", "value": "false" }
+                        {
+                            "label_text": "Active",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "Inactive",
+                            "value": "false"
+                        }
                     ]
                 },
                 "currency_id_filter": {
@@ -4017,39 +4247,84 @@
                     "label_text": "Transaction Type",
                     "placeholder_text": "Select transaction type",
                     "option_list": [
-                        { "label_text": "Deposit", "value": "deposit" },
-                        { "label_text": "Withdrawal", "value": "withdrawal" },
-                        { "label_text": "Transfer", "value": "transfer" },
-                        { "label_text": "Exchange", "value": "exchange" }
+                        {
+                            "label_text": "Deposit",
+                            "value": "deposit"
+                        },
+                        {
+                            "label_text": "Withdrawal",
+                            "value": "withdrawal"
+                        },
+                        {
+                            "label_text": "Transfer",
+                            "value": "transfer"
+                        },
+                        {
+                            "label_text": "Exchange",
+                            "value": "exchange"
+                        }
                     ]
                 },
                 "configuration_level_filter": {
                     "label_text": "Configuration Level",
                     "placeholder_text": "Select level",
                     "option_list": [
-                        { "label_text": "Level 1", "value": 1 },
-                        { "label_text": "Level 2", "value": 2 },
-                        { "label_text": "Level 3", "value": 3 },
-                        { "label_text": "Level 4", "value": 4 }
+                        {
+                            "label_text": "Level 1",
+                            "value": 1
+                        },
+                        {
+                            "label_text": "Level 2",
+                            "value": 2
+                        },
+                        {
+                            "label_text": "Level 3",
+                            "value": 3
+                        },
+                        {
+                            "label_text": "Level 4",
+                            "value": 4
+                        }
                     ]
                 },
                 "fee_type_filter": {
                     "label_text": "Fee Type",
                     "placeholder_text": "Select fee type",
                     "option_list": [
-                        { "label_text": "Flat", "value": "flat" },
-                        { "label_text": "Percentage", "value": "percentage" },
-                        { "label_text": "Range", "value": "range" }
+                        {
+                            "label_text": "Flat",
+                            "value": "flat"
+                        },
+                        {
+                            "label_text": "Percentage",
+                            "value": "percentage"
+                        },
+                        {
+                            "label_text": "Range",
+                            "value": "range"
+                        }
                     ]
                 },
                 "effective_state_filter": {
                     "label_text": "Effective State",
                     "placeholder_text": "Select effective state",
                     "option_list": [
-                        { "label_text": "Current", "value": "current" },
-                        { "label_text": "Scheduled", "value": "scheduled" },
-                        { "label_text": "Expired", "value": "expired" },
-                        { "label_text": "Unbounded", "value": "unbounded" }
+                        {
+                            "label_text": "Current",
+                            "value": "current"
+                        },
+                        {
+                            "label_text": "Scheduled",
+                            "value": "scheduled"
+                        },
+                        {
+                            "label_text": "Expired",
+                            "value": "expired"
+                        },
+                        {
+                            "label_text": "Unbounded",
+                            "value": "unbounded"
+                        }
                     ]
                 },
                 "min_amount_filter": {
@@ -4151,6 +4426,7 @@
         "form_view_ui": {
             "header_text": "",
             "fieldset": {
+                "no_selection_option_text": "No selection",
                 "currency_id_field": {
                     "label_text": "Currency",
                     "placeholder_text": "Search currency",
@@ -4175,19 +4451,40 @@
                     "label_text": "Transaction Type",
                     "placeholder_text": "Select transaction type",
                     "options_list": [
-                        { "label_text": "Deposit", "value": "deposit" },
-                        { "label_text": "Withdrawal", "value": "withdrawal" },
-                        { "label_text": "Transfer", "value": "transfer" },
-                        { "label_text": "Exchange", "value": "exchange" }
+                        {
+                            "label_text": "Deposit",
+                            "value": "deposit"
+                        },
+                        {
+                            "label_text": "Withdrawal",
+                            "value": "withdrawal"
+                        },
+                        {
+                            "label_text": "Transfer",
+                            "value": "transfer"
+                        },
+                        {
+                            "label_text": "Exchange",
+                            "value": "exchange"
+                        }
                     ]
                 },
                 "fee_type_field": {
                     "label_text": "Fee Type",
                     "placeholder_text": "Select fee type",
                     "options_list": [
-                        { "label_text": "Flat", "value": "flat" },
-                        { "label_text": "Percentage", "value": "percentage" },
-                        { "label_text": "Range", "value": "range" }
+                        {
+                            "label_text": "Flat",
+                            "value": "flat"
+                        },
+                        {
+                            "label_text": "Percentage",
+                            "value": "percentage"
+                        },
+                        {
+                            "label_text": "Range",
+                            "value": "range"
+                        }
                     ]
                 },
                 "amount_field": {
@@ -4207,8 +4504,14 @@
                     "label_text": "Range Fee Type",
                     "placeholder_text": "Select fee type",
                     "options_list": [
-                        { "label_text": "Flat", "value": "flat" },
-                        { "label_text": "Percentage", "value": "percentage" }
+                        {
+                            "label_text": "Flat",
+                            "value": "flat"
+                        },
+                        {
+                            "label_text": "Percentage",
+                            "value": "percentage"
+                        }
                     ]
                 },
                 "range_amount_field": {
@@ -4217,7 +4520,9 @@
                 },
                 "add_range_btn_text": "Add Range",
                 "remove_range_btn_text": "Remove Range",
-                "is_active_field": { "label_text": "Active" },
+                "is_active_field": {
+                    "label_text": "Active"
+                },
                 "effective_from_field": {
                     "label_text": "Effective From",
                     "placeholder_text": "Optional start date"
@@ -4233,7 +4538,9 @@
             "loading_text": "Loading service fee configuration...",
             "no_description_text": "",
             "empty_value_text": "-",
-            "header": { "currency_logo_alt_text": "Currency logo" },
+            "header": {
+                "currency_logo_alt_text": "Currency logo"
+            },
             "sections": {
                 "configuration_information": {
                     "title_text": "Configuration Information",
@@ -4273,8 +4580,12 @@
                     "created_label_text": "Created:",
                     "updated_label_text": "Updated:"
                 },
-                "created_by": { "title_text": "Created By" },
-                "updated_by": { "title_text": "Updated By" }
+                "created_by": {
+                    "title_text": "Created By"
+                },
+                "updated_by": {
+                    "title_text": "Updated By"
+                }
             }
         }
     },
@@ -5152,6 +5463,7 @@
         "wallet_id_text": "Wallet reference",
         "deposit_text": "Deposit",
         "withdrawal_text": "Withdrawal",
+        "withdrawal_recipients_text": "Withdrawal Recipients",
         "coming_soon_text": "Withdrawals are coming soon.",
         "transactions_text": "Recent transactions",
         "all_wallets_text": "All wallets",
@@ -5255,7 +5567,23 @@
                 "expired_text": "This deposit has expired.",
                 "launch_error_text": "We could not open checkout or refresh its status. Try the hosted checkout link or check the status again.",
                 "frame_note_text": "If checkout does not load here, use the link below to open it in a new tab.",
-                "iframe_title_text": "Secure payment checkout"
+                "iframe_title_text": "Secure payment checkout",
+                "expected_amount_text": "Expected amount",
+                "received_amount_text": "Confirmed received",
+                "remaining_amount_text": "Remaining amount",
+                "excess_amount_text": "Excess held",
+                "refundable_amount_text": "Refundable amount",
+                "memo_required_text": "Required memo / destination tag",
+                "simulation_notice_text": "Simulated payment — do not send real funds.",
+                "confirming_text": "A deposit has been detected and is awaiting confirmation. Do not send it again.",
+                "blockchain_hash_text": "Blockchain transaction hash",
+                "blockchain_hash_required_text": "We could not automatically match this deposit. Enter its blockchain transaction hash to verify it.",
+                "expires_in_text": "Time remaining",
+                "copy_text": "Copy",
+                "copied_text": "Copied",
+                "copy_error_text": "We could not copy this value. Select and copy it manually.",
+                "qr_code_text": "Scan to copy the deposit address",
+                "qr_code_error_text": "We could not generate a QR code. Use the copyable deposit address instead."
             }
         },
         "modals_ui": {
@@ -5268,6 +5596,371 @@
         "actions_text": "Actions",
         "check_status_text": "Check status",
         "checking_status_text": "Checking…"
+    },
+    "withdrawal_recipient_view_ui": {
+        "list_view_ui": {
+            "breadcrumb_list": [
+                {
+                    "menu_text": "Home",
+                    "menu_icon": "home_svg_icon",
+                    "menu_link": "/dashboard"
+                },
+                {
+                    "menu_text": "My Wallets",
+                    "menu_icon": "greater_than_caret_svg_icon",
+                    "menu_link": "/my-wallets"
+                },
+                {
+                    "menu_text": "Withdrawal Recipients",
+                    "menu_icon": "greater_than_caret_svg_icon"
+                }
+            ],
+            "header_section": {
+                "header_text": "Withdrawal Recipients",
+                "header_description_text": "View and filter your saved withdrawal destinations.",
+                "create_btn": {
+                    "btn_text": "Add recipient"
+                }
+            },
+            "filters_section": {
+                "toggle_btn": {
+                    "btn_text": "Filters",
+                    "btn_icon": "horizontal_filters_svg_icon"
+                },
+                "clear_filters_btn": {
+                    "btn_text": "Clear"
+                },
+                "apply_filters_btn": {
+                    "btn_text": "Apply Filters"
+                },
+                "search_filter": {
+                    "label_text": "Search",
+                    "placeholder_text": "Search recipient reference, type or status"
+                },
+                "status_filter": {
+                    "label_text": "Status",
+                    "placeholder_text": "All statuses",
+                    "option_list": [
+                        {
+                            "label_text": "All",
+                            "value": ""
+                        },
+                        {
+                            "label_text": "Pending",
+                            "value": "pending"
+                        },
+                        {
+                            "label_text": "Active",
+                            "value": "active"
+                        },
+                        {
+                            "label_text": "Disabled",
+                            "value": "disabled"
+                        },
+                        {
+                            "label_text": "Failed",
+                            "value": "failed"
+                        },
+                        {
+                            "label_text": "Stale",
+                            "value": "stale"
+                        }
+                    ]
+                },
+                "recipient_type_filter": {
+                    "label_text": "Recipient type",
+                    "placeholder_text": "All recipient types",
+                    "option_list": [
+                        {
+                            "label_text": "All",
+                            "value": ""
+                        },
+                        {
+                            "label_text": "Bank account",
+                            "value": "bank_account"
+                        },
+                        {
+                            "label_text": "Mobile money",
+                            "value": "mobile_money"
+                        },
+                        {
+                            "label_text": "Digital wallet",
+                            "value": "digital_wallet"
+                        },
+                        {
+                            "label_text": "Crypto wallet",
+                            "value": "crypto_wallet"
+                        },
+                        {
+                            "label_text": "Card authorization",
+                            "value": "card_authorization"
+                        },
+                        {
+                            "label_text": "Provider recipient",
+                            "value": "provider_recipient"
+                        }
+                    ]
+                },
+                "is_verified_filter": {
+                    "label_text": "Verification",
+                    "placeholder_text": "All verification states",
+                    "option_list": [
+                        {
+                            "label_text": "All",
+                            "value": ""
+                        },
+                        {
+                            "label_text": "Verified",
+                            "value": "true"
+                        },
+                        {
+                            "label_text": "Unverified",
+                            "value": "false"
+                        }
+                    ]
+                },
+                "provider_recipient_reference_filter": {
+                    "label_text": "Provider reference",
+                    "placeholder_text": "Enter provider recipient reference"
+                },
+                "date_range_filter": {
+                    "label_text": "Created between",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                },
+                "updated_at_range_filter": {
+                    "label_text": "Updated between",
+                    "start_date_placeholder_text": "Start date",
+                    "end_date_placeholder_text": "End date"
+                }
+            },
+            "table": {
+                "result_section": {
+                    "result_text": "Showing {{showing}} of {{total_records}} recipient(s) (Page {{current_page}} of {{total_pages}})"
+                },
+                "bulk_action_section": {
+                    "btn_text": "{{selected_count}} record(s) selected"
+                },
+                "loading_section": {
+                    "loader_text": "Loading withdrawal recipients…"
+                },
+                "empty_state_section": {
+                    "header_text": "No withdrawal recipients match your filters."
+                },
+                "header": {
+                    "public_id_text": "Recipient reference",
+                    "external_account_text": "Destination",
+                    "currency_text": "Currency",
+                    "recipient_type_text": "Type",
+                    "status_text": "Status",
+                    "is_verified_text": "Verification",
+                    "created_at_text": "Created at",
+                    "sn_text": "S/N",
+                    "actions_text": "Actions"
+                },
+                "pagination_section": {
+                    "btn_content": {
+                        "previous_text": "Previous",
+                        "next_text": "Next"
+                    }
+                },
+                "labels": {
+                    "pending_text": "Pending",
+                    "active_text": "Active",
+                    "disabled_text": "Disabled",
+                    "failed_text": "Failed",
+                    "stale_text": "Stale",
+                    "bank_account_text": "Bank account",
+                    "mobile_money_text": "Mobile money",
+                    "digital_wallet_text": "Digital wallet",
+                    "crypto_wallet_text": "Crypto wallet",
+                    "card_authorization_text": "Card authorization",
+                    "provider_recipient_text": "Provider recipient",
+                    "verified_text": "Verified",
+                    "unverified_text": "Unverified"
+                },
+                "action_menu_list": {
+                    "select_menu_option": {
+                        "menu_text": "Select",
+                        "menu_icon": "check_circle_svg_icon",
+                        "menu_link": ""
+                    },
+                    "edit_menu_option": {
+                        "menu_text": "Edit",
+                        "menu_icon": "edit_square_pencil_svg_icon",
+                        "menu_link": ""
+                    },
+                    "view_menu_option": {
+                        "menu_text": "View",
+                        "menu_icon": "view_eye_svg_icon",
+                        "menu_link": ""
+                    },
+                    "delete_menu_option": {
+                        "menu_text": "Delete",
+                        "menu_icon": "delete_trash_svg_icon",
+                        "menu_link": ""
+                    }
+                }
+            }
+        },
+        "form_view_ui": {
+            "header_text": "Withdrawal recipient",
+            "submit_btn_text": "Save recipient",
+            "create_title_text": "Add withdrawal recipient",
+            "edit_title_text": "Edit withdrawal recipient",
+            "currency_id_text": "Currency",
+            "local_text": "Local",
+            "international_text": "International",
+            "bank_account_type_text": "Account type",
+            "current_text": "Current account",
+            "checking_text": "Checking account",
+            "savings_text": "Savings account",
+            "account_name_text": "Account name",
+            "account_number_text": "Account number",
+            "bank_code_text": "Bank",
+            "bank_name_text": "Bank name",
+            "sort_code_text": "Sort code",
+            "routing_number_text": "Routing number",
+            "iban_text": "IBAN",
+            "swift_code_text": "SWIFT / BIC",
+            "wallet_address_text": "Wallet address",
+            "network_text": "Network",
+            "address_tag_text": "Memo / address tag (optional)",
+            "description_text": "Description (optional)",
+            "keep_saved_text": "Leave unchanged to keep saved details",
+            "choose_or_enter_text": "Choose or enter a value",
+            "edit_hint_text": "Currency and transfer scope stay fixed. Saved sensitive details are hidden. Enter a replacement only when you want to change them.",
+            "unchanged_text": "Saved value unchanged",
+            "review_text": "Review recipient",
+            "back_text": "Back",
+            "create_text": "Add recipient",
+            "save_text": "Save changes",
+            "loading_text": "Please wait…",
+            "unsupported_text": "This currency does not have a supported recipient form yet.",
+            "lookup_unavailable_text": "Bank lookup is unavailable for this form. Please try again later.",
+            "lookup_failed_text": "We could not load banks. Please retry.",
+            "resolve_failed_text": "We could not resolve this account. Check the bank and account number, then try again.",
+            "resolve_required_text": "Wait for the account name to be resolved before continuing.",
+            "invalid_text": "Complete the required fields with valid destination details.",
+            "no_changes_text": "No changes have been made.",
+            "submit_unavailable_text": "Saving recipients is unavailable.",
+            "submit_failed_text": "We could not save the recipient. Please try again.",
+            "load_failed_text": "We could not load recipient currencies. Please retry.",
+            "permission_text": "You do not have permission to perform this action.",
+            "csrf_failed_text": "Your form session could not be prepared. Please retry.",
+            "form_intro_text": "Choose a currency and enter the recipient’s destination details.",
+            "review_hint_text": "Check the destination carefully before saving this recipient.",
+            "bank_account_scope_text": "Transfer type",
+            "local_hint_text": "Use the recipient’s local bank account details.",
+            "international_hint_text": "Use the recipient’s international bank details, including the required routing information.",
+            "resolved_name_hint_text": "The account name appears automatically when the bank details are complete.",
+            "account_holder_type_text": "Account holder",
+            "individual_text": "Individual account",
+            "corporate_text": "Corporate account",
+            "personal_text": "Individual account",
+            "business_text": "Corporate account",
+            "resolving_account_text": "Trying to resolve account name…",
+            "retry_resolution_text": "Retry",
+            "validation_iban_characters_text": "IBAN must contain only letters A–Z and digits 0–9.",
+            "validation_iban_structure_text": "IBAN must start with two country letters and two check digits.",
+            "validation_iban_country_text": "Enter an IBAN with a recognised country code.",
+            "validation_iban_route_text": "This IBAN country is not supported for this withdrawal route.",
+            "validation_iban_length_text": "IBAN length does not match its country. Check the complete account number.",
+            "validation_iban_checksum_text": "IBAN checksum is invalid. Check the account number.",
+            "validation_bic_characters_text": "SWIFT/BIC must contain only letters A–Z and digits 0–9.",
+            "validation_bic_length_text": "SWIFT/BIC must contain 8 or 11 characters.",
+            "validation_bic_structure_text": "Enter a valid SWIFT/BIC: four bank letters, two country letters, a two-character location and an optional three-character branch.",
+            "validation_required_text": "This field is required.",
+            "validation_digits_text": "Enter digits only.",
+            "validation_digit_count_text": "Enter exactly {{digits}} digits.",
+            "validation_max_length_text": "Enter no more than {{max_length}} characters.",
+            "validation_option_text": "Select a valid option.",
+            "validation_invalid_text": "Enter a valid value.",
+            "validation_failed_text": "We could not validate this value. Please edit it and try again."
+        },
+        "modals_ui": {
+            "add_new_modal_ui": {
+                "title_text": "Add withdrawal recipient",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "update_modal_ui": {
+                "title_text": "Edit withdrawal recipient",
+                "title_icon": "square_grid_plus_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "profile_details_modal_ui": {
+                "title_text": "Withdrawal recipient details",
+                "title_icon": "identification_card_svg_icon",
+                "title_img": "/assets/img/modal_icon.png"
+            },
+            "delete_modal_ui": {
+                "title_text": "Delete withdrawal recipient",
+                "title_icon": "delete_trash_svg_icon",
+                "title_img": "/assets/img/modal_icon.png",
+                "content": {
+                    "title_text": "Delete recipient {{public_id}}?",
+                    "message_text": "This recipient will be removed from your withdrawal recipients. Do you want to continue?",
+                    "cancel_btn_text": "Cancel",
+                    "confirm_btn_text": "Delete recipient"
+                }
+            }
+        },
+        "profile_view_ui": {
+            "loading_text": "Loading recipient…",
+            "no_description_text": "",
+            "empty_value_text": "Not available",
+            "title_text": "Withdrawal recipient",
+            "masked_hint_text": "Sensitive destination details are masked for your protection.",
+            "overview_text": "Recipient overview",
+            "destination_text": "Destination details",
+            "verification_text": "Verification",
+            "provider_text": "Provider details",
+            "history_text": "History",
+            "yes_text": "Yes",
+            "no_text": "No",
+            "public_id_text": "Recipient reference",
+            "recipient_type_text": "Recipient type",
+            "status_text": "Status",
+            "currency_text": "Currency",
+            "account_name_text": "Account name",
+            "account_type_text": "Account type",
+            "bank_name_text": "Bank name",
+            "bank_code_text": "Bank code",
+            "bank_account_scope_text": "Transfer scope",
+            "bank_account_type_text": "Bank account type",
+            "country_code_text": "Bank country",
+            "branch_code_text": "Branch code",
+            "account_number_masked_text": "Account number",
+            "routing_number_masked_text": "Routing number",
+            "iban_masked_text": "IBAN",
+            "swift_code_masked_text": "SWIFT / BIC",
+            "mobile_money_provider_text": "Mobile money provider",
+            "mobile_money_number_masked_text": "Mobile number",
+            "wallet_address_masked_text": "Wallet address",
+            "network_text": "Network",
+            "is_default_text": "Default destination",
+            "is_verified_text": "Verified",
+            "verification_level_text": "Verification level",
+            "validation_method_text": "Validation method",
+            "account_holder_verified_text": "Account holder verified",
+            "account_name_matches_text": "Account name matches",
+            "supplied_account_name_text": "Supplied account name",
+            "resolved_account_name_text": "Resolved account name",
+            "checked_at_text": "Last verification check",
+            "provider_name_text": "Provider",
+            "provider_code_text": "Provider code",
+            "provider_reference_text": "Provider recipient reference",
+            "external_reference_text": "Destination reference",
+            "external_status_text": "Destination status",
+            "failure_reason_text": "Failure reason",
+            "created_at_text": "Created",
+            "updated_at_text": "Last updated",
+            "verified_at_text": "Verified on",
+            "disabled_at_text": "Disabled on",
+            "last_synchronized_at_text": "Last synchronized",
+            "account_holder_type_text": "Account holder type"
+        }
     },
     "api_responses": {
         "general_responses": {
@@ -5290,9 +5983,7 @@
             "unauthorized_access_7": "👤 Your account could not be verified. Please sign in again.",
             "unauthorized_access_8": "⚠️ Your session details don't match our records. Please log in again.",
             "unauthorized_access_9": "🔄 Your access token has expired. Please refresh your session or sign in again.",
-            "invalid_app_request": "🚫 This application request could not be verified.",
             "invalid_app_request_expired": "⏱️ This application request has expired. Please try again.",
-            "error_occurred": "⚠️ Something went wrong on our side. Please try again in a moment.",
             "failed_to_fetch_rows": "⚠️ We couldn't retrieve the requested records right now. Please try again.",
             "record_not_found": "🔍 The requested resource could not be found.",
             "fetched_app_identity_record_successfully": "✅ The member identity record was fetched successfully.",
@@ -5304,170 +5995,13 @@
             "invalid_registered_at": "📅 Please provide a valid member registration date.",
             "invalid_identity_metadata": "🧩 The member metadata must be a valid object.",
             "invalid_identity_type": "🪪 Please provide a supported identity type.",
-            "invalid_identity_public_id": "🪪 Please provide a valid identity public ID.",
             "invalid_create_provider_account": "⚠️ Please specify whether Fibase should create a provider account.",
             "invalid_deposit_amount": "💰 Please provide a valid deposit amount greater than zero.",
-            "invalid_transaction_amount": "💰 Please provide a valid transaction amount greater than zero.",
-            "invalid_transaction_type": "🔄 Please provide a supported transaction type.",
-            "invalid_amount_precision": "🔢 The transaction amount has too many decimal places for the selected currency.",
             "app_reference_required": "🔖 Please provide your application transaction reference.",
             "invalid_app_reference": "🔖 Please provide a valid application transaction reference.",
             "invalid_idempotency_key": "🔐 Please provide a valid idempotency key for this transaction.",
-            "invalid_transaction_description": "✏️ Please provide a valid transaction description.",
-            "invalid_transaction_reason": "📝 Please provide a valid transaction reason.",
-            "invalid_transaction_redirect_url": "🔗 Please provide an approved application redirect URL.",
-            "invalid_payment_network": "🌐 Please provide a valid payment network.",
-            "invalid_transaction_metadata": "🧩 Transaction metadata must be a valid object.",
-            "transaction_metadata_too_large": "📦 The transaction metadata is too large.",
-            "sensitive_transaction_metadata_not_allowed": "🔐 Sensitive keys are not allowed in transaction metadata.",
-            "idempotency_key_payload_conflict": "⚠️ This idempotency key was already used with different transaction details.",
-            "app_reference_already_exists": "⚠️ This application transaction reference is already in use.",
-            "app_identity_not_found": "🔍 This application identity could not be found.",
-            "deposit_payment_option_not_found": "🔍 The selected deposit payment option is unavailable.",
-            "deposit_amount_exceeds_currency_precision": "🔢 The deposit amount has too many decimal places for this currency.",
-            "deposit_amount_below_minimum": "⬇️ The deposit amount is below the permitted minimum.",
-            "deposit_amount_above_maximum": "⬆️ The deposit amount exceeds the permitted maximum.",
-            "payment_method_does_not_support_deposits": "🚫 The selected payment method does not support deposits.",
-            "payment_provider_config_not_found": "⚙️ The payment provider is not configured for this transaction.",
-            "payment_provider_not_supported": "🚫 This payment provider is not currently supported.",
-            "payment_provider_does_not_support_deposits": "🚫 The selected payment provider does not support deposits.",
-            "payment_method_not_supported_by_provider": "🚫 The payment provider does not support the selected payment method.",
-            "currency_not_supported_by_provider": "🚫 The payment provider does not support this currency.",
-            "identity_provider_account_is_not_available": "⏳ The identity provider account is not currently available.",
-            "provider_account_provisioning_in_progress": "⏳ The payment provider account is still being prepared. Please try again shortly.",
-            "payment_provider_account_provisioning_error": "⚠️ The payment provider account could not be prepared right now.",
-            "payment_provider_account_strategy_mismatch": "⚠️ The payment provider returned an unexpected account type.",
-            "transaction_idempotency_conflict": "⚠️ This idempotency key or application reference belongs to a different transaction.",
-            "deposit_transaction_initialization_failed": "⚠️ This deposit transaction could not be initialized.",
-            "deposit_transaction_already_initialized": "ℹ️ This deposit transaction has already been initialized.",
-            "payment_provider_initialization_error": "⚠️ The payment provider could not initialize this deposit.",
-            "deposit_provider_initialization_failed": "⚠️ The provider declined or failed to initialize this deposit.",
-            "failed_to_initiate_app_deposit_transaction": "⚠️ We could not initiate the deposit transaction right now.",
-            "app_deposit_transaction_already_initialized": "ℹ️ The deposit transaction was already initialized successfully.",
-            "initiated_app_deposit_transaction_successfully": "✅ The deposit transaction was initialized successfully.",
-            "created_app_deposit_intent_successfully": "🧾 The deposit intent and fee summary were created successfully.",
-            "app_deposit_intent_idempotent_replay": "ℹ️ The existing deposit intent and fee summary were returned.",
-            "deposit_intent_fee_summary_not_found": "⚠️ The stored deposit intent fee summary is unavailable.",
-            "failed_to_create_app_deposit_intent": "⚠️ The deposit intent could not be created right now.",
-            "transaction_intent_field_not_editable": "One or more supplied transaction fields cannot be edited.",
-            "transaction_intent_changes_required": "Provide at least one transaction detail to update.",
-            "invalid_intent_version": "Provide the version from your latest transaction summary.",
-            "transaction_intent_not_editable": "This transaction can no longer be edited. Start a new transaction.",
-            "transaction_intent_version_conflict": "Your transaction summary has changed. Refresh it before trying again.",
-            "failed_to_update_app_transaction_intent": "Unable to update the transaction. Please try again.",
-            "updated_app_transaction_intent_successfully": "Transaction summary updated successfully.",
-            "created_app_transaction_intent_successfully": "🧾 The transaction intent was created successfully.",
-            "app_transaction_intent_idempotent_replay": "ℹ️ The existing transaction intent was returned.",
-            "app_transaction_intent_context_not_found": "⚠️ An eligible transaction route could not be resolved.",
-            "failed_to_resolve_transaction_intent_fees": "⚠️ The transaction intent fees could not be resolved.",
-            "failed_to_create_app_transaction_intent": "⚠️ The transaction intent could not be created right now.",
-            "transaction_initiation_context_not_found": "⚠️ The transaction provider context is no longer available.",
-            "invalid_withdrawal_recipient_id": "⚠️ Select a valid withdrawal recipient before requesting approval.",
-            "invalid_destination_wallet_id": "⚠️ Select a valid destination wallet for the internal transfer.",
-            "invalid_transaction_destination": "⚠️ The selected destination is not valid for this transaction type.",
-            "withdrawal_recipient_not_found": "🔍 The selected withdrawal recipient is unavailable for this transaction.",
-            "unsupported_transaction_type": "⚠️ This transaction type cannot be initiated through this endpoint.",
-            "invalid_query_search": "⚠️ The search filter is invalid or too long.",
-            "invalid_query_status": "⚠️ The selected status filter is invalid.",
-            "invalid_query_currency_id": "⚠️ The selected currency filter is invalid.",
-            "invalid_transaction_amount_filter": "⚠️ Please provide valid non-negative transaction amount filters.",
-            "invalid_transaction_amount_range": "⚠️ A transaction amount minimum cannot exceed its maximum.",
-            "invalid_transaction_filter": "⚠️ One or more transaction filters are invalid.",
-            "initiated_app_transaction_successfully": "✅ The deposit transaction was initiated successfully.",
-            "created_withdrawal_approval_challenge_successfully": "🔐 The withdrawal approval challenge was created successfully.",
-            "created_internal_transfer_approval_challenge_successfully": "🔐 The internal transfer approval challenge was created successfully.",
-            "invalid_transaction_approval_credentials": "⚠️ The transaction approval credentials are invalid.",
-            "invalid_transaction_approval_decision": "⚠️ Choose whether to approve or reject the withdrawal.",
-            "withdrawal_transaction_not_found": "⚠️ The withdrawal transaction could not be found.",
-            "rejected_withdrawal_transaction_successfully": "✅ The withdrawal transaction was rejected.",
-            "rejected_internal_transfer_successfully": "✅ The internal wallet transfer was rejected.",
-            "approval_transaction_not_found": "The transaction requiring approval could not be found.",
-            "approval_transaction_mismatch": "The approval challenge does not belong to the requested transaction.",
-            "failed_to_initiate_app_transaction": "The transaction could not be initiated.",
-            "failed_to_continue_approved_transaction": "The approved transaction could not be continued.",
-            "invalid_blockchain_transaction_hash": "The blockchain transaction hash is invalid.",
-            "transaction_type_does_not_support_provider_verification": "This transaction type does not support provider verification.",
-            "provider_transaction_verification_not_supported": "The selected provider does not support transaction verification.",
-            "provider_transaction_verification_failed": "The provider could not verify the transaction.",
-            "verified_app_transaction_successfully": "The transaction was verified with the provider successfully.",
-            "approved_and_initiated_withdrawal_transaction_successfully": "✅ The withdrawal was approved and submitted to the provider.",
-            "approved_and_completed_internal_transfer_successfully": "✅ The internal wallet transfer was approved and completed successfully.",
-            "completed_internal_transfer_successfully": "✅ The internal wallet transfer completed successfully.",
-            "challenge_not_found": "⚠️ The approval challenge could not be found.",
-            "challenge_not_pending": "⚠️ The approval challenge is no longer pending.",
-            "challenge_expired": "⚠️ The approval challenge has expired.",
-            "challenge_consumed": "⚠️ The approval challenge has already been used.",
-            "challenge_rate_limited": "⚠️ Too many approval attempts were made. Request a new challenge.",
-            "challenge_token_invalid": "⚠️ The approval token is invalid.",
-            "transaction_not_awaiting_approval": "⚠️ The transaction is no longer awaiting approval.",
-            "invalid_withdrawal_recipient_form": "Please provide the destination details required for the selected currency.",
-            "invalid_withdrawal_recipient_wallet_address": "Enter a valid wallet address without spaces or unsupported characters.",
-            "invalid_withdrawal_recipient_address_tag": "Enter a valid address tag that is different from the wallet address.",
-            "invalid_withdrawal_recipient_network": "Select the network configured for this currency.",
-            "invalid_ngn_withdrawal_recipient_currency": "The selected currency is not available for an NGN bank recipient.",
-            "invalid_ngn_withdrawal_recipient_type": "NGN withdrawal recipients must use the bank account type.",
-            "invalid_ngn_bank_account_scope": "Select either local or international as the bank transfer scope.",
-            "invalid_ngn_bank_account_type": "Select either current or savings as the bank account type.",
-            "invalid_ngn_bank_account_number": "Enter a valid 10-digit Nigerian bank account number.",
-            "invalid_ngn_bank_code": "Enter a valid Nigerian bank code.",
-            "invalid_ngn_bank_account_name": "Enter the account holder name for this bank account.",
-            "invalid_ngn_bank_iban": "Enter a valid IBAN for an international NGN bank transfer.",
-            "invalid_ngn_bank_swift_code": "Enter a valid SWIFT or BIC code for an international NGN bank transfer.",
-            "invalid_gbp_withdrawal_recipient_currency": "The selected currency is not available for a GBP bank recipient.",
-            "invalid_gbp_withdrawal_recipient_type": "GBP withdrawal recipients must use the bank account type.",
-            "invalid_gbp_bank_account_scope": "Select either local or international as the bank transfer scope.",
-            "invalid_gbp_bank_account_type": "Select either checking or savings as the bank account type.",
-            "invalid_gbp_bank_account_number": "Enter a valid GBP bank account number.",
-            "invalid_gbp_bank_sort_code": "Enter a valid six-digit UK sort code for a local GBP bank transfer.",
-            "invalid_gbp_bank_iban": "Enter a valid IBAN for an international GBP bank transfer.",
-            "invalid_gbp_bank_swift_code": "Enter a valid SWIFT or BIC code for an international GBP bank transfer.",
-            "invalid_withdrawal_recipient_context": "The selected currency or its withdrawal route is unavailable.",
-            "withdrawal_recipient_provider_validation_unavailable": "This provider does not currently support destination validation.",
-            "withdrawal_recipient_destination_mismatch": "The recipient destination does not match the saved withdrawal account.",
-            "withdrawal_recipient_is_disabled": "This withdrawal recipient has been disabled.",
-            "withdrawal_recipient_destination_conflict": "This withdrawal destination already belongs to another recipient.",
-            "withdrawal_recipient_account_name_mismatch": "The supplied account name does not match the bank account holder.",
-            "withdrawal_recipient_update_conflict": "This recipient changed while you were editing it. Refresh and try again.",
-            "withdrawal_recipient_destination_details_unavailable": "This older recipient cannot be partially edited. Please create a new recipient with its complete destination details.",
-            "withdrawal_recipient_provider_validation_failed": "The withdrawal destination could not be verified. Please check the details and try again.",
-            "withdrawal_recipient_bank_resolution_failed": "The bank account could not be verified.",
-            "created_app_withdrawal_recipient_successfully": "Withdrawal recipient created successfully.",
-            "updated_app_withdrawal_recipient_successfully": "Withdrawal recipient updated successfully.",
-            "deleted_app_withdrawal_recipient_successfully": "Withdrawal recipient deleted successfully.",
-            "record_not_updated": "The withdrawal recipient could not be updated. Please try again.",
-            "record_not_deleted": "The withdrawal recipient could not be deleted. Please try again.",
-            "invalid_withdrawal_recipient_public_id": "Please provide a valid withdrawal recipient public ID.",
-            "invalid_withdrawal_recipient_query": "Please check the withdrawal recipient filters and pagination values.",
-            "fetched_app_withdrawal_recipient_list_successfully": "Withdrawal recipients fetched successfully.",
-            "fetched_app_withdrawal_recipient_successfully": "Withdrawal recipient fetched successfully.",
-            "fetched_app_identity_wallet_list_successfully": "👛 The identity wallet list was fetched successfully.",
-            "fetched_app_identity_currency_wallet_successfully": "👛 The identity currency wallet was fetched successfully.",
-            "created_app_identity_currency_wallet_successfully": "🎉 The identity currency wallet was created successfully.",
-            "failed_to_resolve_app_identity_currency_wallet": "⚠️ We couldn't retrieve or create the identity currency wallet right now. Please try again.",
-            "fetched_app_currency_list_successfully": "💱 The assigned currency list was fetched successfully.",
-            "fetched_app_currency_payment_options_successfully": "💳 The available currency payment options were fetched successfully.",
-            "app_identity_provider_account_context_not_found": "⚠️ The identity, provider, currency, or eligible payment route could not be resolved.",
-            "failed_to_resolve_app_identity_provider_account": "⚠️ The identity payment provider account could not be resolved right now.",
-            "provider_dedicated_account_creation_not_enabled": "⚠️ Dedicated account creation is not enabled for this payment provider.",
-            "failed_to_store_app_identity_provider_account": "⚠️ The payment provider account could not be stored right now.",
-            "fetched_app_identity_provider_account_successfully": "🏦 The identity payment provider account was fetched successfully.",
-            "created_app_identity_provider_account_successfully": "🏦 The identity payment provider account was created successfully.",
-            "invalid_payment_option_transaction_type": "⚠️ Please provide deposit or withdrawal as the transaction type.",
-            "invalid_payment_option_amount": "💰 Please provide a valid amount greater than zero.",
-            "invalid_identity_profile": "👤 Please provide the member profile information required to create an identity.",
-            "invalid_identity_profile_field": "✏️ One or more member profile fields are invalid.",
-            "identity_profile_name_required": "🪪 Please provide the member's first and last name.",
-            "invalid_identity_profile_email": "📧 Please provide a valid member email address.",
-            "invalid_identity_profile_phone": "📱 Please provide a valid member phone number.",
-            "invalid_identity_profile_photo_link": "🖼️ Please provide a valid profile photo link.",
-            "invalid_identity_profile_dob": "🎂 Please provide a valid date of birth that is not in the future.",
-            "invalid_identity_profile_address": "📍 The member address must be a valid object.",
-            "invalid_identity_profile_metadata": "🧩 The profile metadata must be a valid object.",
-            "valid_input": "✅ Input validated successfully.",
-            "input_has_not_changed": "ℹ️ No changes were detected in the submitted data.",
             "invalid_record_selection": "⚠️ Invalid record selected. Please try again.",
             "greater_than_max_bulk_input_allowed": "⚠️ The number of items provided/selected exceeds the maximum allowed limit.",
-            "invalid_form_input_provided": "❌ No input was provided. Please complete the form and try again.",
             "invalid_max_amount": "🔢 Please provide a valid maximum amount.",
             "invalid_min_amount": "🔢 Please provide a valid minimum amount.",
             "permission_denied": "You do not have permission to perform this action."
@@ -6129,6 +6663,23 @@
             "invalid_payment_provider_logo_url": "🖼️ Please provide a valid payment provider logo URL.",
             "invalid_payment_provider_name": "❌ Please provide a valid payment provider name.",
             "invalid_payment_provider_website_url": "🌐 Please provide a valid payment provider website URL.",
+            "payment_provider_interactor_context_input_is_invalid": "❌ The provider interactor context details are incomplete or invalid.",
+            "payment_provider_interactor_registered_app_not_found": "⚠️ The application required for this provider interaction could not be found or is inactive.",
+            "payment_provider_interactor_identity_not_found": "⚠️ The identity is unavailable for the selected application.",
+            "payment_provider_interactor_currency_not_found": "⚠️ The selected currency could not be found or is inactive.",
+            "payment_provider_interactor_currency_not_available_to_app": "⚠️ The selected currency is not enabled for this application.",
+            "payment_provider_interactor_destination_currency_not_found": "⚠️ The selected destination currency could not be found or is inactive.",
+            "payment_provider_interactor_destination_currency_not_available_to_app": "⚠️ The selected destination currency is not enabled for this application.",
+            "payment_provider_interactor_withdrawal_recipient_not_found": "⚠️ The selected withdrawal recipient is not active or verified for this application.",
+            "payment_provider_interactor_withdrawal_route_mismatch": "⚠️ The selected provider route does not match the withdrawal recipient.",
+            "payment_provider_interactor_route_not_found": "⚠️ No active provider route and configuration match the selected currency and method.",
+            "payment_provider_interactor_context_is_required": "❌ Provider interaction context is required.",
+            "payment_provider_interactor_context_invalid": "⚠️ The provider interaction configuration is incomplete or unsupported.",
+            "payment_provider_interactor_context_resolution_failed": "⚠️ Provider interaction context could not be resolved. Please try again.",
+            "payment_provider_interactor_not_registered": "⚠️ No interaction is available for the selected payment provider.",
+            "payment_provider_interactor_instance_creation_failed": "⚠️ The payment provider interaction could not be started. Please try again.",
+            "payment_provider_interactor_created_successfully": "✅ The payment provider interaction is ready.",
+            "valid_payment_provider_interactor_context": "✅ Provider interaction context is valid.",
             "payment_provider_created_successfully": "🎉 Payment provider created successfully.",
             "payment_provider_deleted_successfully": "🗑️ Payment provider deleted successfully.",
             "payment_provider_exists": "⚠️ A payment provider with this code already exists.",
@@ -6241,7 +6792,7 @@
             "registered_app_not_found": "🔍 We couldn't find an active registered app matching your selection.",
             "scalar_service_fee_cannot_have_ranges": "⚠️ Flat and percentage fees cannot include range tiers.",
             "service_fee_configuration_created_successfully": "🎉 Service fee configuration created successfully.",
-            "service_fee_configuration_exists": "⚠️ A service fee configuration already exists for this currency and transaction type. Please update the existing configuration instead.",
+            "service_fee_configuration_exists": "⚠️ A service fee configuration already exists for this currency, transaction type, and scope. Please update the existing configuration instead.",
             "service_fee_effective_until_must_be_later": "📅 The effective-until date must be later than the effective-from date.",
             "service_fee_percentage_cannot_exceed_100": "⚠️ A percentage fee cannot be greater than 100%.",
             "service_fee_configuration_updated_successfully": "✅ Service fee configuration updated successfully.",
@@ -6271,7 +6822,30 @@
             "invalid_identity_id": "❌ Please select a valid identity.",
             "fetched_identity_list_successfully": "👥 Identity records loaded successfully.",
             "fetched_identity_record_successfully": "👤 Identity details loaded successfully.",
-            "fetched_identity_wallet_list_successfully": "👛 Identity wallets loaded successfully."
+            "fetched_identity_wallet_list_successfully": "👛 Identity wallets loaded successfully.",
+            "fetched_app_identity_wallet_list_successfully": "👛 The identity wallet list was fetched successfully.",
+            "fetched_app_identity_currency_wallet_successfully": "👛 The identity currency wallet was fetched successfully.",
+            "created_app_identity_currency_wallet_successfully": "🎉 The identity currency wallet was created successfully.",
+            "failed_to_resolve_app_identity_currency_wallet": "⚠️ We couldn't retrieve or create the identity currency wallet right now. Please try again.",
+            "fetched_app_currency_list_successfully": "💱 The assigned currency list was fetched successfully.",
+            "fetched_app_currency_payment_options_successfully": "💳 The available currency payment options were fetched successfully.",
+            "app_identity_provider_account_context_not_found": "⚠️ The identity, provider, currency, or eligible payment route could not be resolved.",
+            "failed_to_resolve_app_identity_provider_account": "⚠️ The identity payment provider account could not be resolved right now.",
+            "provider_dedicated_account_creation_not_enabled": "⚠️ Dedicated account creation is not enabled for this payment provider.",
+            "failed_to_store_app_identity_provider_account": "⚠️ The payment provider account could not be stored right now.",
+            "fetched_app_identity_provider_account_successfully": "🏦 The identity payment provider account was fetched successfully.",
+            "created_app_identity_provider_account_successfully": "🏦 The identity payment provider account was created successfully.",
+            "invalid_payment_option_transaction_type": "⚠️ Please provide deposit or withdrawal as the transaction type.",
+            "invalid_payment_option_amount": "💰 Please provide a valid amount greater than zero.",
+            "invalid_identity_profile": "👤 Please provide the member profile information required to create an identity.",
+            "invalid_identity_profile_field": "✏️ One or more member profile fields are invalid.",
+            "identity_profile_name_required": "🪪 Please provide the member's first and last name.",
+            "invalid_identity_profile_email": "📧 Please provide a valid member email address.",
+            "invalid_identity_profile_phone": "📱 Please provide a valid member phone number.",
+            "invalid_identity_profile_photo_link": "🖼️ Please provide a valid profile photo link.",
+            "invalid_identity_profile_dob": "🎂 Please provide a valid date of birth that is not in the future.",
+            "invalid_identity_profile_address": "📍 The member address must be a valid object.",
+            "invalid_identity_profile_metadata": "🧩 The profile metadata must be a valid object."
         },
         "wallet_module_responses": {
             "invalid_wallet_id": "❌ Please select a valid wallet.",
@@ -6391,6 +6965,282 @@
             "super_admin_role_cannot_be_unassigned": "🚫 The super admin role cannot be unassigned through this action.",
             "system_role_cannot_be_deleted": "🚫 System roles cannot be deleted.",
             "permisison_cannot_be_unassigned_from_super_admin_role": "🚫 Super Admin Role cannot be unassigned permission(s) already assigned."
+        },
+        "withdrawal_recipient_module_responses": {
+            "invalid_withdrawal_recipient_form": "Please provide the destination details required for the selected currency.",
+            "invalid_withdrawal_recipient_wallet_address": "Enter a valid wallet address without spaces or unsupported characters.",
+            "invalid_withdrawal_recipient_address_tag": "Enter a valid address tag that is different from the wallet address.",
+            "invalid_withdrawal_recipient_network": "Select the network configured for this currency.",
+            "invalid_ngn_withdrawal_recipient_currency": "The selected currency is not available for an NGN bank recipient.",
+            "invalid_ngn_withdrawal_recipient_type": "NGN withdrawal recipients must use the bank account type.",
+            "invalid_withdrawal_bank_currency": "Please enter a valid three-letter currency code, such as NGN.",
+            "invalid_account_number": "Please enter a valid bank account number of no more than 100 characters.",
+            "invalid_bank_identifier": "Please provide the bank code, bank name, branch code or sort code for this account.",
+            "withdrawal_bank_currency_not_supported": "Bank lookup is not available for the selected currency.",
+            "withdrawal_bank_provider_unavailable": "Bank lookup is currently unavailable for the selected currency. Please try again later.",
+            "withdrawal_bank_list_failed": "We could not load the available banks. Please try again in a moment.",
+            "withdrawal_bank_account_resolution_failed": "We could not confirm the account holder’s name. Please check the account number and bank details, then try again.",
+            "fetched_withdrawal_banks_successfully": "Available withdrawal banks loaded successfully.",
+            "resolved_withdrawal_bank_account_successfully": "Account holder’s name confirmed successfully.",
+            "iban_required": "Please enter the IBAN for this transfer.",
+            "iban_invalid_characters": "IBAN must contain only letters, numbers and spaces.",
+            "iban_invalid_format": "Please enter an IBAN starting with two country letters and two check digits.",
+            "iban_country_not_supported": "The IBAN country is not listed in the supported IBAN registry.",
+            "iban_invalid_country_length": "The IBAN length is incorrect for its country. Please check the full account number.",
+            "iban_invalid_national_structure": "The IBAN does not match the account format used in its country.",
+            "iban_invalid_checksum": "The IBAN checksum is invalid. Please check the account number.",
+            "iban_country_not_supported_for_route": "This IBAN country is not supported by the selected withdrawal route.",
+            "withdrawal_bank_country_not_supported": "The bank country is not supported by the selected withdrawal route.",
+            "withdrawal_bank_route_not_supported": "International NGN bank withdrawals are not supported by the configured providers.",
+            "country_code_invalid_characters": "Please provide a valid two-letter bank country code.",
+            "invalid_withdrawal_bank_form": "Please provide the withdrawal bank details as a valid form.",
+            "unknown_withdrawal_bank_field": "The withdrawal form contains an unsupported field. Please check the details.",
+            "invalid_withdrawal_bank_field_type": "One or more bank details have an invalid format. Please enter text values for bank identifiers.",
+            "withdrawal_recipient_verification_pending": "The bank provider is still verifying this recipient. Please try again once verification is complete.",
+            "swift_code_required": "Please enter the SWIFT/BIC for this transfer.",
+            "swift_code_invalid_characters": "The SWIFT/BIC must contain only letters and numbers.",
+            "swift_code_invalid_length": "The SWIFT/BIC must contain exactly 8 or 11 characters.",
+            "swift_code_invalid_format": "The SWIFT/BIC format is invalid. Please check the bank, country, location and branch codes.",
+            "swift_code_invalid_country": "The SWIFT/BIC contains an unrecognised country code.",
+            "intermediary_swift_code_required": "Please enter the intermediary bank SWIFT/BIC for this transfer.",
+            "intermediary_swift_code_invalid_characters": "The intermediary bank SWIFT/BIC must contain only letters and numbers.",
+            "intermediary_swift_code_invalid_length": "The intermediary bank SWIFT/BIC must contain exactly 8 or 11 characters.",
+            "intermediary_swift_code_invalid_format": "The intermediary bank SWIFT/BIC format is invalid. Please check the bank, country, location and branch codes.",
+            "intermediary_swift_code_invalid_country": "The intermediary bank SWIFT/BIC contains an unrecognised country code.",
+            "invalid_ngn_bank_account_scope": "Select either local or international as the bank transfer scope.",
+            "invalid_ngn_bank_account_type": "Select either current or savings as the bank account type.",
+            "invalid_ngn_bank_account_number": "Enter a valid 10-digit Nigerian bank account number.",
+            "invalid_ngn_bank_code": "Enter a valid Nigerian bank code.",
+            "invalid_ngn_bank_account_name": "Enter the account holder name for this bank account.",
+            "invalid_ngn_bank_iban": "Enter a valid IBAN for an international NGN bank transfer.",
+            "invalid_ngn_bank_swift_code": "Enter a valid SWIFT or BIC code for an international NGN bank transfer.",
+            "invalid_gbp_withdrawal_recipient_currency": "The selected currency is not available for a GBP bank recipient.",
+            "invalid_gbp_withdrawal_recipient_type": "GBP withdrawal recipients must use the bank account type.",
+            "invalid_gbp_bank_account_scope": "Select either local or international as the bank transfer scope.",
+            "invalid_gbp_bank_account_type": "Select either checking or savings as the bank account type.",
+            "invalid_gbp_bank_account_number": "Enter a valid GBP bank account number.",
+            "invalid_gbp_bank_sort_code": "Enter a valid six-digit UK sort code for a local GBP bank transfer.",
+            "invalid_gbp_bank_iban": "Enter a valid IBAN for an international GBP bank transfer.",
+            "invalid_gbp_bank_swift_code": "Enter a valid SWIFT or BIC code for an international GBP bank transfer.",
+            "invalid_withdrawal_recipient_context": "The selected currency or its withdrawal route is unavailable.",
+            "withdrawal_recipient_provider_validation_unavailable": "This provider does not currently support destination validation.",
+            "withdrawal_recipient_destination_mismatch": "The recipient destination does not match the saved withdrawal account.",
+            "withdrawal_recipient_is_disabled": "This withdrawal recipient has been disabled.",
+            "withdrawal_recipient_destination_conflict": "This withdrawal destination already belongs to another recipient.",
+            "withdrawal_recipient_account_name_mismatch": "The supplied account name does not match the bank account holder.",
+            "withdrawal_recipient_update_conflict": "This recipient changed while you were editing it. Refresh and try again.",
+            "withdrawal_recipient_destination_details_unavailable": "This older recipient cannot be partially edited. Please create a new recipient with its complete destination details.",
+            "withdrawal_recipient_provider_validation_failed": "The withdrawal destination could not be verified. Please check the details and try again.",
+            "withdrawal_recipient_bank_resolution_failed": "The bank account could not be verified.",
+            "created_app_withdrawal_recipient_successfully": "Withdrawal recipient created successfully.",
+            "updated_app_withdrawal_recipient_successfully": "Withdrawal recipient updated successfully.",
+            "deleted_app_withdrawal_recipient_successfully": "Withdrawal recipient deleted successfully.",
+            "record_not_updated": "The withdrawal recipient could not be updated. Please try again.",
+            "record_not_deleted": "The withdrawal recipient could not be deleted. Please try again.",
+            "invalid_withdrawal_recipient_public_id": "Please provide a valid withdrawal recipient public ID.",
+            "invalid_withdrawal_recipient_query": "Please check the withdrawal recipient filters and pagination values.",
+            "fetched_app_withdrawal_recipient_list_successfully": "Withdrawal recipients fetched successfully.",
+            "fetched_app_withdrawal_recipient_successfully": "Withdrawal recipient fetched successfully.",
+            "fetched_withdrawal_recipient_list_successfully": "📦 Withdrawal recipients loaded successfully.",
+            "fetched_withdrawal_recipient_record_successfully": "📄 Withdrawal recipient details loaded successfully.",
+            "invalid_withdrawal_recipient_id": "❌ Please select a valid withdrawal recipient.",
+            "invalid_withdrawal_recipient_name": "❌ Please provide a valid withdrawal recipient name.",
+            "invalid_withdrawal_recipient_reference": "❌ Please provide a valid withdrawal recipient reference.",
+            "invalid_account_holder_type": "Please choose personal or business as the account holder type.",
+            "invalid_withdrawal_recipient_type": "❌ Please select a valid withdrawal recipient type.",
+            "withdrawal_recipient_created_successfully": "🎉 Withdrawal recipient created successfully.",
+            "withdrawal_recipient_deleted_successfully": "🗑️ Withdrawal recipient deleted successfully.",
+            "withdrawal_recipient_updated_successfully": "✏️ Withdrawal recipient updated successfully.",
+            "withdrawal_recipient_list_failed_text": "We could not load withdrawal recipients. Please try applying the filters again.",
+            "withdrawal_recipient_delete_permission_text": "You do not have permission to delete this withdrawal recipient.",
+            "withdrawal_recipient_load_failed_text": "We could not load this recipient. Please try again."
+        },
+        "app_transaction_module_responses": {
+            "app_identity_currency_transaction_in_progress": "⏳ Finish the existing transaction of this type for this identity and currency before starting another.",
+            "invalid_resolve_crypto_depsoit_form": "⚠️ Please provide valid details to resolve this crypto deposit.",
+            "invalid_transaction_description": "✏️ Please provide a valid transaction description.",
+            "invalid_transaction_reason": "📝 Please provide a valid transaction reason.",
+            "invalid_transaction_redirect_url": "🔗 Please provide an approved application redirect URL.",
+            "invalid_payment_network": "🌐 Please provide a valid payment network.",
+            "invalid_transaction_metadata": "🧩 Transaction metadata must be a valid object.",
+            "transaction_metadata_too_large": "📦 The transaction metadata is too large.",
+            "sensitive_transaction_metadata_not_allowed": "🔐 Sensitive keys are not allowed in transaction metadata.",
+            "idempotency_key_payload_conflict": "⚠️ This idempotency key was already used with different transaction details.",
+            "app_reference_already_exists": "⚠️ This application transaction reference is already in use.",
+            "app_identity_not_found": "🔍 This application identity could not be found.",
+            "deposit_payment_option_not_found": "🔍 The selected deposit payment option is unavailable.",
+            "deposit_amount_exceeds_currency_precision": "🔢 The deposit amount has too many decimal places for this currency.",
+            "deposit_amount_below_minimum": "⚠️ ⬇️ The deposit amount is below the permitted minimum.",
+            "deposit_amount_above_maximum": "⚠️ ⬆️ The deposit amount exceeds the permitted maximum.",
+            "payment_method_does_not_support_deposits": "🚫 The selected payment method does not support deposits.",
+            "payment_provider_config_not_found": "⚙️ The payment provider is not configured for this transaction.",
+            "payment_provider_not_supported": "🚫 This payment provider is not currently supported.",
+            "payment_provider_does_not_support_deposits": "🚫 The selected payment provider does not support deposits.",
+            "payment_method_not_supported_by_provider": "🚫 The payment provider does not support the selected payment method.",
+            "currency_not_supported_by_provider": "🚫 The payment provider does not support this currency.",
+            "identity_provider_account_is_not_available": "⏳ The identity provider account is not currently available.",
+            "provider_account_provisioning_in_progress": "⏳ The payment provider account is still being prepared. Please try again shortly.",
+            "payment_provider_account_provisioning_error": "⚠️ The payment provider account could not be prepared right now.",
+            "payment_provider_account_strategy_mismatch": "⚠️ The payment provider returned an unexpected account type.",
+            "transaction_idempotency_conflict": "⚠️ This idempotency key or application reference belongs to a different transaction.",
+            "deposit_transaction_initialization_failed": "⚠️ This deposit transaction could not be initialized.",
+            "deposit_transaction_already_initialized": "⚠️ ℹ️ This deposit transaction has already been initialized.",
+            "payment_provider_initialization_error": "⚠️ The payment provider could not initialize this deposit.",
+            "deposit_provider_initialization_failed": "⚠️ The provider declined or failed to initialize this deposit.",
+            "failed_to_initiate_app_deposit_transaction": "⚠️ We could not initiate the deposit transaction right now.",
+            "app_deposit_transaction_already_initialized": "⚠️ ℹ️ The deposit transaction was already initialized successfully.",
+            "initiated_app_deposit_transaction_successfully": "✅ The deposit transaction was initialized successfully.",
+            "created_app_deposit_intent_successfully": "🧾 The deposit intent and fee summary were created successfully.",
+            "app_deposit_intent_idempotent_replay": "ℹ️ ℹ️ The existing deposit intent and fee summary were returned.",
+            "deposit_intent_fee_summary_not_found": "⚠️ The stored deposit intent fee summary is unavailable.",
+            "failed_to_create_app_deposit_intent": "⚠️ The deposit intent could not be created right now.",
+            "transaction_intent_field_not_editable": "⚠️ One or more supplied transaction fields cannot be edited.",
+            "transaction_intent_changes_required": "⚠️ Provide at least one transaction detail to update.",
+            "invalid_intent_version": "⚠️ Provide the version from your latest transaction summary.",
+            "created_transaction_approval_challenge_successfully": "✅ The approval challenge was created successfully.",
+            "transaction_approval_required": "⚠️ Approve this transaction before initiating it.",
+            "transaction_intent_not_initiable": "⚠️ Only a transaction intent can be initiated.",
+            "transaction_deposit_identity_mismatch": "⚠️ The deposit identity, wallet, or application does not match this transaction.",
+            "transaction_source_wallet_invalid": "⚠️ The source wallet is unavailable or does not match this transaction.",
+            "transaction_wallet_balance_insufficient": "⚠️ The wallet has insufficient funds for this transaction.",
+            "transaction_approval_challenge_already_exists": "⚠️ This withdrawal already has an approval challenge.",
+            "transaction_intent_not_editable": "⚠️ This transaction can no longer be edited. Start a new transaction.",
+            "transaction_intent_version_conflict": "⚠️ Your transaction summary has changed. Refresh it before trying again.",
+            "failed_to_update_app_transaction_intent": "⚠️ Unable to update the transaction. Please try again.",
+            "updated_app_transaction_intent_successfully": "✅ Transaction summary updated successfully.",
+            "created_app_transaction_intent_successfully": "🧾 The transaction intent was created successfully.",
+            "app_transaction_intent_idempotent_replay": "ℹ️ ℹ️ The existing transaction intent was returned.",
+            "app_transaction_intent_context_not_found": "⚠️ An eligible transaction route could not be resolved.",
+            "failed_to_resolve_transaction_intent_fees": "⚠️ The transaction intent fees could not be resolved.",
+            "failed_to_create_app_transaction_intent": "⚠️ The transaction intent could not be created right now.",
+            "transaction_initiation_context_not_found": "⚠️ The transaction provider context is no longer available.",
+            "invalid_withdrawal_recipient_id": "⚠️ Select a valid withdrawal recipient before requesting approval.",
+            "invalid_destination_wallet_id": "⚠️ Select a valid destination wallet for the internal transfer.",
+            "invalid_transaction_destination": "⚠️ The selected destination is not valid for this transaction type.",
+            "withdrawal_recipient_not_found": "🔍 The selected withdrawal recipient is unavailable for this transaction.",
+            "unsupported_transaction_type": "🚫 This transaction type is not supported for the requested action.",
+            "invalid_query_search": "⚠️ The search filter is invalid or too long.",
+            "invalid_query_status": "⚠️ The selected status filter is invalid.",
+            "invalid_query_currency_id": "⚠️ The selected currency filter is invalid.",
+            "invalid_transaction_amount_filter": "⚠️ Please provide valid non-negative transaction amount filters.",
+            "invalid_transaction_amount_range": "⚠️ A transaction amount minimum cannot exceed its maximum.",
+            "invalid_transaction_filter": "⚠️ One or more transaction filters are invalid.",
+            "initiated_app_transaction_successfully": "✅ Your transaction was initiated successfully.",
+            "created_withdrawal_approval_challenge_successfully": "🔐 The withdrawal approval challenge was created successfully.",
+            "created_internal_transfer_approval_challenge_successfully": "🔐 The internal transfer approval challenge was created successfully.",
+            "invalid_transaction_approval_credentials": "⚠️ The transaction approval credentials are invalid.",
+            "invalid_transaction_approval_decision": "🔐 Please choose whether to approve or reject this transaction.",
+            "withdrawal_transaction_not_found": "⚠️ The withdrawal transaction could not be found.",
+            "rejected_withdrawal_transaction_successfully": "✅ The withdrawal transaction was rejected.",
+            "rejected_internal_transfer_successfully": "✅ The internal wallet transfer was rejected.",
+            "approval_transaction_not_found": "⚠️ The transaction requiring approval could not be found.",
+            "approval_transaction_mismatch": "⚠️ The approval challenge does not belong to the requested transaction.",
+            "failed_to_initiate_app_transaction": "⚠️ The transaction could not be initiated.",
+            "failed_to_continue_approved_transaction": "⚠️ The approved transaction could not be continued.",
+            "blockchain_transaction_hash_required_for_crypto": "⚠️ A blockchain transaction hash is required to verify a crypto transaction.",
+            "invalid_blockchain_transaction_hash": "⚠️ The blockchain transaction hash is invalid.",
+            "transaction_type_does_not_support_provider_verification": "⚠️ This transaction type does not support provider verification.",
+            "provider_transaction_verification_not_supported": "⚠️ The selected provider does not support transaction verification.",
+            "provider_transaction_verification_failed": "⚠️ The provider could not verify the transaction.",
+            "verified_app_transaction_successfully": "✅ The transaction was verified with the provider successfully.",
+            "approved_and_initiated_withdrawal_transaction_successfully": "✅ The withdrawal was approved and submitted to the provider.",
+            "approved_and_completed_internal_transfer_successfully": "✅ The internal wallet transfer was approved and completed successfully.",
+            "completed_internal_transfer_successfully": "✅ The internal wallet transfer completed successfully.",
+            "challenge_not_found": "⚠️ The approval challenge could not be found.",
+            "challenge_not_pending": "⚠️ The approval challenge is no longer pending.",
+            "challenge_expired": "⚠️ The approval challenge has expired.",
+            "challenge_consumed": "⚠️ The approval challenge has already been used.",
+            "challenge_rate_limited": "⚠️ Too many approval attempts were made. Request a new challenge.",
+            "challenge_token_invalid": "⚠️ The approval token is invalid.",
+            "transaction_not_awaiting_approval": "⚠️ The transaction is no longer awaiting approval.",
+            "provider_account_setup_unavailable": "⚠️ Your payment account is not ready. Please retry or contact support.",
+            "provider_account_provisioning_requires_review": "⚠️ Your provider account setup needs review before you can continue.",
+            "provider_account_not_active": "⚠️ Your existing provider account is not active. Please contact support.",
+            "provider_account_provisioning_failed": "⚠️ We could not finish setting up the payment provider account. Please try again or contact support.",
+            "deposit_already_in_progress": "⏳ A deposit is already open for this account. Complete it or wait for it to expire.",
+            "invalid_crypto_refund_payment": "⚠️ Select the original crypto payment for this refund.",
+            "crypto_refund_intent_is_immutable": "⚠️ A linked refund cannot be edited after creation.",
+            "invalid_crypto_deposit_resolution": "⚠️ Provide a supported resolution and a reason.",
+            "crypto_deposit_expiry_invalid": "⚠️ Choose a valid future payment expiry, within 24 hours.",
+            "crypto_deposit_resolution_conflict": "⚠️ This payment cannot accept that resolution in its current state.",
+            "crypto_deposit_resolution_failed": "⚠️ The payment could not be resolved. Refresh and review its current state.",
+            "crypto_deposit_transaction_not_found": "⚠️ The crypto deposit transaction could not be found.",
+            "resolved_crypto_deposit_successfully": "✅ The crypto payment resolution was saved.",
+            "crypto_refund_payment_mismatch": "⚠️ The refund must use the original payment app, wallet, and currency.",
+            "crypto_refund_amount_exceeds_receipts": "⚠️ The refund exceeds the remaining refundable amount.",
+            "invalid_resolve_crypto_depsoit_form_reason_input": "⚠️ Provide a reason of up to 1,000 characters without control characters.",
+            "invalid_resolve_crypto_depsoit_form_expiry_invalid": "⚠️ Choose a valid future payment expiry, within 24 hours.",
+            "invalid_resolve_crypto_depsoit_form_provider_deposit_id_invalid": "⚠️ Provide a valid provider deposit ID to allocate.",
+            "app_identity_provider_account_context_not_found": "🔍 We could not find the payment account details for this identity.",
+            "created_app_identity_provider_account_successfully": "✅ The payment provider account was created successfully.",
+            "error_occurred": "⚠️ Something went wrong on our side. Please try again in a moment.",
+            "failed_to_claim_transaction_to_update": "⚠️ We could not prepare this transaction for editing. Please refresh and try again.",
+            "failed_to_fetch_app_transaction_list": "⚠️ We could not load your transactions. Please try again.",
+            "failed_to_find_provider_interactor": "⚠️ We could not connect to the selected payment provider. Please try again.",
+            "failed_to_quote_app_trasnaction": "⚠️ We could not calculate the transaction amount and fees. Please try again.",
+            "fee_resolution_failed": "⚠️ We could not calculate the transaction fees. Please try again.",
+            "fetched_app_identity_provider_account_successfully": "✅ The payment provider account details were loaded successfully.",
+            "fetched_app_transaction_list_successfully": "✅ Your transactions were loaded successfully.",
+            "fetched_app_transaction_record_successfully": "✅ Your transaction details were loaded successfully.",
+            "idempotent_transaction_replay": "ℹ️ ℹ️ This request was already processed. Your existing transaction has been returned.",
+            "inavlid_app_transaction_metadate_sensitive_transaction_metadata_not_allowed": "🔐 Please remove passwords, credentials, and other sensitive details from the transaction metadata.",
+            "input_has_not_changed": "⚠️ ℹ️ No changes were detected in the submitted data.",
+            "invalid_amount_precision": "🔢 The transaction amount has too many decimal places for the selected currency.",
+            "invalid_app_app_reference_input": "🔖 Please provide a valid application transaction reference.",
+            "invalid_app_currency_code_input": "💱 Please provide a valid currency code.",
+            "invalid_app_destination_wallet_id_input": "👛 Please provide a valid destination wallet public ID.",
+            "invalid_app_idempotency_key_input": "🔑 Please provide a valid idempotency key for this transaction request.",
+            "invalid_app_identity_public_id_input": "🪪 Please provide a valid identity public ID.",
+            "invalid_app_request": "🚫 This application request could not be verified.",
+            "invalid_app_teansaction_context_provided": "⚠️ The transaction details are incomplete or do not match. Please review them and try again.",
+            "invalid_app_transaction_amount_input": "💰 Please provide a valid transaction amount greater than zero.",
+            "invalid_app_transaction_description_input": "📝 Please provide a valid transaction description.",
+            "invalid_app_transaction_destination_input": "📍 Choose a withdrawal recipient or a destination wallet that matches the transaction type.",
+            "invalid_app_transaction_intent_input_duplicate_transaction": "⚠️ A transaction already exists with this request key or application reference. Use the existing transaction or provide a new reference.",
+            "invalid_app_transaction_metadata_input": "🧩 Please provide transaction metadata as a valid object.",
+            "invalid_app_transaction_metadata_too_large": "📦 The transaction metadata is too large. Please reduce its size and try again.",
+            "invalid_app_transaction_payment_method_id_input": "💳 Please provide a valid payment method ID.",
+            "invalid_app_transaction_payment_provider_id_input": "🏦 Please provide a valid payment provider ID.",
+            "invalid_app_transaction_refund_payment_input": "⚠️ ↩️ Please provide the public ID of the original transaction you want to refund.",
+            "invalid_app_transaction_refund_payment_input_for_transaction_type": "⚠️ ↩️ Refunds must use a withdrawal or an internal wallet transfer.",
+            "invalid_app_transaction_type_input": "🔄 Please choose a supported transaction type.",
+            "invalid_app_withdrawal_recipient_id_input": "👤 Please provide a valid withdrawal recipient public ID.",
+            "invalid_form_input_provided": "📝 Please provide valid request details and try again.",
+            "invalid_payment_method_id": "💳 Please select a valid payment method.",
+            "invalid_payment_provider_id": "🏦 Please select a valid payment provider.",
+            "invalid_resolve_crypto_depsoit_form_action_input": "🔄 Please choose a supported action to resolve this crypto deposit.",
+            "invalid_transaction_id": "❌ Please select a valid transaction.",
+            "invalid_transaction_type": "🔄 Please provide a supported transaction type.",
+            "invalid_withdrawal_recipient_public_id": "⚠️ Please provide a valid withdrawal recipient public ID.",
+            "no_funded_provider": "⏳ No payment provider currently has sufficient funds for this withdrawal. Please try again later.",
+            "payment_provider_interactor_context_input_is_invalid": "⚠️ The payment provider details are invalid. Please review your transaction and try again.",
+            "payment_provider_interactor_context_invalid": "⚠️ The provider interaction configuration is incomplete or unsupported.",
+            "payment_provider_interactor_context_is_required": "⚠️ Payment provider details are required to continue with this transaction.",
+            "payment_provider_interactor_context_resolution_failed": "⚠️ Provider interaction context could not be resolved. Please try again.",
+            "payment_provider_interactor_created_successfully": "✅ The payment provider is ready to process this transaction.",
+            "payment_provider_interactor_currency_not_available_to_app": "💱 This currency is not enabled for your application.",
+            "payment_provider_interactor_currency_not_found": "🔍 The selected currency is unavailable.",
+            "payment_provider_interactor_identity_not_found": "🔍 The transaction identity could not be found for this application.",
+            "payment_provider_interactor_identity_wallet_not_found": "👛 No eligible wallet was found for this identity and currency.",
+            "payment_provider_interactor_instance_creation_failed": "⚠️ The payment provider interaction could not be started. Please try again.",
+            "payment_provider_interactor_not_registered": "⚠️ No interaction is available for the selected payment provider.",
+            "payment_provider_interactor_route_not_found": "🏦 No payment provider option is available for this currency and transaction type.",
+            "provider_account_context_invalid": "⚠️ The payment account details do not match this transaction. Please refresh and try again.",
+            "provider_account_not_required": "⚠️ ℹ️ This transaction does not require a separate payment provider account.",
+            "provider_account_record_incomplete": "⚠️ Your payment account setup is incomplete. Please try again or contact support.",
+            "provider_dedicated_account_creation_not_enabled": "🏦 Dedicated payment accounts are not available with this provider.",
+            "provider_fee_exceeds_principal": "💰 The provider fee is greater than the transaction amount. Please review the amount or choose another payment method.",
+            "provider_interactor_context_mismatch": "⚠️ The payment provider details do not match this transaction. Please refresh and try again.",
+            "provider_interactor_unavailable": "⏳ The payment provider is unavailable right now. Please try again shortly.",
+            "provider_lifecycle_unsupported": "🚫 This payment provider does not support the requested transaction action.",
+            "provider_or_service_fee_response_invalid": "⚠️ We could not confirm the transaction fees. Please try again.",
+            "provider_route_incomplete": "⚠️ The payment route is incomplete. Please choose another payment option or contact support.",
+            "transaction_record_not_found": "🔍 We could not find this transaction for your application.",
+            "unsupported_transaction_direction": "🚫 The selected payment option does not support this transaction direction.",
+            "valid": "✅ The transaction approval details are valid.",
+            "valid_input": "✅ Input validated successfully.",
+            "valid_payment_provider_interactor_context": "✅ The payment provider details are valid and ready to use.",
+            "withdrawal_method_unavailable": "🏦 No supported withdrawal method is available for this currency and provider."
         }
     }
 }
